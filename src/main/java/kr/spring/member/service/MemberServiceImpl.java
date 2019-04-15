@@ -101,13 +101,13 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public List<MemberCommand> selectPayHist(Map<String, Object> map) {
-		return memberMapper.selectPayHist(map);
+	public List<MemberCommand> selectPayHistory(Map<String, Object> map) {
+		return memberMapper.selectPayHistory(map);
 	}
 
 	@Override
-	public int selectPayHistRowCount(String user_id) {
-		return memberMapper.selectPayHistRowCount(user_id);
+	public int selectPayHistoryRowCount(String user_id) {
+		return memberMapper.selectPayHistoryRowCount(user_id);
 	}
 	
 	
