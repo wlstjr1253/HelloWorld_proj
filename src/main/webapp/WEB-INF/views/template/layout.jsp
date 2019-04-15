@@ -42,10 +42,10 @@
     <script src="${pageContext.request.contextPath}/resources/js/jquery.mask.js"></script>
 </head>
 <body>
-<div class="wrapper">
+<!-- <div class="wrapper"> -->
 	<tiles:insertAttribute name="header" />
 	<tiles:insertAttribute name="body" />
 	<tiles:insertAttribute name="footer" />
-</div>
+<!-- </div> -->
 </body>
 </html>

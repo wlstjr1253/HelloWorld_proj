@@ -5,7 +5,7 @@
 <!-- 중앙 컨텐츠 시작 -->
 <div class="container write-form">
 	<div class="row ">
-		<h2 class="text-center">회원상세정보</h2>
+		<h2 class="text-center margin-top">회원상세정보</h2>
 		<br><br>
 		<div class="table-responsive col-xs-4 col-xs-offset-4">
 		<table class="table table-striped pull-right">
@@ -45,14 +45,7 @@
 			<th>전화번호</th>
 			<td>${member.user_phone} </td>
 		</tr>
-		<c:if test="${user_auth==member.user_auth }">
-		<tr>
-			<td colspan="2"><input type="button" value="비밀번호 변경" onclick="location.href='changePassword.do'" ></td>
-		</tr>
-		</c:if>
-		<tr>
-			<td colspan="2"><input type="button" value="결제 내역" onclick="location.href='memberPayHistory.do'"></td>	
-		</tr>
+		
 		
 		<c:if test="${user_auth!=3}">
 		<tr>
@@ -86,16 +79,23 @@
 		</tr>
 		</c:if>
 		
+		<c:if test="${user_auth==member.user_auth }">
+		<tr>
+			<td colspan="2"><input type="button" value="비밀번호 변경" onclick="location.href='changePassword.do'" ></td>
+		</tr>
+		</c:if>
+		<tr>
+			<td colspan="2"><input type="button" value="결제 내역" onclick="location.href='memberPayHistory.do'"></td>	
+		</tr>
 		</table>
 		
 		</div>
-		<div class="col-xs-12 btn-submit">
+		<div class="col-xs-12 btn-submit margin-bottom">
 			<c:if test="${user_auth==member.user_auth }">
 			<input type="button" value="수정" class="btn btn-ok" onclick="location.href='update.do'"/>
 			<input type="button" value="탈퇴" class="btn btn-default" onclick="location.href='delete.do'"/>
 			</c:if>
 		</div>
-		<section><br><br><br><br></section>
 	</div>
 </div>
 <!-- 중앙 컨텐츠 끝 -->
