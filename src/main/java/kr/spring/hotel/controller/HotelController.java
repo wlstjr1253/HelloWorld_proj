@@ -29,19 +29,28 @@ public class HotelController {
 	private HotelService hotelService;
 
 	@RequestMapping("/hotel/hotelList.do")
-	public ModelAndView hotelList() {
+	public ModelAndView hotelList(@RequestParam("hotel_nc") String hotel_nc,
+			@RequestParam("hotel_type") String hotel_type,
+			@RequestParam("hotel_adult") int hotel_adult,
+			@RequestParam("hotel_kid") int hotel_kid) {
 
-		if(log.isDebugEnabled()) log.debug("<<hotel list>>");
+		if(log.isDebugEnabled()) log.debug("<<hotel list>>{hotel_nc : " + hotel_nc + ", hotel_type : " + hotel_type + ", hotel_adult : " + hotel_adult + ", hotel_kid : " + hotel_kid + "}");
 		
-		int cnt = hotelService.selectHotelListRow();
+		Map<String,Object> map = new HashMap<String, Object>();
+		map.put("hotel_nc", hotel_nc);
+		map.put("hotel_type", hotel_type);
+		map.put("hotel_adult", hotel_adult);
+		map.put("hotel_kid", hotel_kid);
+		
+		int cnt = hotelService.selectHotelListRow(map);
 		
 		List<HotelCommand> hotelList = null;
 		if (cnt > 0) {
-			hotelList = hotelService.selectHotelList();
-		}
+			hotelList = hotelService.selectHotelList(map);
 		
-		for(HotelCommand hotel : hotelList) {
-			hotel.setSt_cvntl_list(hotelService.selectCvntlList(hotel.getSt_cvntl_id()));
+			for(HotelCommand hotel : hotelList) {
+				hotel.setSt_cvntl_list(hotelService.selectCvntlList(hotel.getSt_cvntl_id()));
+			}
 		}
 		
 		ModelAndView mav = new ModelAndView();
@@ -57,7 +66,7 @@ public class HotelController {
 
 		if(log.isDebugEnabled()) log.debug("<<hotel room detail id>> : " + id);
 		
-		int cnt = hotelService.selectHotelListRow();
+		int cnt = hotelService.selectRoomListRow(id);
 		
 		List<HotelVwCommand> roomList = null;
 		if (cnt > 0) {

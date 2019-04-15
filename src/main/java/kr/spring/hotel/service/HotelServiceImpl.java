@@ -20,13 +20,13 @@ public class HotelServiceImpl implements HotelService {
 	private HotelMapper hotelMapper;
  
 	@Override
-	public List<HotelCommand> selectHotelList() {
-		return hotelMapper.selectHotelList();
+	public List<HotelCommand> selectHotelList(Map<String,Object> map) {
+		return hotelMapper.selectHotelList(map);
 	}
 
 	@Override
-	public int selectHotelListRow() {
-		return hotelMapper.selectHotelListRow();
+	public int selectHotelListRow(Map<String,Object> map) {
+		return hotelMapper.selectHotelListRow(map);
 	}
 
 	@Override
