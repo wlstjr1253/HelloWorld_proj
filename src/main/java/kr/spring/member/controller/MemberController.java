@@ -326,7 +326,7 @@ public class MemberController {
 		
 		// 총 결제 갯수 또는 검색된 결제의 갯수
 		//어떤 결제??? 대여? 투어 결제? 항공권 결제? 호텔 결제?
-		int count = memberService.selectPayHistRowCount(user_id);
+		int count = memberService.selectPayHistoryRowCount(user_id);
 		 
 		if(log.isDebugEnabled()) {
 			log.debug("<<count>> : " + count);
@@ -339,7 +339,7 @@ public class MemberController {
 		
 		List<MemberCommand> list = null;
 		if (count > 0) {
-			list = memberService.selectPayHist(map);
+			list = memberService.selectPayHistory(map);
 		}
 		
 		ModelAndView mav = new ModelAndView();
