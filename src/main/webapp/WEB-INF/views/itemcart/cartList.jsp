@@ -113,7 +113,7 @@
  --%>
 				<!-- 장바구니 표 -->
 				<br>
-				<form:form commandName="command" id="orderForm" action="orderForm.do" enctype="multipart/form-data">
+				<form:form commandName="command" id="orderFormPart" action="orderFormPart.do">
 				
 					<table class="table">
 						<thead>
@@ -130,7 +130,7 @@
 						<c:forEach var="itemCart" items="${list}">
 
 							<tr>
-								<td><input type="checkbox" name="checkbox" id="checkbox" value="1" style="width:20px; height:20px;"></td>
+								<td><input type="checkbox" name="checked_num" id="checked_num" value="${itemCart.ic_num}" style="width:20px; height:20px;"></td>
 								<td>
 								<a href="${pageContext.request.contextPath}/itemDetail.do?i_num=${itemCart.i_num}">
 										<img src="imageView.do?i_num=${itemCart.i_num}" width="100"

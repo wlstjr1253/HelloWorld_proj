@@ -22,7 +22,6 @@ public class ItemCartServiceImpl implements ItemCartService{
 		// TODO Auto-generated method stub
 		return itemCartMapper.selectCartList(user_id);
 	}
-
 	
 	/*@Override
 	public int selectRowCount(Map<String, Object> map) {
@@ -30,6 +29,24 @@ public class ItemCartServiceImpl implements ItemCartService{
 		return 0;
 	}*/
 
+	//장바구니 금액합계
+	@Override
+	public int getTotalById(String user_id) {
+		// TODO Auto-generated method stub
+		return itemCartMapper.getTotalById(user_id);
+	}
+	
+	//선택 상품를 장바구니로부터 읽기
+	@Override
+	public List<ItemCartCommand> selectCartListChosen(List<String> ic_nums) {
+		return itemCartMapper.selectCartListChosen(ic_nums);
+	}
+	
+	@Override
+	public int getTotalByIdChosen(List<String> ic_nums) {
+		return itemCartMapper.getTotalByIdChosen(ic_nums);
+	}
+	
 	//장바구니추가
 	@Override
 	public void insertCart(ItemCartCommand cart) {
@@ -37,12 +54,6 @@ public class ItemCartServiceImpl implements ItemCartService{
 		
 	}
 
-	//장바구니 금액합계
-	@Override
-	public int getTotalById(String user_id) {
-		// TODO Auto-generated method stub
-		return itemCartMapper.getTotalById(user_id);
-	}
 
 	//장바구니 상품 확인
 	@Override
@@ -63,8 +74,4 @@ public class ItemCartServiceImpl implements ItemCartService{
 		// TODO Auto-generated method stub
 		itemCartMapper.deleteCart(ic_num);
 	}
-
-
-	
-
 }

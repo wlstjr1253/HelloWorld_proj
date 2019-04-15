@@ -66,7 +66,7 @@
 					        <form action="${pageContext.request.contextPath}/hotel/hotelList.do" id="hotel_reg_form">
 					         <div class="select-book mb-15">
 					             <select <%-- class="select-booking" --%> name="hotel_nc" id="hotel_nc">
-			                        <option value="" selected>숙박 도시 선택</option>
+			                        <option value="ALL" selected>숙박 도시 선택</option>
 			                    </select>
 					         </div>
 					        	<div class="row">
@@ -82,10 +82,10 @@
 					            <div class="row">
 					                <div class="select-book mb-15 col-md-4">
 					                    <select name="hotel_type" class="select-booking">
-					                        <option value="" selected>호텔 종류</option>
-					                        <option value="1">호텔</option>
-					                        <option value="2">모텔</option>
-					                        <option value="3">게스트 하우스</option>
+					                        <option value="ALL" selected>호텔 종류</option>
+					                        <option value="HOTEL">호텔</option>
+					                        <option value="MOTEL">모텔</option>
+					                        <option value="GUEST">게스트 하우스</option>
 					                    </select>
 					                </div>
 					                <div class="select-book mb-15 col-md-4">
@@ -102,7 +102,7 @@
 					                    </select>
 					                </div>
 					                <div class="select-book mb-15 col-md-4">
-					                    <select name="book_kid" class="select-booking">
+					                    <select name="hotel_kid" class="select-booking">
 					                        <option value="0" selected>어린이</option>
 					                        <option value="1">1</option>
 					                        <option value="2">2</option>
