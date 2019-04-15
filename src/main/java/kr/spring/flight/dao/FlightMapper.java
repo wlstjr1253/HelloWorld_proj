@@ -21,7 +21,7 @@ public interface FlightMapper {
 	public int getFr_id();
 	
 	//항공권 예약
-	@Insert("INSERT INTO flight_rsrv_log (fr_id,fsi_idx," 
+	/*@Insert("INSERT INTO flight_rsrv_log (fr_id,fsi_idx," 
 			+ "user_id,fr_rsrv_seat_type,fr_adult_pp," 
 			+ "fr_kid_pp,fr_nm,fr_email," 
 			+ "fr_phone,fr_passport,fr_age,fr_fnm) VALUES ("
@@ -29,12 +29,15 @@ public interface FlightMapper {
 			+ "#{fr_adult_pp},#{fr_kid_pp},"
 			+ "#{fr_nm},#{fr_email},#{fr_phone},#{fr_passport},"
 			+ "#{fr_age},#{fr_fnm})")
-	public void insertFlightRsrv(FlightRsrvCommand flightRsrv);
+	public void insertFlightRsrv(FlightRsrvCommand flightRsrv);*/
+	public FlightCommand getFlightInfo(int fsi_idx);
+	public void flightRsrv(Map<String,Object> map);
 	
 	public FlightCommand selectFlight(Integer fsi_idx);
 	
 	//결제
 	public void insertFlightPay(FlightPayCommand flightPay);
+	
 	
 }
 	
