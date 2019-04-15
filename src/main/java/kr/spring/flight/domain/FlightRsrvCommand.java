@@ -14,6 +14,7 @@ public class FlightRsrvCommand {
 	private String fr_passport; //예약자 여권번호
 	private int fr_age; //10대 단위
 	private String fr_fnm; //예약자 성
+	private int fr_total_pc; // 총 가격
 	
 	public int getFr_id() {
 		return fr_id;
@@ -93,12 +94,18 @@ public class FlightRsrvCommand {
 	public void setFr_fnm(String fr_fnm) {
 		this.fr_fnm = fr_fnm;
 	}
+	public int getFr_total_pc() {
+		return fr_total_pc;
+	}
+	public void setFr_total_pc(int fr_total_pc) {
+		this.fr_total_pc = fr_total_pc;
+	}
 	@Override
 	public String toString() {
 		return "FlightRsrvCommand [fr_id=" + fr_id + ", fsi_idx=" + fsi_idx + ", user_id=" + user_id
 				+ ", fr_rsrv_seat_type=" + fr_rsrv_seat_type + ", fr_adult_pp=" + fr_adult_pp + ", fr_kid_pp="
 				+ fr_kid_pp + ", ph_idx=" + ph_idx + ", fr_nm=" + fr_nm + ", fr_email=" + fr_email + ", fr_phone="
-				+ fr_phone + ", fr_passport=" + fr_passport + ", fr_age=" + fr_age + ", fr_fnm=" + fr_fnm + "]";
+				+ fr_phone + ", fr_passport=" + fr_passport + ", fr_age=" + fr_age + ", fr_fnm=" + fr_fnm
+				+ ", fr_total_pc=" + fr_total_pc + "]";
 	}
-	
 }

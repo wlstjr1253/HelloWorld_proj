@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.spring.board.domain.BoardCommand;
@@ -20,6 +21,8 @@ import kr.spring.flight.domain.FlightCommand;
 import kr.spring.flight.domain.FlightPayCommand;
 import kr.spring.flight.domain.FlightRsrvCommand;
 import kr.spring.flight.service.FlightService;
+import kr.spring.hotel.domain.HotelRsrvCommand;
+import kr.spring.hotel.domain.HotelVwCommand;
 
 @Controller
 public class FlightRsrvController {
@@ -28,7 +31,7 @@ public class FlightRsrvController {
 	@Resource
 	private FlightService flightService;
 	
-	//======게시판 글 등록=======//
+	/*//======게시판 글 등록=======//
 	//등록 폼
 	@RequestMapping(value="/flight/rsrvWrite.do",
 	        			method=RequestMethod.GET)
@@ -60,9 +63,9 @@ public class FlightRsrvController {
 		}
 
 		//데이터 유효성 체크
-		/*if(result.hasErrors()) {
+		if(result.hasErrors()) {
 			return "flightRsrv";
-		}*/
+		}
 
 		int fr_id = flightService.getFr_id();
 		if(log.isDebugEnabled()) {
@@ -81,7 +84,28 @@ public class FlightRsrvController {
 		redirect.addFlashAttribute("fr_id", fr_id);
 		
 		return "redirect:/flight/flightPay.do";
+	}*/
+	
+	@RequestMapping("/flight/flightRsrv.do")
+	public ModelAndView flightRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand, HttpSession session) {
+
+		flightRsrvCommand.setUser_id((String)session.getAttribute("user_id"));
+		FlightCommand flightCommand = flightService.getFlightInfo(flightRsrvCommand.getFsi_idx());
+
+		if(log.isDebugEnabled()) {
+			log.debug("<<flightRsrvCommand>> : " + flightRsrvCommand);
+			log.debug("<<flightCommand>> : " + flightCommand);
+		}
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("flightRsrv");
+		mav.addObject("rsrv", flightRsrvCommand);
+		mav.addObject("flight", flightCommand);
+
+		return mav;
 	}
+	
+	
 	
 	//=====결제 하기=====//
 	//등록 폼
