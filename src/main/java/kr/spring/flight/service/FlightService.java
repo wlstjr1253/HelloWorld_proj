@@ -16,7 +16,9 @@ public interface FlightService {
 	//항공권 아이디
 	public int getFr_id();
 	//항공권 예약	
-	public void insertFlightRsrv(FlightRsrvCommand flightRsrv);	
+	/*public void insertFlightRsrv(FlightRsrvCommand flightRsrv);*/
+	public FlightCommand getFlightInfo(int fsi_idx);
+	public void flightRsrv(Map<String,Object> map);
 	public FlightCommand selectFlight(Integer fsi_idx);
 	
 	//결제

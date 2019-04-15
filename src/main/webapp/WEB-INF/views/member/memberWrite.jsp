@@ -6,8 +6,7 @@
 <!-- 중앙 컨텐츠 시작 -->
 <div class="container write-form w_800 ">
 	<div class="row">
-		<h1 class="col-xs-12 text-center margin-top-50 margin-bottom-50"><span class="text-green">Hello World</span> 와 함께 여행을 떠나 보세요</h1>
-		<section><br><br><br></section>
+		<h1 class="col-xs-12 text-center margin-top margin-bottom-50"><span class="text-green">Hello World</span> 와 함께 여행을 떠나 보세요</h1>
 			<form:form commandName="command" action="write.do" id="register_form">
 			<div class="row">
 				<form:errors element="div" cssClass="error-color" />
@@ -44,11 +43,12 @@
 					</li>
 				</ul>
 				</div>
-				<div class="btn-submit col-xs-12 margin-bottom">
+				<div class="btn-submit col-xs-12">
 					<input type="submit" value="전송" class="btn btn-ok">
 					<input type="button" value="홈으로" class="btn btn-default" 
 						onclick="location.href='${pageContext.request.contextPath}/main/main.do'">
 				</div>
+				<section class="margin-bottom"></section>
 		</form:form>
 	</div>
 </div>

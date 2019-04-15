@@ -129,13 +129,11 @@
 		payment_hist
 		<where>
 			<if test="keyword != '' and keyfield == 'user_id'">
-				m.user_id like '%' || #{keyword} || '%'
+				user_id like '%' || #{keyword} || '%'
 			</if>
 		</where>
-		ORDER BY d.user_id ASC)a)
-		<![CDATA[
-		WHERE rnum >= #{start} and rnum <= #{end} 
-		]]>
+		ORDER BY ph_reg_dt ASC)a)
+		WHERE user_id = #{keyword} 
 	</select>
 <!-- 
 	<select id="selectRowCount" parameterType="map"
