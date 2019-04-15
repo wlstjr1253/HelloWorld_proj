@@ -1,17 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<<script type="text/javascript">
-$(function(){
-	$('#next_2').on('click', function(){
-		$('#page_2').click();
-	});
-	$('#next_3').on('click', function(){
-		$('#page_3').click();
-	});
-});
-</script>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/flightRsrv.js"></script>
 	<!--Welcome secton-->
 	<div class="welcome-section text-center ptb-110">
 		<div class="container">
@@ -22,9 +13,8 @@ $(function(){
 							<h2>항공권 예약</h2>
 							<div class="breadcrubs-menu">
 								<ul>
-									<li><a
-										href="${pageContext.request.contextPath}/main/main.do">Home<i class="mdi mdi-chevron-right"></i></a></li>
-									<li>Booking</li>
+									<li><a href="${pageContext.request.contextPath}/main/main.do">Home<i class="mdi mdi-chevron-right"></i></a></li>
+									<li>flight</li>
 								</ul>
 							</div>
 						</div>
@@ -42,8 +32,9 @@ $(function(){
 			<div class="col-md-12">
 				<div class="section-title mb-80 text-center">
 					<h2>
-						Booking <span>flight</span>
+						<span>항공권</span> 예약
 					</h2>
+					<p></p>
 				</div>
 			</div>
 		</div>
@@ -51,8 +42,8 @@ $(function(){
 		<form action="rsrvWrite.do">
 			<div class="row">
 				<!-- 수정예정 -->
-				<input type="hidden" name="user_id" value="suywook91" />
-				<input type="hidden" name="fsi_idx" value="${param.fsi_idx}" />
+				<%-- <input type="hidden" name="user_id" value="suywook91" />
+				<input type="hidden" name="fsi_idx" value="${param.fsi_idx}" /> --%>
 				<div class="col-md-12">
 					<div class="booking-rooms-tab" align="center">
 						<ul class="nav" role="tablist">

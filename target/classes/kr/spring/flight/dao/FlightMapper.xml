@@ -110,6 +110,28 @@
 					</where>)		
 	</select>
 
+	<insert id="flightRsrv" parameterType="map" statementType="CALLABLE">
+		{
+			CALL SP_FLIGHT_RSRV(
+				#{p_fsi_idx},
+				#{p_user_id},
+				#{p_rsrv_seat},
+				#{p_fr_adult_pp},
+				#{p_fr_kid_pp},
+				#{p_fr_nm},
+				#{p_fr_email},
+				#{p_fr_phone},
+				#{p_fr_passport},
+				#{p_fr_age},
+				#{p_fr_fnm},
+				#{p_total_pc},
+				#{p_num},
+				#{p_pin_num},
+				#{p_year},
+				#{p_month}
+			)
+		}
+	</insert>
 
 	<select id="selectFlight" parameterType="string" 
 								  resultType="flightCommand">
