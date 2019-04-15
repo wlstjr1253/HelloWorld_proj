@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import kr.spring.cart.dao.ItemCartMapper;
 import kr.spring.cart.domain.ItemCartCommand;
 import kr.spring.order.dao.ItemOrderMapper;
 import kr.spring.order.domain.ItemOrderCommand;
@@ -16,6 +17,8 @@ public class ItemOrderServiceImpl implements ItemOrderService {
 
 	@Resource
 	private ItemOrderMapper itemOrderMapper;
+	@Resource
+	private ItemCartMapper itemCartMapper;
 	
 	@Override
 	public int getOrderNum() {
@@ -42,14 +45,16 @@ public class ItemOrderServiceImpl implements ItemOrderService {
 	}
 
 	@Override
-	public void insertOrder(ItemOrderCommand itemOrderCommand,List<ItemCartCommand> itemOrderlist) {
+	public void insertOrder(ItemOrderCommand itemOrderCommand,List<ItemCartCommand> itemOrderlist,String user_id) {
 		itemOrderMapper.insertOrder(itemOrderCommand);
 		
 		for(ItemCartCommand item : itemOrderlist) {
 			item.setIbh_idx(itemOrderCommand.getIbh_idx());
-			System.out.println("~~~~~~~~~~~~~~~~"+item);
 			itemOrderMapper.insertDetailOrder(item);
 		}
+		
+		//회원 아이디별로 장바구니에 저장된 데이터 삭제
+		itemCartMapper.deleteCartByUser_id(user_id);
 		
 	}
 

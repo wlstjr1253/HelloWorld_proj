@@ -39,7 +39,7 @@
                             <div class="owl-item" style="width: 1170px;">
                             <div class="single-room-sapce">
                             <c:forEach var="list" items="${list}">
-                                   <c:if test="${list.ict_num==48}">
+                                   <c:if test="${list.ict_num==1}">
                                    <div class="col-md-4 col-sm-6 col-xs-12 col-sm-6 col-xs-12">
                                    
                                     <div class="single-room mb-80">
