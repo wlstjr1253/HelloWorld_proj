@@ -52,4 +52,13 @@ public interface Tour_infoMapper {
      @Delete("DELETE FROM tour_apply_hist WHERE ta_idx=#{ta_idx}")
      public void deleteApply(Integer ta_idx);
      
+     //부모글 삭제 시 신청 사실이 존재하면 삭제 전 신청 삭제
+     @Delete("DELETE FROM tour_apply WHERE ta_idx=#{ta_idx}")
+     public void deleteApplyByNum(Integer ti_id);
+     
+     public List<Tour_infoCommand> selectGuideList(Map<String,Object> map);
+     public int selectRowCountGuide(Map<String,Object> map);
+     
+     
+     
 }

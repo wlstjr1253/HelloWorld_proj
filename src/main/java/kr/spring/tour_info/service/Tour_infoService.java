@@ -34,5 +34,9 @@ public interface Tour_infoService {
 	
 	//등록글 삭제 시 신청 내역 삭제
 	public void deleteApplyByNum(Integer ti_id);
+	
+	//가이드 신청자 목록 보기
+	public List<Tour_infoApplyCommand> selectListGuide(Map<String,Object> map);
+	public int selectRowCountGuide(Map<String,Object> map);
 
 }

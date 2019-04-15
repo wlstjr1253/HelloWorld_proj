@@ -91,5 +91,15 @@ public class Tour_infoServiceImpl implements Tour_infoService{
 	public void deleteApplyByNum(Integer ti_id) {
 		tour_infoMapper.deleteReplyByNum(ti_id);
 	}
+	@Override
+	public List<Tour_infoApplyCommand> selectListGuide(Map<String, Object> map) {
+		// TODO Auto-generated method stub//--------------------------------------------------------------------¼öÁ¤Áß
+		return null;
+	}
+	@Override
+	public int selectRowCountGuide(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

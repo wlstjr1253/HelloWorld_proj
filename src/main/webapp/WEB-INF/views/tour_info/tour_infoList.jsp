@@ -12,7 +12,8 @@
 </div>
 <div class="container table-list">
 	<div class="row">
-		<div class="col-md-6 col-sm-6">
+		<div class="col-xs-6 col-xs-offset-3">
+		<!-- <div class="col-md-6 col-sm-6"> -->
 			<div class="booking-box">
 				<div class="btn-list row">
 					<h3>투어 검색</h3>
@@ -39,6 +40,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 		<%-- <div class="row">
 		<br>
 		<br>
@@ -61,7 +63,8 @@
 			</div>
 		</form>
 	</div> --%>
-
+</div>
+<div class="container table-list">
 		<div class="row">
 			<div class="col-xs-12">
 				<!-- <div class=welcome-text> -->
@@ -70,7 +73,8 @@
 				</c:if>
 				<c:if test="${count > 0}">
 					<div class="table">
-						<table class="table" style="width: 600px">
+						<table class="table">
+						<!-- <table class="table" style="width: 600px"> -->
 							<tr>
 								<th>투어 ID</th>
 								<th width="250">투어 명</th>
@@ -93,6 +97,5 @@
 				</c:if>
 			</div>
 		</div>
-	</div>
-</div>
+		</div>
 	<!-- 중앙 컨텐츠 끝 -->

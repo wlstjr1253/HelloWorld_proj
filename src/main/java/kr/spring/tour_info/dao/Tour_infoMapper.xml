@@ -106,4 +106,67 @@
  		 WHERE rnum >= #{start} AND rnum <= #{end}
  		 ]]>           
  	  </select>
+ 	  <!-- ======================나에게 신청한 인원 목록 보게 하기 ============================= -->
+ 	  <select id="selectGuideList" parameterType="map" resultType="tour_infoApplyCommand"><!-- 조건 검색하는 셀렉트 -->
+		SELECT 
+		   *
+		  FROM (SELECT
+		        a.*,
+		         rownum rnum
+		       FROM (SELECT
+		               t.ti_id,
+		               t.ta_idx,
+		               t.ti_start_day,
+		               t.user_id,
+		              
+		            FROM tour_apply_hist t LEFT OUTER JOIN (SELECT ti_id,
+		                                                      ta_idx,
+		                                                       user_id
+		                                            FROM tour_info
+		                                            GROUP BY ti_id)r
+		            ON t.ti_id = r.ti_id
+		            <where>
+		            	<if test="keyword != '' and keyfield == 'user_id'">
+		            		b.title like '%' || #{keyword} || '%'
+		            	</if>
+		            	<if test="keyword != '' and keyfield == 'ti_id'">
+		            		b.id like '%' || #{keyword} || '%'
+		            	</if>
+		            	<if test="keyword != '' and keyfield == 'ta_idx'">
+		            		b.content like '%' || #{keyword} || '%'
+		            	</if>
+		            	<if test="keyword != '' and keyfield == 'all'">
+		            		b.title like '%' || #{keyword} || '%' or 
+		            		b.id like '%' || #{keyword} || '%'or
+		            		b.content like '%' || #{keyword} || '%'
+		            	</if>
+		            </where>
+		            ORDER BY t.ti_id DESC)a)
+		    <![CDATA[
+		  WHERE rnum >= #{start} AND rnum <= #{end}
+		 ]]>            
+	 </select>
+	<select id="selectRowCountGuide" parameterType="map" resultType="integer">
+		 SELECT
+		  COUNT(*)
+		   FROM tour_info 
+		 <where>
+			<if test="keyword != '' and keyfield == 'user_id'">
+				ti_nm like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'ti_id'">
+				user_id like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'ta_idx'">
+				user_id like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'all'">
+				user_id like '%' || #{keyword} || '%' or
+				ti_id like '%' || #{keyword} || '%'or
+				ta_idx like '%' || #{keyword} || '%'
+			</if>
+		</where> 
+	</select>
+ 	  
+ 	  
 </mapper>
