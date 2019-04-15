@@ -191,7 +191,8 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
-
+		map.put("ict_num", null);
+		
 		//총 글의 갯수 또는 검색된 글의 갯수
 		int count = itemService.selectRowCount(map);
 
