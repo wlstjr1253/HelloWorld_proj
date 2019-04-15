@@ -29,11 +29,6 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public void insertFlightRsrv(FlightRsrvCommand flightRsrv) {
-		flightMapper.insertFlightRsrv(flightRsrv);
-	}
-
-	@Override
 	public FlightCommand selectFlight(Integer fsi_idx) {	
 		return flightMapper.selectFlight(fsi_idx);
 	}
@@ -46,6 +41,16 @@ public class FlightServiceImpl implements FlightService {
 	@Override
 	public int getFr_id() {
 		return flightMapper.getFr_id();
+	}
+
+	@Override
+	public FlightCommand getFlightInfo(int fsi_idx) {
+		return flightMapper.getFlightInfo(fsi_idx);
+	}
+	
+	@Override
+	public void flightRsrv(Map<String, Object> map) {
+		flightMapper.flightRsrv(map);
 	}
 
 	

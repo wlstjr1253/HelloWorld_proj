@@ -2,6 +2,7 @@ package kr.spring.order.controller;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -64,7 +65,7 @@ public class ItemOrderController {
 
 		return mav;
 	}
-	// ================ 게시판 글 등록 ================ //
+	// ================ 장바구니 전체 상품 ================ //
 	@RequestMapping(value="/itemcart/orderForm.do", method=RequestMethod.GET)
 	public ModelAndView insertOrder(HttpSession session) {
 		String user_id = (String)session.getAttribute("user_id");
@@ -114,7 +115,7 @@ public class ItemOrderController {
 		List<ItemCartCommand> itemOrderlist = itemCartService.selectCartList(user_id);
 		
 		// 글쓰기
-		itemOrderService.insertOrder(itemOrderCommand,itemOrderlist);
+		itemOrderService.insertOrder(itemOrderCommand,itemOrderlist,user_id);
 
 		// RedirectAttributes 객체는 리다이렉트 시점에 한 번만 사용되는
 		// 데이터를 전송.
@@ -126,6 +127,75 @@ public class ItemOrderController {
 	}
 
 
+	// ================ 장바구니 개별 상품 ================ //
+		@RequestMapping(value="/itemcart/orderFormPart.do")
+		public ModelAndView insertOrderPart(@RequestParam("checked_num") String checked_num) {
+			
+			if (log.isDebugEnabled()) {
+				log.debug("<<checked_num>> : " + checked_num);
+			}
+			
+			List<String> ic_nums =Arrays.asList(checked_num.split(","));
+			
+			
+			int getTotalByIdChosen = itemCartService.getTotalByIdChosen(ic_nums);//장바구니 전체금액 호출
+
+			List<ItemCartCommand> list = itemCartService.selectCartListChosen(ic_nums);
+
+			if (log.isDebugEnabled()) {
+				log.debug("<<list>> : " + list);
+			}
+
+			//Model이 들어간 이름은 리퀘스트에 담겨있고 el이 가져다씀
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("orderForm");
+			mav.addObject("list",list);
+			mav.addObject("ic_nums", ic_nums);
+			//mav에 담은걸 el이 뽑아서 사용한다 view에서
+
+
+			mav.addObject("getTotalById",getTotalByIdChosen);	//주문상품 전체금액
+
+			return mav;
+
+		}
+
+		// 전송된 데이터 처리
+		@RequestMapping(value="/itemcart/ordersubmitPart.do")
+		public String submitPart(@ModelAttribute("command") @Valid ItemOrderCommand itemOrderCommand,
+		BindingResult result,HttpSession session) {
+
+			
+			// 유효성 체크
+			/*if (result.hasErrors()) {
+				return "orderForm";
+			}*/
+
+			//주문번호 생성
+			int order_num = itemOrderService.getOrderNum();
+			itemOrderCommand.setIbh_idx(order_num);
+
+			if (log.isDebugEnabled()) {
+				log.debug("<<itemOrderCommand>> : " + itemOrderCommand);
+			}
+			
+			String user_id = (String)session.getAttribute("user_id");
+			//상세정보 처리를 위해서 장바구니 테이블에 저장된 정보 호출
+			List<ItemCartCommand> itemOrderlist = itemCartService.selectCartList(user_id);
+			
+			// 글쓰기
+			itemOrderService.insertOrder(itemOrderCommand,itemOrderlist,user_id);
+
+			// RedirectAttributes 객체는 리다이렉트 시점에 한 번만 사용되는
+			// 데이터를 전송.
+			// 브라우저에 데이터를 전송하지만 URI상에는 보이지 않는 숨겨진 데이터의
+			// 형태로 전달
+			
+
+			return "redirect:/itemcart/orderCheck.do";
+		}
+	
+	
 
 	// ================ 주문확인 ================ //
 	@RequestMapping("/itemcart/orderCheck.do")

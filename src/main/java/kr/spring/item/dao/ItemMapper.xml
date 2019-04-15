@@ -22,6 +22,7 @@
 		              i_state,
 		              ict_num
 		            FROM item_info
+		            WHERE ict_num = #{ict_num}
 			ORDER BY
 		   <if test="order==''">
 		   i_num DESC 
@@ -41,6 +42,7 @@
 		SELECT
 		  COUNT(*)
 		FROM item_info
+		WHERE ict_num = #{ict_num}
 	</select>
 	
 	
