@@ -11,7 +11,7 @@
 <div class="container write-form w_600">
 	<div class="section-title mb-80" style="text-align: center;">
 		<h1>
-			<span style="color: #44b272">주문완료</span>
+			<span style="color: #44b272">장바구니</span>
 
 		</h1>
 	</div>
@@ -21,10 +21,11 @@
 <div class="container main-board-list mb-100">
 	<div class="row">
 		<div class="section-title mb-80">
-			<span>주문이 성공적으로 완료되었습니다!</span>
-			<input type="button" value="홈으로" class="btn btn-ok" onclick="${pageContext.request.contextPath}/main/main.do"/>
-			<input type="button" value="주문내역" class="btn btn-default" onclick="${pageContext.request.contextPath}/itemcart/mypage.do"/>
+
+
+			
 			
 		</div>
 	</div>
 </div>
+<!-- 중앙 컨텐츠 끝 -->

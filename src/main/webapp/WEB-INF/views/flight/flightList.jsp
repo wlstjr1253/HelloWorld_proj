@@ -7,32 +7,6 @@
 	<jsp:include page="../main/main_header.jsp" />
 </div>
 <!--Header section end-->
-<!-- search bar Start -->
-<div class="search-bar animated slideOutUp">
-	<div class="table">
-		<div class="table-cell">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-8 col-sm-offset-2">
-						<div class="search-form-wrap">
-							<button class="close-search">
-								<i class="mdi mdi-close"></i>
-							</button>
-							<form action="#">
-								<input type="text" placeholder="Search here..."
-									value="Search here..." />
-								<button class="search-button" type="submit">
-									<i class="fa fa-search"></i>
-								</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- search bar End -->
 <div class="our-news text-center ptb-80 white_bg">
 	<div class="container">
 		<div class="row">
@@ -94,7 +68,7 @@
 								<td>${flight.fsi_pass1_dt}</td>
 								<td>${flight.fsi_pass2_dt}</td>
 								<td><input type="button" value="예약"
-				    										onclick="location.href='rsrvWrite.do?fsi_idx=${flight.fsi_idx}'"></td>
+				    										onclick="location.href='flightRsrv.do?fsi_idx=${flight.fsi_idx}'"></td>
 							</tr>
 							</c:forEach>
 						</table>

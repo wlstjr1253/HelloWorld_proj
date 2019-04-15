@@ -82,6 +82,56 @@
 			</table>
 
 
+			<form:form commandName="command" id="orderFormPart" action="orderFormPart.do"
+				enctype="multipart/form-data">
+				<input type="hidden" name="i_num" id="i_num" value="${param.i_num}">
+				<input type="hidden" name="user_id" id="user_id" value="${user_id}">
+				
+				<div>
+				<br><br>
+					<div class="name mb-15">
+						<input type="text" name="ibh_nm" id="ibh_nm" required="required"
+							placeholder="수령자 이름">
+					</div>
+
+					<div class="name mb-15">
+						<select name="ibh_pay">
+							<option value="0" selected>결제방식</option>
+							<option id="ibh_pay" value="1">카드결제</option>
+							<option id="ibh_pay" value="2">계좌이체</option>
+							<option id="ibh_pay" value="3">현금결제</option>
+						</select> <br>
+					</div>
+
+
+					<div class="name mb-15">
+						<input type="number" name="ibh_phone" id="ibh_phone" placeholder="연락 가능한 번호">
+					</div>
+					<div class="mail mb-15">
+						<input type="email" name="ibh_email" id="ibh_email"	placeholder="이메일 주소">
+					</div>
+
+				</div>
+
+
+
+
+				<div class="request-box mt-15">
+					<textarea name="ibh_request" id="ibh_request"
+						placeholder="요청사항이 있으신가요?"></textarea>
+				</div>
+
+
+
+				<div class="prve-next-box mt-20">
+					<div class="back-link">
+						<a href="${pageContext.request.contextPath}/itemcart/orderCheck">뒤로가기</a>
+						<input type="submit" value="주문하기">
+					</div>
+				</div>
+
+			</form:form>
+			
 			<form:form commandName="command" id="orderForm" action="orderForm.do"
 				enctype="multipart/form-data">
 				<input type="hidden" name="i_num" id="i_num" value="${param.i_num}">

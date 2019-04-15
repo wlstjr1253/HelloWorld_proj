@@ -12,15 +12,20 @@ import kr.spring.cart.domain.ItemCartCommand;
 
 public interface ItemCartMapper {
 	
-	
+	//전체 장바구니 상품 by user_id
 	public List<ItemCartCommand> selectCartList(String user_id);
+	public int getTotalById(String user_id);
 	
 	//public int selectRowCount(Map<String,Object> map);
+	
+	//장바구니로부터 선택 상품 읽기
+	public List<ItemCartCommand> selectCartListChosen(List<String> ic_nums);
+	
+	public int getTotalByIdChosen(List<String> ic_nums);
 	
 	@Insert("INSERT INTO item_cart(ic_num,user_id,i_num,ic_quan,i_rent_day,i_return_day,i_rent_nc,i_return_nc) VALUES(item_cart_seq.NEXTVAL,#{user_id},#{i_num},#{ic_quan},#{i_rent_day},#{i_return_day},#{i_rent_nc},#{i_return_nc})")
 	public void insertCart(ItemCartCommand cart);
 	
-	public int getTotalById(String user_id);
 	
 	@Select("SELECT * FROM item_cart c JOIN item_info i ON c.i_num = i.i_num WHERE c.user_id = ? ORDER BY i.i_num ASC")
 	public int selectCartDetail(int i_num,String user_id);
@@ -32,5 +37,9 @@ public interface ItemCartMapper {
 	
 	@Delete("DELETE FROM item_cart WHERE ic_num=#{ic_num}")
 	public void deleteCart(Integer ic_num);
+	
+	//주문 등록 후 장바구니 상품 삭제
+	@Delete("DELETE FROM item_cart WHERE user_id=#{user_id}")
+	public void deleteCartByUser_id(String user_id);
 	
 }
