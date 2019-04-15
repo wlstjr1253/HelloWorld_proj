@@ -76,10 +76,10 @@
     </definition>
     
     <!-- 후기 -->
-    <definition name="reviewWrite" extends="main">
+    <definition name="itemreview" extends="main">
     	<put-attribute name="title" value="후기등록" />
     	<put-attribute name="body" 
-    		value="/WEB-INF/views/item/reviewWrite.jsp" />
+    		value="/WEB-INF/views/item/itemreview.jsp" />
     </definition>
     <definition name="reviewList" extends="main">
     	<put-attribute name="title" value="후기목록" />

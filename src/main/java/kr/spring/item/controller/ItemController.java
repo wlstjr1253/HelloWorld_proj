@@ -36,7 +36,7 @@ import kr.spring.util.PagingUtil;
 @Controller
 public class ItemController {
 	private Logger log = Logger.getLogger(this.getClass());
-	private int rowCount = 10;
+	private int rowCount = 9;
 	private int pageCount = 10;
 
 	@Resource
@@ -231,6 +231,7 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
+		map.put("ict_num", 48);
 
 		//ÃÑ ±ÛÀÇ °¹¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ °¹¼ö
 		int count = itemService.selectRowCount(map);
@@ -270,6 +271,7 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
+		map.put("ict_num", 50);
 
 		//ÃÑ ±ÛÀÇ °¹¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ °¹¼ö
 		int count = itemService.selectRowCount(map);
@@ -309,6 +311,7 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
+		map.put("ict_num", 52);
 
 		//ÃÑ ±ÛÀÇ °¹¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ °¹¼ö
 		int count = itemService.selectRowCount(map);
@@ -348,6 +351,7 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
+		map.put("ict_num", 54);
 
 		//ÃÑ ±ÛÀÇ °¹¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ °¹¼ö
 		int count = itemService.selectRowCount(map);
@@ -387,6 +391,7 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
+		map.put("ict_num", 56);
 
 		//ÃÑ ±ÛÀÇ °¹¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ °¹¼ö
 		int count = itemService.selectRowCount(map);
@@ -426,6 +431,7 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
+		map.put("ict_num", 58);
 
 		//ÃÑ ±ÛÀÇ °¹¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ °¹¼ö
 		int count = itemService.selectRowCount(map);
