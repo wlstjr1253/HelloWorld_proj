@@ -71,7 +71,7 @@ public interface MemberMapper {
 	
 	//결제 내역
 	//@Select("SELECT * FROM payment_hist WHERE user_id=#{user_id} ORDER BY ph_reg_dt DESC")
-	public List<MemberCommand> selectPayHist(Map<String, Object> map);
+	public List<MemberCommand> selectPayHistory(Map<String, Object> map);
 	@Select("SELECT COUNT(*) FROM payment_hist WHERE user_id=#{user_id}")
-	public int selectPayHistRowCount(String user_id);
+	public int selectPayHistoryRowCount(String user_id);
 }

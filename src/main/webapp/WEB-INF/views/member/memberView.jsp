@@ -37,10 +37,10 @@
 			<th>이메일</th>
 			<td>${member.user_email}</td>
 		</tr>
-		<tr>
+		<%-- <tr>
 			<th>마일리지</th>
 			<td>${member.user_mil}</td>
-		</tr>
+		</tr> --%>
 		<tr>
 			<th>전화번호</th>
 			<td>${member.user_phone} </td>
