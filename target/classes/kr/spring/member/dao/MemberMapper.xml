@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.spring.member.dao.MemberMapper">
+
+	<select id="selectGuideList" parameterType="map"
+		resultType="memberCommand">
+		SELECT
+		*
+		FROM (SELECT
+		a.*,
+		rownum rnum
+		FROM (SELECT
+		*
+		FROM user_auth m LEFT OUTER JOIN user_info d
+		ON m.user_id = d.user_id
+		<where>
+			<if test="keyword != '' and keyfield == 'user_id'">
+				m.user_id like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'user_nm'">
+				d.user_nm like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'user_email'">
+				d.user_email like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'all'">
+				m.user_id like '%' || #{keyword} || '%' or
+				d.user_nm like '%' || #{keyword} || '%' or
+				d.user_email like '%' || #{keyword} || '%'
+			</if>
+			and user_apply_dt is not null
+		</where>
+		ORDER BY d.user_id ASC)a)
+		<![CDATA[
+		WHERE rnum >= #{start} and rnum <= #{end} 
+		]]>
+	</select>
+
+	<select id="selectGuideRowCount" parameterType="map"
+		resultType="integer">
+		SELECT
+		COUNT(*)
+		FROM user_auth m LEFT OUTER JOIN user_info d
+		ON m.user_id = d.user_id
+		<where>
+			<if test="keyword != '' and keyfield == 'user_id'">
+				m.user_id like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'user_nm'">
+				d.user_nm like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'user_email'">
+				d.user_email like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'all'">
+				m.user_id like '%' || #{keyword} || '%' or
+				d.user_nm like '%' || #{keyword} || '%' or
+				d.user_email like '%' || #{keyword} || '%'
+			</if>
+			and user_apply_dt is not null
+		</where>
+	</select>
+	
+	<select id="selectList" parameterType="map"
+		resultType="memberCommand">
+		SELECT
+		*
+		FROM (SELECT
+		a.*,
+		rownum rnum
+		FROM (SELECT
+		*
+		FROM user_auth m LEFT OUTER JOIN user_info d
+		ON m.user_id = d.user_id
+		<where>
+			<if test="keyword != '' and keyfield == 'user_id'">
+				m.user_id like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'user_nm'">
+				d.user_nm like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'user_email'">
+				d.user_email like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'all'">
+				m.user_id like '%' || #{keyword} || '%' or
+				d.user_nm like '%' || #{keyword} || '%' or
+				d.user_email like '%' || #{keyword} || '%'
+			</if>
+		</where>
+		ORDER BY d.user_id ASC)a)
+		<![CDATA[
+		WHERE rnum >= #{start} and rnum <= #{end} 
+		]]>
+	</select>
+
+	<select id="selectRowCount" parameterType="map"
+		resultType="integer">
+		SELECT
+		COUNT(*)
+		FROM user_auth m LEFT OUTER JOIN user_info d
+		ON m.user_id = d.user_id
+		<where>
+			<if test="keyword != '' and keyfield == 'user_id'">
+				m.user_id like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'user_nm'">
+				d.user_nm like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'user_email'">
+				d.user_email like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != '' and keyfield == 'all'">
+				m.user_id like '%' || #{keyword} || '%' or
+				d.user_nm like '%' || #{keyword} || '%' or
+				d.user_email like '%' || #{keyword} || '%'
+			</if>
+		</where>
+	</select>
+	
+	<!-- pay history -->
+	<select id="selectPayHistory" parameterType="map"
+		resultType="memberCommand">
+		SELECT
+		*
+		FROM 
+		payment_hist
+		<where>
+			<if test="keyword != '' and keyfield == 'user_id'">
+				m.user_id like '%' || #{keyword} || '%'
+			</if>
+		</where>
+		ORDER BY d.user_id ASC)a)
+		<![CDATA[
+		WHERE rnum >= #{start} and rnum <= #{end} 
+		]]>
+	</select>
+<!-- 
+	<select id="selectRowCount" parameterType="map"
+		resultType="integer">
+		SELECT
+		COUNT(*)
+		FROM payment_hist
+		<where>
+			<if test="keyword != '' and keyfield == 'user_id'">
+				m.user_id like '%' || #{keyword} || '%'
+			</if>
+		</where>
+	</select> -->
+
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="tour_infoList" extends="main">
+    	<put-attribute name="title" value="투어목록" />
+    	<put-attribute name="body" 
+    		value="/WEB-INF/views/tour_info/tour_infoList.jsp" />
+    </definition>
+    <definition name="tour_infoWrite" extends="main">
+    	<put-attribute name="title" value="투어등록" />
+    	<put-attribute name="body" 
+    		value="/WEB-INF/views/tour_info/tour_infoWrite.jsp" />
+    </definition>
+    <definition name="tour_infoModify" extends="main">
+    	<put-attribute name="title" value="투어 글 수정" />
+    	<put-attribute name="body" 
+    		value="/WEB-INF/views/tour_info/tour_infoModify.jsp" />
+    </definition>
+    <definition name="tour_infoDetail" extends="main">
+    	<put-attribute name="title" value="투어상세" />
+    	<put-attribute name="body" 
+    		value="/WEB-INF/views/tour_info/tour_infoDetail.jsp" />
+    </definition>
+        <definition name="tour_infoMemberList" extends="main">
+    	<put-attribute name="title" value="투어신청목록" />
+    	<put-attribute name="body" 
+    		value="/WEB-INF/views/tour_info/tour_infoMemberList.jsp" />
+    </definition>
+</tiles-definitions>
+

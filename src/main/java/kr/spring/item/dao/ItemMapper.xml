@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.spring.item.dao.ItemMapper">
+
+<!-- 상품리스트 -->
+	<select id="selectList" parameterType="map" resultType="itemCommand">
+		SELECT 
+		   *
+		FROM (SELECT
+		        a.*,
+		        rownum rnum
+		      FROM (SELECT
+		              i_num,
+		              i_nm,
+		              i_pc,
+		              i_dispc,
+		              i_quan,
+		              i_img,
+		              i_content,
+		              i_state,
+		              ict_num
+		            FROM item_info
+			ORDER BY
+		   <if test="order==''">
+		   i_num DESC 
+		   </if>
+		   <if test="order!='' and order=='asc'">
+		   i_pc ASC
+		   </if>
+		   <if test="order!='' and order=='desc'">
+		   i_pc DESC
+		   </if>
+		   )a)
+		 <![CDATA[
+		 WHERE rnum >= #{start} AND rnum <= #{end}
+		 ]]>    
+	</select>
+	<select id="selectRowCount" parameterType="map" resultType="integer">
+		SELECT
+		  COUNT(*)
+		FROM item_info
+	</select>
+	
+	
+</mapper>

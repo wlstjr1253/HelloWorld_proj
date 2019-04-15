@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.spring.hotel.dao.HotelMapper">
+
+	<select id="selectHotelList" resultType="hotelCommand">
+		SELECT * FROM STAYING_INFO ORDER BY ST_ID
+	</select>
+	 
+	<select id="selectHotelListRow" resultType="integer">
+		SELECT COUNT(*) FROM STAYING_INFO
+	</select>
+
+	<select id="selectRoomList" parameterType="integer" resultType="hotelVwCommand">
+		SELECT * FROM STAYING_ROOM WHERE ST_ID = #{st_id} ORDER BY SR_ID
+	</select>
+	 
+	<select id="selectRoomListRow" parameterType="integer" resultType="integer">
+		SELECT COUNT(*) FROM STAYING_ROOM WHERE ST_ID = #{st_id}
+	</select>
+	
+	<select id="selectCvntlList" resultType="cvntlInfoCommand">
+		SELECT *
+		FROM CVNTL_INFO
+		WHERE CVNTL_ID in
+		<foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+		ORDER BY CVNTL_ID
+	</select>
+	
+	<insert id="hotelRsrv" parameterType="map" statementType="CALLABLE">
+		{
+			CALL SP_HOTEL_RSRV(
+				#{p_sr_id},
+				#{p_user_id},
+				#{p_total_pc},
+				#{p_check_in_dt},
+				#{p_check_out_dt},
+				#{p_srl_nm},
+				#{p_srl_email},
+				#{p_srl_phone},
+				#{p_srl_adult_pp},
+				#{p_srl_kid_pp},
+				#{p_num},
+				#{p_pin_num},
+				#{p_year},
+				#{p_month}
+			)
+		}
+	</insert>
+
+</mapper>
