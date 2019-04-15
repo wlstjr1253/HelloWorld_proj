@@ -39,7 +39,9 @@
 			</div>
 		</div>
 		<!-- 전체 form start -->
-		<form action="flightRsrv.do"> 
+		<form action="flightRsrv.do" method="post" id="rsrv_form"> 
+			<input type="hidden" name="fsi_idx" value="${rsrv.fsi_idx}" />
+			<input type="hidden" name="user_id" value="${rsrv.user_id}" />
 			<div class="row">
 				<!-- 수정예정 -->
 				<%-- <input type="hidden" name="user_id" value="suywook91" />
@@ -206,7 +208,7 @@
 											<div class="back-link">
 												<a href="#">Back</a>
 											</div>
-											<button type="submit" id="next_3">다음</button>
+											<button type="button" id="next_3">다음</button>
 										</div>
 									</div>
 								</div>
