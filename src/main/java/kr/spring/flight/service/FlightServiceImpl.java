@@ -44,7 +44,7 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public FlightCommand getFlightInfo(int fsi_idx) {
+	public FlightCommand getFlightInfo(Integer fsi_idx) {
 		return flightMapper.getFlightInfo(fsi_idx);
 	}
 	

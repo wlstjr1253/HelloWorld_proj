@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<!-- 전체 form start -->
-		<form action="rsrvWrite.do">
+		<form action="flightRsrv.do"> 
 			<div class="row">
 				<!-- 수정예정 -->
 				<%-- <input type="hidden" name="user_id" value="suywook91" />

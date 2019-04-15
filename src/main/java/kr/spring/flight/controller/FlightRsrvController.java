@@ -90,7 +90,7 @@ public class FlightRsrvController {
 	public ModelAndView flightRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand, HttpSession session) {
 
 		flightRsrvCommand.setUser_id((String)session.getAttribute("user_id"));
-		FlightCommand flightCommand = flightService.getFlightInfo(flightRsrvCommand.getFsi_idx());
+		FlightCommand flightCommand = flightService.selectFlight(flightRsrvCommand.getFsi_idx());
 
 		if(log.isDebugEnabled()) {
 			log.debug("<<flightRsrvCommand>> : " + flightRsrvCommand);
@@ -100,7 +100,7 @@ public class FlightRsrvController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("flightRsrv");
 		mav.addObject("rsrv", flightRsrvCommand);
-		mav.addObject("flight", flightCommand);
+		mav.addObject("flightCommand", flightCommand);
 
 		return mav;
 	}

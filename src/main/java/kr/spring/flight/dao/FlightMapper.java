@@ -30,7 +30,7 @@ public interface FlightMapper {
 			+ "#{fr_nm},#{fr_email},#{fr_phone},#{fr_passport},"
 			+ "#{fr_age},#{fr_fnm})")
 	public void insertFlightRsrv(FlightRsrvCommand flightRsrv);*/
-	public FlightCommand getFlightInfo(int fsi_idx);
+	public FlightCommand getFlightInfo(Integer fsi_idx);
 	public void flightRsrv(Map<String,Object> map);
 	
 	public FlightCommand selectFlight(Integer fsi_idx);
