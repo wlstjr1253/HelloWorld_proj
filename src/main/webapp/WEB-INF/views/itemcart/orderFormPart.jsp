@@ -4,13 +4,26 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
+<style>
+th{
+text-align:center;
+}
+td.nm{
+text-align:left;
+}
+td.bt{
+text-align:center;
+}
+td.price{
+text-aglin:right;
+font-size:20px;
+}
+</style>
+
+
 
 <title>상품 대여</title>
-</head>
+
 <body>
 	<!--Room booking start-->
 	<div class="container main-board-list mb-100">
