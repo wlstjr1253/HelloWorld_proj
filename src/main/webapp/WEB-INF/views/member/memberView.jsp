@@ -2,11 +2,23 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<div class="welcome-section text-center ptb-110">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="breadcurbs-inner">
+						<div class="breadcrubs">
+							<h2>회원상세정보</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- 중앙 컨텐츠 시작 -->
 <div class="container write-form">
 	<div class="row ">
-		<h2 class="text-center margin-top">회원상세정보</h2>
-		<br><br>
+		<!-- <h2 class="text-center margin-top">회원상세정보</h2> -->
 		<div class="table-responsive col-xs-4 col-xs-offset-4">
 		<table class="table table-striped pull-right">
 		<tr>
