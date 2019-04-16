@@ -40,8 +40,11 @@ public class Tour_infoServiceImpl implements Tour_infoService{
 	}
 	@Override
 	public void delete(Integer ti_id) {
+		//신청이 존재하면 우선 삭제 
+		tour_infoMapper.deleteApplyByNum(ti_id);
 		//댓글이 존재하면 우선 삭제 그리고 부모글 삭제
 		tour_infoMapper.deleteReplyByNum(ti_id);
+	
 		//부모글 삭제
 		tour_infoMapper.delete(ti_id);
 	}
@@ -105,5 +108,4 @@ public class Tour_infoServiceImpl implements Tour_infoService{
 	public List<Tour_infoCommand> selectMainList() {
 		return tour_infoMapper.selectMainList();
 	}
-	
 }

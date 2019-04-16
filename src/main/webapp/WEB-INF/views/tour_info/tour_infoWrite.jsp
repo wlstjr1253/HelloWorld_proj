@@ -31,19 +31,99 @@ $(function(){
 	});
 });
 </script>
-<div class="tour_infoWrite write-form w_600">
-		<!-- 컨텐츠 시작 -->
+<!-- <div class="tour_infoWrite write-form w_600">
 		<div class="container">
-			<div class="row">
-<%-- 
-<c:if test="${user_auth!=2}">
-	<div><h1 style="color:white"> 해당 코너는 가이드 전용입니다.</h1></div>
-</c:if> --%>
-<c:if test="${!empty user_id && user_auth == 2}">
+			<div class="row"> -->
+<div class="container write-form w_800 ">
+ 
 			<!-- ========================================================== -->
 	
             <!-- ========================================================== -->
-				<h2 class="col-xs-12">투어 등록</h2>
+           
+	<div class="row">
+	 <c:if test="${!empty user_id && user_auth == 2}">
+		<h1 class="col-xs-12 text-center margin-top margin-bottom-50"><span class="text-green">투어</span> 등록</h1>
+			<form:form commandName="command" action="write.do" enctype="multipart/form-data" id="register_form">
+			   <form:hidden path="user_id" value="${user_id}"/> 
+			<div class="row">
+				<form:errors element="div" cssClass="error-color" />
+				<ul class="col-xs-6 col-xs-offset-3 flightForm">
+					<li>
+						<label for="ti_nm" id="ti_nm">투어명</label>
+						<form:input path="ti_nm"/>
+						<form:errors path="ti_nm" cssClass="error-color" />
+					</li>
+					<li>
+						<label for="ti_start_day">시작일자</label>
+						<form:input path="ti_start_day" type="date" name="ti_start_day"/>
+						<form:errors path="ti_start_day" cssClass="error-color" />
+					</li>
+					<li>
+						<label for="ti_end_day">종료일자</label>
+						<form:input path="ti_end_day" type="date" name="ti_end_day"/>
+						<form:errors path="ti_end_day" cssClass="error-color" />
+					</li>
+					<li>
+						<label for="ti_min_pp">최소인원</label>
+						<form:select path="ti_min_pp">
+						     <c:forEach var="i" begin="1" end="20">
+						       <option value="${i}">${i}명</option>
+						     </c:forEach>
+						 </form:select>
+						<form:errors path="ti_min_pp" cssClass="error-color" />
+					</li>
+					<li>
+						<label for="ti_max_pp">최대인원</label>
+						<form:select path="ti_max_pp">
+						     <c:forEach var="i" begin="1" end="20">
+						       <option value="${i}">${i }명</option>
+						     </c:forEach>
+						 </form:select>
+						<form:errors path="ti_max_pp" cssClass="error-color" />
+					</li>
+					<li>
+						<label for="ti_pickup_place">픽업장소</label>
+						<form:input path="ti_pickup_place"/>
+						<form:errors path="ti_pickup_place" cssClass="error-color" />
+					</li>
+					<li>
+						<label for="ti_pickup_time">픽업시간</label>
+						<form:input path="ti_pickup_time" type="time"/>
+						<form:errors path="ti_pickup_time" cssClass="error-color" />
+					</li>
+					<li>
+						<label for="ti_pc">가격</label>
+						<form:input path="ti_pc"/>
+						<form:errors path="ti_pc" cssClass="error-color" />
+					</li>
+					<li>
+						<label for="upload">투어사진</label>
+						<input type="file" id="upload" name="upload" />
+						<form:errors path="ti_img" cssClass="error-color" />
+					</li>
+					<li>
+						<label for="ti_content">상세내용</label>
+						<form:textarea path="ti_content" style="text-align:center; width:390px"/>
+						<form:errors path="ti_content" cssClass="error-color" />
+					</li>
+					
+				</ul>
+				</div>
+				<div class="btn-submit col-xs-12">
+					<input type="button" value="홈으로" class="btn btn-default" 
+						onclick="${pageContext.request.contextPath}/main/main.do">
+						<input type="submit" value="전송" class="btn btn-ok">
+				</div>
+				<section class="margin-bottom"></section>
+		</form:form>
+		</c:if>
+	</div>
+	
+</div>
+
+       <!-- ===================================================================================================== -->     
+            
+			<%-- 	<h2 class="col-xs-12">투어 등록</h2>
 					<form:form commandName="command" action="write.do" enctype="multipart/form-data" id="register_form" cssClass="form-horizontal">
 					  <form:hidden path="user_id" value="${user_id}"/>
 					  <div class="col-xs-12">  
@@ -131,11 +211,12 @@ $(function(){
 						     </div>
 						</div>
 				    </div>
-				</form:form>
+				</form:form> 
           </c:if>
       </div>
     </div>
-</div>
-<script type="text/javascript">
+</div> --%>
+
+<!-- <script type="text/javascript">
 $('.price').mask('000,000,000,000,000', {reverse: true});
-</script>
+</script> -->

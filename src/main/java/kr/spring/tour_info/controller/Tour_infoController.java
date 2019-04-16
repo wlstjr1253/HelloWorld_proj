@@ -57,7 +57,7 @@ public class Tour_infoController {
 			                                            RedirectAttributes redirect) {
 		//로그 처리
 		if(log.isDebugEnabled()) {
-			log.debug("<<memberCommand>>: " + tour_infoCommand);
+			log.debug("<<tour_infoCommand>>: " + tour_infoCommand);
 		}
 		
 		//데이터 유효성 체크
