@@ -87,7 +87,7 @@ public class FlightController {
 	} 
 	
 	@RequestMapping("/flight/flightRsrv.do")
-	public ModelAndView hotelRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand, HttpSession session) {
+	public ModelAndView flightRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand, HttpSession session) {
 
 		flightRsrvCommand.setUser_id((String)session.getAttribute("user_id"));
 		FlightCommand flightCommand = flightService.selectFlight(flightRsrvCommand.getFsi_idx());
@@ -106,7 +106,7 @@ public class FlightController {
 	}
 	
 	@RequestMapping("/flight/flightResult.do")
-	public ModelAndView flightRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand,
+	public ModelAndView flightResult(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand,
 			@RequestParam("cp_num") int cp_num, @RequestParam("cp_pin_num") int cp_pin_num,
 			@RequestParam("cp_year_month") String cp_year_month) {
 
@@ -143,7 +143,7 @@ public class FlightController {
 		
 		
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("flightRsrv");
+		mav.setViewName("flightResult");
 		mav.addObject("rsrv", flightRsrvCommand);
 		mav.addObject("flightCommand", flightCommand);
 
