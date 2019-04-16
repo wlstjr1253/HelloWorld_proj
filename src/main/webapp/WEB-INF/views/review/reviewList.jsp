@@ -15,7 +15,7 @@
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="breadcurbs-inner">
 						<div class="breadcrubs"> 
-							<h2>여행 후기</h2>
+							<h1 class="col-xs-12 text-center"><span class="text-green">Hello World</span> 와 추억을 남겨보세요.</h1>
 							<div class="breadcrubs-menu">
 								<ul>
 									<li><a href="${pageContext.request.contextPath}/main/main.do">Home<i class="mdi mdi-chevron-right"></i></a></li>
@@ -32,20 +32,25 @@
 <!-- 중앙 컨텐츠 시작 -->
 <div class="container table-list">
 	<div class="row">
-		<div align="right">
+		<%-- <div align="right" class="col-xs-12margin-top-50">
 			<c:if test="${!empty user_id}">
 				<a class="button border_radius little button-black mb-20" href="write.do"><span>글쓰기</span></a>
 			</c:if>
-		</div>
+		</div> --%>
 		
 		<div class="col-xs-12">
 			<c:if test="${count == 0}">
-			<div>
-				<div class="text-center margin-top margin-bottom"><h2>등록된 게시글이 없습니다.</h2></div>
-			</div>
+				<div>
+					<div class="text-center margin-top margin-bottom"><h2>등록된 게시글이 없습니다.</h2></div>
+				</div>
 			</c:if>
 			
 			<c:if test="${count > 0}">
+			<div align="right" class="col-xs-12margin-top-50">
+				<c:if test="${!empty user_id}">
+					<a class="button border_radius little button-black mb-20" href="write.do"><span>글쓰기</span></a>
+				</c:if>
+			</div>
 			<div class="table-responsive">
 				<table class="table table-striped">
 					<tr>
@@ -67,19 +72,20 @@
 				</table>
 			</div>
 			<div class="col-xs-offset-4">
-			<form action="list.do" id="search_form" method="get">
-				<select name="keyfield" class="col-xs-2">
+			<form action="list.do" id="search_form" method="get" class="form">
+				<select name="keyfield" class="col-xs-2 search">
 					<option value="tr_title">제목</option>
 					<option value="user_id">ID</option>
 					<option value="tr_content">내용</option>
 					<option value="all">전체</option>
 				</select>
-				<input type="text" name="keyword" id="keyword" class="col-xs-2" >
-				<input type="submit" value="찾기" class="col-xs-1" >
-				<input type="button" value="목록" class="col-xs-1"
+				<input type="text" name="keyword" id="keyword" class="col-xs-2 search" >
+				<input type="submit" value="찾기" class="col-xs-1 search" >
+				<input type="button" value="목록" class="col-xs-1 search"
 				onclick="location.href='list.do'">
 			</form>
 			</div>
+			
 			<div class="text-center col-xs-12 paging">${pagingHtml}</div>
 			</c:if>
 		</div>

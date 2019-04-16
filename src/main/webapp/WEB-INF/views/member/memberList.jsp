@@ -25,7 +25,7 @@
 			</c:if>
 			
 			<c:if test="${count > 0}">
-			<div class="table-responsive">
+			<div class="table-responsive margin-top-50">
 				<table class="table table-striped">
 					<tr>
 						<th>아이디</th>
