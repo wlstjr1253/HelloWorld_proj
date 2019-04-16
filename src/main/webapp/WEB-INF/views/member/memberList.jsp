@@ -19,7 +19,7 @@
 <!-- 중앙 컨텐츠 시작 -->
 <div class="container table-list">
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-10 col-xs-offset-1">
 			<c:if test="${count == 0}">
 			<div class="align-center">등록된 회원이 없습니다.</div>
 			</c:if>
