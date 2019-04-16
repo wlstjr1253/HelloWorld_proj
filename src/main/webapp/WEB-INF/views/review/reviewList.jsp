@@ -9,12 +9,30 @@
 		location.reload();
 	}
 </script>
+	<div class="welcome-section text-center ptb-110">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="breadcurbs-inner">
+						<div class="breadcrubs"> 
+							<h2>여행 후기</h2>
+							<div class="breadcrubs-menu">
+								<ul>
+									<li><a href="${pageContext.request.contextPath}/main/main.do">Home<i class="mdi mdi-chevron-right"></i></a></li>
+									<li>Review</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- 중앙 컨텐츠 시작 -->
 <div class="container table-list">
 	<div class="row">
 		<br><br>
-		<h3 class="text-center">여행후기</h3>
 		<br>
 		
 		<div class="col-xs-offset-4">

@@ -20,13 +20,33 @@ h2{
 	margin-bottom:50px;
 }
 </style>
+</script>
+	<div class="welcome-section text-center ptb-110">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="breadcurbs-inner">
+						<div class="breadcrubs"> 
+							<h2>여행후기 수정</h2>
+							<div class="breadcrubs-menu">
+								<ul>
+									<li><a href="${pageContext.request.contextPath}/main/main.do">Home<i class="mdi mdi-chevron-right"></i></a></li>
+									<li>Review</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- 중앙 컨텐츠 시작 -->
 <div class="tour_infoWrite write-form w_600">
 	<!-- 컨텐츠 시작 -->
 	<div class="container">
 		<div class="row">
-			<h2>여행후기 수정</h2>
+			<h2></h2>
 		<form:form commandName="command" action="update.do" 
 			enctype="multipart/form-data" accept="image/*"
 			id="register_form" cssClass="form-horizontal">
