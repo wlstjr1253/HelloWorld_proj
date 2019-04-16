@@ -101,4 +101,9 @@ public class Tour_infoServiceImpl implements Tour_infoService{
 		return tour_infoMapper.selectRowCountGuide(map);
 	}
 	
+	@Override
+	public List<Tour_infoCommand> selectMainList() {
+		return tour_infoMapper.selectMainList();
+	}
+	
 }

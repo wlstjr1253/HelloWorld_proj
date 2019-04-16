@@ -24,6 +24,7 @@
 		<beans:property name="order" value="2" /> <!-- 우선순위 2 -->
 	</beans:bean>
 	
+	<context:component-scan base-package="kr.spring.main.controller" />
 	<context:component-scan base-package="kr.spring.member.controller" />
 	<context:component-scan base-package="kr.spring.board.controller" />
 	<context:component-scan base-package="kr.spring.item.controller" />
@@ -38,7 +39,7 @@
 	<context:component-scan base-package="kr.spring.travelreview.controller" />
 	
 	<!-- 데이터 작업이 없이 뷰 호출하는 경우 - 메인페이지 -->
-	<view-controller path="/main/main.do" view-name="main" />
+	<!-- <view-controller path="/main/main.do" view-name="main" /> -->
 	
 	<!-- 메시지 처리 -->
 	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">

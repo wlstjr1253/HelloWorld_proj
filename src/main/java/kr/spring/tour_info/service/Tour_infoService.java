@@ -39,4 +39,6 @@ public interface Tour_infoService {
 	public List<Tour_infoApplyCommand> selectListGuide(Map<String,Object> map);
 	public int selectRowCountGuide(Map<String,Object> map);
 
+	// main »£√‚
+	public List<Tour_infoCommand> selectMainList();
 }
