@@ -20,8 +20,7 @@
     아래 설정에서는 Controller 자동 스캔 제외
     -->
     <context:component-scan base-package="kr.spring">
-    	<context:exclude-filter type="annotation" 
-    	    expression="org.springframework.stereotype.Controller"/>
+    	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     
     <!-- TransactionManager 설정 -->
@@ -30,11 +29,9 @@
       p:dataSource-ref="dataSource"/>
     
     <!-- DB연동 설정 파일 등록 -->
-    <context:property-placeholder 
-                 location="classpath:config/jdbc.properties"/>   
+    <context:property-placeholder location="classpath:config/jdbc.properties"/>   
 	<!-- 커넥션 풀을 이용한 DataSource 설정 -->
-	<bean id="dataSource" 
-	        class="org.apache.commons.dbcp.BasicDataSource">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}"/>
 		<property name="url" value="${jdbc.url}"/>   
 		<property name="username" value="${jdbc.username}"/> 
@@ -50,8 +47,7 @@
 	</bean>
 	
 	<!-- 선언적 트랜잭션 처리 -->
-	<tx:advice id="txAdvice" 
-	                transaction-manager="transactionManager">
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
 			<tx:method name="select*" read-only="true"/>
 			<tx:method name="insert*"/>
@@ -63,13 +59,11 @@
 	<aop:config>
 		<aop:pointcut id="servicePublicMethod"
 		expression="execution(public * kr.spring..*ServiceImpl.*(..))" />
-		<aop:advisor advice-ref="txAdvice" 
-		pointcut-ref="servicePublicMethod"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="servicePublicMethod"/>
 	</aop:config>
 	
 	<!-- myBatis 설정(어노테이션 가능) -->
-	<bean id="sqlSessionFactory"
-	 class="org.mybatis.spring.SqlSessionFactoryBean">
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		 <property name="dataSource" ref="dataSource"/>
 		 <!-- 자바빈(커맨드 객체)의 alias 지정
 		 kr.spring.member.domain.MemberCommand -> memberCommand
@@ -104,8 +98,7 @@
 		        	   kr.spring.travelreview.dao"/>
 	</bean>
  	<!-- mail bean -->
-	<bean id="mailSender"
-		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
 		<property name="defaultEncoding" value="utf-8" />

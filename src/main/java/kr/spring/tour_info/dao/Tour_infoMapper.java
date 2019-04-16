@@ -59,6 +59,7 @@ public interface Tour_infoMapper {
      public List<Tour_infoApplyCommand> selectListGuide(Map<String,Object> map);
      public int selectRowCountGuide(Map<String,Object> map);
      
-     
-     
+     // main »£√‚
+     @Select("SELECT * FROM (SELECT * FROM TOUR_INFO ORDER BY TI_ID DESC) WHERE ROWNUM < 5")
+     public List<Tour_infoCommand> selectMainList();
 }

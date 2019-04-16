@@ -68,7 +68,7 @@
 							<div class="booking-info-deatils">
 								<div class="single-room-details fix">
 									<div class="room-img">
-										<img src="${hotel.sr_img1}" alt="" width="182" height="182">
+										<img src="${tour_info.ti_img}" alt="" width="182" height="182">
 									</div>
 									<div class="single-room-details pl-50">
 										<h3 class="s_room_title">${tour_info.ti_nm}</h3>
@@ -110,8 +110,8 @@
 						<div role="tabpanel" class="tab-pane" id="personal">
 							<div class="personal-info-details">
 								<form action="hotelResult.do" method="post" id="rsrv_form">
-									<input type="hidden" name="sr_id" value="${rsrv.sr_id}">
-									<input type="hidden" name="user_id" value="${rsrv.user_id}">
+									<input type="hidden" name="ti_id" value="${tour_info.ti_id}">
+									<input type="hidden" name="user_id" value="${tour_info.user_id}">
 									<input type="hidden" name="srl_total_pc" value="${rsrv.srl_total_pc}">
 									<input type="hidden" name="srl_check_in_dt" value="${rsrv.srl_check_in_dt}">
 									<input type="hidden" name="srl_check_out_dt" value="${rsrv.srl_check_out_dt}">

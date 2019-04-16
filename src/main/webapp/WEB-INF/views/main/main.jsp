@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>   
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!--Welcome secton-->
 	<jsp:include page="main_header.jsp" />
 </div>
@@ -50,7 +51,7 @@
             <div class="col-md-12">
                 <div class="section-title mb-80">
                     <h2>투어 상품 <span>TOUR</span></h2>
-                    <p>현지 가이드의 추천을 받아 특별한 장소로 투어를 떠납니다! 무슨 일이 생길지 아무도 모르지요... <span>Good Luck!</span></p>
+                    <p>새로운 사람들과 특별한 장소로 투어를 떠납니다! 무슨 일이 생길지 아무도 모르지요... <span>Good Luck!</span></p>
                 </div>
             </div>
         </div>
@@ -58,86 +59,28 @@
     <div class="our-services-list">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-services">
-                        <div class="services-img">
-                            <img src="${pageContext.request.contextPath}/resources/images/services/services1.jpg" alt="">
-                            <div class="services-title">
-                                <h2>Breakfast & Buffet</h2>
-                            </div>
-                            <div class="services-hover-desc">
-                                <div class="services-hover-inner">
-                                    <div class="services-hover-table">
-                                        <div class="services-hover-table-cell">
-                                            <h2>Breakfast & Buffet</h2>
-                                            <p>There are many variations of passages Loem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-services">
-                        <div class="services-img">
-                            <img src="${pageContext.request.contextPath}/resources/images/services/services2.jpg" alt="">
-                            <div class="services-title">
-                                <h2>Towels and bedding</h2>
-                            </div>
-                            <div class="services-hover-desc">
-                                <div class="services-hover-inner">
-                                    <div class="services-hover-table">
-                                        <div class="services-hover-table-cell">
-                                            <h2>Breakfast & Buffet</h2>
-                                            <p>There are many variations of passages Loem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-services">
-                        <div class="services-img">
-                            <img src="${pageContext.request.contextPath}/resources/images/services/services3.jpg" alt="">
-                            <div class="services-title">
-                                <h2>24/7 Reception</h2>
-                            </div>
-                            <div class="services-hover-desc">
-                                <div class="services-hover-inner">
-                                    <div class="services-hover-table">
-                                        <div class="services-hover-table-cell">
-                                            <h2>24/7 Reception</h2>
-                                            <p>There are many variations of passages Loem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-services">
-                        <div class="services-img">
-                            <img src="${pageContext.request.contextPath}/resources/images/services/services4.jpg" alt="">
-                            <div class="services-title">
-                                <h2>City Tours</h2>
-                            </div>
-                            <div class="services-hover-desc">
-                                <div class="services-hover-inner">
-                                    <div class="services-hover-table">
-                                        <div class="services-hover-table-cell">
-                                            <h2>City Tourst</h2>
-                                            <p>There are many variations of passages Loem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            	<c:forEach var="tour" items="${tour_list}">
+	                <div class="col-md-3 col-sm-6 col-xs-12">
+	                    <div class="single-services">
+	                        <div class="services-img">
+	                            <img src="${pageContext.request.contextPath}/tour_info/imageView.do?ti_id=${tour.ti_id}" width="443" height="291">
+	                            <div class="services-title">
+	                                <h2>${tour.ti_nm}</h2>
+	                            </div>
+	                            <div class="services-hover-desc">
+	                                <div class="services-hover-inner">
+	                                    <div class="services-hover-table">
+	                                        <div class="services-hover-table-cell">
+	                                            <a href="${pageContext.request.contextPath}/tour_info/detail.do?ti_id=${tour.ti_id}" target="_blank"><h2>${tour.ti_nm}</h2>
+	                                            <p>${tour.ti_content}</p></a>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+                </c:forEach>
             </div>
         </div>
     </div>
