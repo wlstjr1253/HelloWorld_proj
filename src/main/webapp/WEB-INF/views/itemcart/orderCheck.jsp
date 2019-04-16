@@ -25,6 +25,37 @@
 			<input type="button" value="홈으로" class="btn btn-ok" onclick="${pageContext.request.contextPath}/main/main.do"/>
 			<input type="button" value="주문내역" class="btn btn-default" onclick="${pageContext.request.contextPath}/itemcart/mypage.do"/>
 			
+			
+			<table class="table">
+					<thead>
+						<tr>
+							<th>상품명</th>
+							<th>수량</th>
+							<th>대여금액</th>
+							<th>대여기간</th>
+						<th>수령공항</th>
+						<th>반납공항</th>
+						</tr>
+					</thead>
+				<c:forEach var="itemCart" items="${list}">
+					<tr>
+						<td><a
+							href="${pageContext.request.contextPath}/itemDetail.do?i_num=${itemCart.i_num}">
+								<img src="imageView.do?i_num=${itemCart.i_num}" width="100"
+								class="thumb-image"> ${itemCart.i_nm}
+						</a></td>
+						<td>${itemCart.ic_quan}</td>
+						<td>${itemCart.i_pc}</td>
+						<td>${itemCart.i_rent_day} ~ ${itemCart.i_return_day}</td>
+						<td>${itemCart.i_rent_nc}</td>
+						<td>${itemCart.i_return_nc}</td>
+
+					</tr>
+				</c:forEach>
+				
+				</tbody>
+			</table>
+			
 		</div>
 	</div>
 </div>
