@@ -41,5 +41,8 @@ public interface ItemCartMapper {
 	//주문 등록 후 장바구니 상품 삭제
 	@Delete("DELETE FROM item_cart WHERE user_id=#{user_id}")
 	public void deleteCartByUser_id(String user_id);
+	//선택 상품 주문 등록 후 장바구니 상품 삭제
+	
+	public void deleteCartByPart(List<String> ic_nums);
 	
 }

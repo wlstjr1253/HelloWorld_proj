@@ -1,15 +1,19 @@
 package kr.spring.travelreview.domain;
 
 import java.io.IOException;
+import java.sql.Date;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 public class TravelReviewCommand {
 	private int tr_idx;//리뷰 번호
+	@NotEmpty
 	private String tr_title;//제목
+	@NotEmpty
 	private String tr_content;//내용
 	private int tr_hit;//조회수
-	private String tr_reg_date;//작성일
+	private Date tr_reg_date;//작성일
 	private MultipartFile tr_upload;
 	private byte[] tr_img;//이미지업로드
 	private String user_id;//사용자아이디
@@ -46,13 +50,15 @@ public class TravelReviewCommand {
 	public void setTr_hit(int tr_hit) {
 		this.tr_hit = tr_hit;
 	}
-	public String getTr_reg_date() {
+	
+	public Date getTr_reg_date() {
 		return tr_reg_date;
 	}
-	public void setTr_reg_date(String tr_reg_date) {
+
+	public void setTr_reg_date(Date tr_reg_date) {
 		this.tr_reg_date = tr_reg_date;
 	}
-	
+
 	public MultipartFile getTr_upload() {
 		return tr_upload;
 	}

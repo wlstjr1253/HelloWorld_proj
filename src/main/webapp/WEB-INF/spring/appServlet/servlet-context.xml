@@ -93,6 +93,7 @@
 			<mapping path="/member/memberList.do" />
 			<mapping path="/member/guideList.do" />
 			<mapping path="/hotel/hotelRsrv.do" />
+			<mapping path="/flight/flightRsrv.do" />
 			<beans:bean class="kr.spring.interceptor.LoginCheckInterceptor"></beans:bean>
 		</interceptor>
 	</interceptors>

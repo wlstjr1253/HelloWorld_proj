@@ -15,6 +15,21 @@
     	<put-attribute name="body"
     		value="/WEB-INF/views/itemcart/orderForm.jsp" />
     </definition>
+     <definition name="orderform222" extends="main">
+    	<put-attribute name="title" value="대여하기" />
+    	<put-attribute name="body"
+    		value="/WEB-INF/views/itemcart/orderform222.jsp" />
+    </definition>
+     <definition name="orderform333" extends="main">
+    	<put-attribute name="title" value="대여하기" />
+    	<put-attribute name="body"
+    		value="/WEB-INF/views/itemcart/orderform333.jsp" />
+    </definition>
+    <definition name="orderFormPart" extends="main">
+    	<put-attribute name="title" value="선택상품대여하기" />
+    	<put-attribute name="body"
+    		value="/WEB-INF/views/itemcart/orderFormPart.jsp" />
+    </definition>
     <definition name="orderCheck" extends="main">
     	<put-attribute name="title" value="대여하기" />
     	<put-attribute name="body"

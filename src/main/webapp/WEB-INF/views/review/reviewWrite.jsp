@@ -2,30 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 </script>
-	<div class="welcome-section text-center ptb-110">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="breadcurbs-inner">
-						<div class="breadcrubs"> 
-							<h2>여행후기 글쓰기</h2>
-							<div class="breadcrubs-menu">
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/main/main.do">Home<i class="mdi mdi-chevron-right"></i></a></li>
-									<li>Review</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 <!-- 중앙 컨텐츠 시작 -->
 <div class="container write-form w_800">
 	<!-- 컨텐츠 시작 -->
 	<div class="row">
-		<h1 class="col-xs-12 text-center margin-top"><span class="text-green">Hello World</span> 와 추억을 남겨보세요.</h1>
+		<!-- <h1 class="col-xs-12 text-center margin-top"><span class="text-green">Hello World</span> 와 추억을 남겨보세요.</h1> -->
 		<section><br><br><br></section>
 			<form:form commandName="command" action="write.do" id="register_form" enctype="multipart/form-data" accept="image/*">
 			<form:hidden path="user_id"/>
@@ -37,16 +18,17 @@
 					<li>
 						<label for="tr_title">제목</label>
 						<form:input path="tr_title"/>
-						<form:errors path="tr_title" cssClass="error-color" />
+						<form:errors path="tr_title" style="color:white;" />
 					</li>
 					<li>
 					   <label for="tr_content">내용</label>			
 				       <form:textarea path="tr_content" style="height:250px;"/>
-				       <form:errors path="tr_content" cssClass="error-color"/>   
+				       <form:errors path="tr_content" style="color:white;" />   
 		            </li>
 		            <li>		
 					   <label for="tr_upload">파일업로드 </label> 
 				       <input id="tr_upload" name="tr_upload" type="file" class="form-control" style="height:50px;"/> 						
+		               <form:errors path="tr_upload" style="color:white;" /> 
 		            </li>
 		        </ul>
             </div>

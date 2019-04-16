@@ -19,7 +19,8 @@
 			tr_content,
 			tr_reg_date,
 			ti_id,
-			user_id	
+			user_id	,
+			tr_hit
 		FROM travel_review
 		<where>
 			<if test="keyword != '' and keyfield == 'tr_title'">
