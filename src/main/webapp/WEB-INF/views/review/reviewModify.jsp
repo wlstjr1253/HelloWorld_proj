@@ -8,8 +8,9 @@
 	<!-- 컨텐츠 시작 -->
 	<div class="row">
 		<div class="margin-top">
-			<form:form commandName="command" action="write.do" id="register_form" enctype="multipart/form-data" accept="image/*">
+			<form:form commandName="command" action="update.do" id="register_form" enctype="multipart/form-data" accept="image/*">
 			<form:hidden path="user_id"/>
+			<form:hidden path="tr_idx"/>
 			<form:hidden path="pi_id" value="1"/>
 			<form:hidden path="ti_id" value="1"/>
 			<div class="row">
