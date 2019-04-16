@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/member.js"></script>
 <!-- 중앙 컨텐츠 시작 -->
 </div>
@@ -33,7 +34,7 @@
 							<c:if test="${pay.ph_knd==3}">투어 결제</c:if>
 							<c:if test="${pay.ph_knd==4}">물품 대여</c:if>
 						</td>
-						<td>${pay.ph_pay}</td>
+						<td><fmt:formatNumber value="${pay.ph_pay}" pattern="#,###,###,###원"/> </td>
 						<td>
 							<c:if test="${pay.ph_pay_type==0}">현금</c:if>
 							<c:if test="${pay.ph_pay_type==1}">카드</c:if>
