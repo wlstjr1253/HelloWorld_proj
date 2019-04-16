@@ -1876,6 +1876,9 @@ alter table tour_info add (user_id varchar2(20));
 alter table tour_info add (reg_date date);
 alter table tour_info add (re_cnt number);
 alter table tour_info add (ti_select number default 0 not null);
+추가 수정 사항
+alter table tour_info modify(ti_nm varchar2(50));
+
 
 --ITEM_BUY_HIST 테이블 수정사항
 alter table item_buy_hist add (ibh_email varchar2(50 byte)); --주문자 이메일주소

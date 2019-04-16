@@ -42,9 +42,17 @@
 			<input type="button" value="목록" onclick="location.href='list.do'">
 		</div>
 		<div class="btn-submit col-xs-12 align-right">       <!-- 일반 회원일 경우 -->
-
 				 <%-- <input type="button" value="신청하기"  onclick="location.href='apply.do?ti_id=${tour_info.ti_id}'"> --%> 
-			<!-- 모달 시작 -->
+		<c:if test="${!empty user_id && user_id != tour_info.user_id}">
+           		<form action="apply.do" method="post" id="tour_apply" enctype="multipart/form-data">
+           		       <input type="button" class="btn btn-primaty" value="신청"  onclick="location.href='apply.do'">
+           					     <input type="hidden" name="ti_id" value="${tour_info.ti_id}" id="ti_id">
+				                 <input type="hidden" name="user_id" value="${user_id}" id="user_id">
+           		</form>
+		</c:if>
+		<br><br><br><br><br><br>
+		     <!-- 모달 끝 -->
+		     <%-- <!-- 모달 시작 -->
 		<c:if test="${!empty user_id && user_id != tour_info.user_id}">
            		      <a href="#writeModal" class="btn btn-primary" data-toggle="modal">신청하기</a>
            				<div class="modal fade" id="writeModal">
@@ -81,7 +89,7 @@
            				</div>
 		</c:if>
 		<br><br><br><br><br><br>
-		     <!-- 모달 끝 -->
+		     <!-- 모달 끝 --> --%>
 		</div>
 	<div id="reply_div">
            

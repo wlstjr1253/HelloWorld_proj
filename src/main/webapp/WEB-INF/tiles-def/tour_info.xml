@@ -30,5 +30,20 @@
     	<put-attribute name="body" 
     		value="/WEB-INF/views/tour_info/tour_infoMemberList.jsp" />
     </definition>
+    <definition name="tour_infoGuideList" extends="main">
+    	<put-attribute name="title" value="투어신청자목록" />
+    	<put-attribute name="body" 
+    		value="/WEB-INF/views/tour_info/tour_infoGuideList.jsp" />
+    </definition>
+    <definition name="tour_infoRsrv" extends="main">
+    	<put-attribute name="title" value="투어신청하기" />
+    	<put-attribute name="body" 
+    		value="/WEB-INF/views/tour_info/tour_infoRsrv.jsp" />
+    </definition>
+    <definition name="tour_infoResult" extends="main">
+    	<put-attribute name="title" value="투어신청 결과" />
+    	<put-attribute name="body" 
+    		value="/WEB-INF/views/tour_info/tour_infoResult.jsp" />
+    </definition>
 </tiles-definitions>
 
