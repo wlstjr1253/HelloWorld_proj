@@ -23,6 +23,8 @@ import org.springframework.web.servlet.ModelAndView;
 import kr.spring.flight.domain.FlightCommand;
 import kr.spring.flight.domain.FlightRsrvCommand;
 import kr.spring.flight.service.FlightService;
+import kr.spring.hotel.domain.HotelRsrvCommand;
+import kr.spring.hotel.domain.HotelVwCommand;
 import kr.spring.util.PagingUtil;
 
 @Controller
@@ -85,11 +87,29 @@ public class FlightController {
 	} 
 	
 	@RequestMapping("/flight/flightRsrv.do")
-	public ModelAndView flightRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand, 
-			@RequestParam("cp_num") int cp_num, @RequestParam("cp_pin_num") int cp_pin_num,
-			@RequestParam("cp_year_month") String cp_year_month, HttpSession session) {
+	public ModelAndView hotelRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand, HttpSession session) {
 
 		flightRsrvCommand.setUser_id((String)session.getAttribute("user_id"));
+		FlightCommand flightCommand = flightService.selectFlight(flightRsrvCommand.getFsi_idx());
+		
+		if(log.isDebugEnabled()) {
+			log.debug("<<flightRsrvCommand>> : " + flightRsrvCommand);
+			log.debug("<<flightCommand>> : " + flightCommand);
+		}
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("flightRsrv");
+		mav.addObject("rsrv", flightRsrvCommand);
+		mav.addObject("flightCommand", flightCommand);
+
+		return mav;
+	}
+	
+	@RequestMapping("/flight/flightResult.do")
+	public ModelAndView flightRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand,
+			@RequestParam("cp_num") int cp_num, @RequestParam("cp_pin_num") int cp_pin_num,
+			@RequestParam("cp_year_month") String cp_year_month) {
+
 		FlightCommand flightCommand = flightService.selectFlight(flightRsrvCommand.getFsi_idx());
 
 		Map<String,Object> map = new HashMap<String, Object>();
@@ -118,6 +138,9 @@ public class FlightController {
 			log.debug("<<flightCommand>> : " + flightCommand);
 			log.debug("<<map>> : " + map );
 		}
+		
+		flightService.flightRsrv(map);
+		
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("flightRsrv");
