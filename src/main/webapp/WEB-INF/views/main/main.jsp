@@ -6,7 +6,7 @@
 <!-- Header section end -->
 
 <!--About Section Title start-->
-<div class="about-section text-center ptb-80 white_bg clearfix container">
+<%-- <div class="about-section text-center ptb-80 white_bg clearfix container">
     <div class="row">
         <ul class="package-carousel">
             <li class="item">
@@ -40,7 +40,7 @@
             </li> 
         </ul>
     </div>
-</div>
+</div> --%>
 <!--About Section end-->
 
 <!--Our services start-->

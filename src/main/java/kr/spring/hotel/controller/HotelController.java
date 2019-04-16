@@ -29,10 +29,10 @@ public class HotelController {
 	private HotelService hotelService;
 
 	@RequestMapping("/hotel/hotelList.do")
-	public ModelAndView hotelList(@RequestParam("hotel_nc") String hotel_nc,
-			@RequestParam("hotel_type") String hotel_type,
-			@RequestParam("hotel_adult") int hotel_adult,
-			@RequestParam("hotel_kid") int hotel_kid) {
+	public ModelAndView hotelList(@RequestParam(value="hotel_nc", defaultValue="ALL") String hotel_nc,
+			@RequestParam(value="hotel_type", defaultValue="ALL") String hotel_type,
+			@RequestParam(value="hotel_adult", defaultValue="0") int hotel_adult,
+			@RequestParam(value="hotel_kid", defaultValue="0") int hotel_kid) {
 
 		if(log.isDebugEnabled()) log.debug("<<hotel list>>{hotel_nc : " + hotel_nc + ", hotel_type : " + hotel_type + ", hotel_adult : " + hotel_adult + ", hotel_kid : " + hotel_kid + "}");
 		

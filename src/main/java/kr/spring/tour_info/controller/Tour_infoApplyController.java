@@ -43,7 +43,7 @@ public class Tour_infoApplyController {
 	
 	model.addAttribute("command",command);
 	
-	return "tour_infoApply";
+	return "tour_infoRsrv";
 	}
 	//등록 데이터 전송
 	@RequestMapping(value="/tour_info/apply.do",method=RequestMethod.POST)
