@@ -6,7 +6,6 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.web.multipart.MultipartFile;
 
 public class MemberCommand {
 	@NotEmpty
@@ -31,6 +30,45 @@ public class MemberCommand {
 	@Size(min=4,max=20)
 	private String old_pw;
 	
+	//결제 내역
+	private String ph_pay_type;
+	private int ph_pay;
+	private Date ph_reg_dt;
+	private int ph_knd;
+	
+	
+	public String getPh_pay_type() {
+		return ph_pay_type;
+	}
+
+	public void setPh_pay_type(String ph_pay_type) {
+		this.ph_pay_type = ph_pay_type;
+	}
+
+	public int getPh_pay() {
+		return ph_pay;
+	}
+
+	public void setPh_pay(int ph_pay) {
+		this.ph_pay = ph_pay;
+	}
+
+	public Date getPh_reg_dt() {
+		return ph_reg_dt;
+	}
+
+	public void setPh_reg_dt(Date ph_reg_dt) {
+		this.ph_reg_dt = ph_reg_dt;
+	}
+
+	public int getPh_knd() {
+		return ph_knd;
+	}
+
+	public void setPh_knd(int ph_knd) {
+		this.ph_knd = ph_knd;
+	}
+
 	// 비밀번호 일치 여부 체크
 	public boolean isCheckedPasswd(String user_pw) {
 		if (user_auth > 0 && user_pw.equals(user_pw)) {

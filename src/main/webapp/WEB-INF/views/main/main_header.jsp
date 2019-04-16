@@ -58,7 +58,7 @@
 					        <p>얼마없는 호텔을 검색해 보세요! 나오면 사고 없음 딴데 가보고</p>
 					    </div>
 					    <div class="booking-form">
-					        <form action="${pageContext.request.contextPath}/hotel/hotelList.do" id="hotel_reg_form">
+					        <form action="${pageContext.request.contextPath}/hotel/hotelList.do" id="hotel_reg_form" method="post">
 					         <div class="select-book mb-15">
 					             <select <%-- class="select-booking" --%> name="hotel_nc" id="hotel_nc">
 			                        <option value="ALL" selected>숙박 도시 선택</option>
@@ -136,9 +136,9 @@
                     </h1>
                     <!-- <p class="welcome-desc">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p> -->
                         <p class="welcome-desc">많은 여행자들에게 부담없는 가격으로 인기를 얻고 있는 패키지! <br> 현지인에게 안내받는 효율만점 투어! <br> Hello World 만의 특별한 여행을 즐겨 보세요!</p>
-                        <div class="explore">
+                        <%-- <div class="explore">
                             <a href="${pageContext.request.contextPath}/packTour/packTour.jsp">패키지/투어 떠나기</a>
-                        </div>
+                        </div> --%>
                     </div>
                 </div>
             </div>

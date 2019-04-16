@@ -124,7 +124,7 @@
 	<select id="selectPayHistory" parameterType="map"
 		resultType="memberCommand">
 		SELECT
-		*
+			user_id, ph_pay_type, ph_pay, ph_reg_dt, ph_knd
 		FROM 
 		payment_hist
 		<where>
@@ -132,8 +132,8 @@
 				user_id like '%' || #{keyword} || '%'
 			</if>
 		</where>
-		ORDER BY ph_reg_dt ASC)a)
-		WHERE user_id = #{keyword} 
+		ORDER BY ph_reg_dt DESC
+		<!-- WHERE user_id = #{keyword} --> 
 	</select>
 <!-- 
 	<select id="selectRowCount" parameterType="map"

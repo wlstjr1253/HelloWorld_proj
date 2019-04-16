@@ -43,7 +43,7 @@ public class Tour_infoApplyController {
 	
 	model.addAttribute("command",command);
 	
-	return "tour_infoApply";
+	return "tour_infoRsrv";
 	}
 	//등록 데이터 전송
 	@RequestMapping(value="/tour_info/apply.do",method=RequestMethod.POST)
@@ -126,7 +126,7 @@ public class Tour_infoApplyController {
 			map.put("user_id", user_id);*/
 			
 			//총 글의 개수 또는 검색된 글의 개수
-			int count = tour_infoService.selectRowCountApply(map);
+			int count = tour_infoService.selectRowCountGuide(map);
 			
 			if(log.isDebugEnabled()) {
 				log.debug("<<count>> : " + count);
@@ -138,7 +138,7 @@ public class Tour_infoApplyController {
 	   		
 			List<Tour_infoApplyCommand> list = null;
 			if(count > 0) {
-				list = tour_infoService.selectListApply(map);
+				list = tour_infoService.selectListGuide(map);
 			}
 			
 			if(log.isDebugEnabled()) {
