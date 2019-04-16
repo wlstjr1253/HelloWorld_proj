@@ -146,7 +146,7 @@ public class Tour_infoApplyController {
 	   		}
 			
 			ModelAndView mav = new ModelAndView();//뷰처리
-			mav.setViewName("tour_infoMemberList");//데피니션 설정 지정  
+			mav.setViewName("tour_infoGuideList");//데피니션 설정 지정  
 			mav.addObject("count", count);
 			mav.addObject("list", list);
 			mav.addObject("pagingHtml", page.getPagingHtml());

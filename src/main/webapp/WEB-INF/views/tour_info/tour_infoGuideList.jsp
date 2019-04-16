@@ -14,8 +14,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<!-- <div class=welcome-text> -->
-			 <c:if test="${!empty user_id && user_id == tour_info.user.id}">
-				<c:if test="${count == 0 && tour_info.user_id}">
+				<c:if test="${count == 0}">
 					<div class="align-center">등록한 투어 게시물이 없습니다.</div>
 				</c:if>
 				<c:if test="${count > 0}">
@@ -25,8 +24,8 @@
 							<tr>
 								<th>투어 ID</th>
 								<th width="250">투어 명</th>
-								<th>작성자</th>
-								<th>시작 일자</th>
+								<th>신청자</th>
+								<th>시청 일자</th>
 								<!-- <th>조회수</th> -->
 							</tr>
 							<c:forEach var="tour_info" items="${list}">
@@ -42,7 +41,6 @@
 					</div>
 					<div class="align-center">${pagingHtml}</div>
 				  </c:if>
-				</c:if>
 			</div>
 		</div>
 		</div>

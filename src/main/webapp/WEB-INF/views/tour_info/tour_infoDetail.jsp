@@ -20,6 +20,7 @@
           </div>		
 		</c:if>
 		<ul>
+		    <li>투어 ID : ${tour_info.ti_id}</li>
 			<li>1.작성자 : ${tour_info.user_id}</li>
 			<li>2.작성일자 : ${tour_info.reg_date}</li>
 			<li>3.투어 경비 : ${tour_info.ti_pc}</li>
