@@ -13,7 +13,7 @@
 			<div class="col-md-12">
 				<div class="section-title mb-80">
 					<h2>
-						<span>Flight</span> List
+						Flight<span>List</span> 
 					</h2>
 					<form action="list.do" id="search_form" method="get">
 						<ul class="search">

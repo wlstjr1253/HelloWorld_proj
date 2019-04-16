@@ -69,6 +69,15 @@
 					</ul>
 				</div>
 				<div class="service-tab-desc text-left mt-60">
+				<input type="hidden" id="fsi_fir_pc" value="${flightCommand.fsi_fir_pc}">
+				<input type="hidden" id="fsi_bus_pc" value="${flightCommand.fsi_bus_pc}">
+				<input type="hidden" id="fsi_eco_pc" value="${flightCommand.fsi_eco_pc}">
+				<input type="hidden" id="fsi_fir_mil" value="${flightCommand.fsi_fir_mil}">
+				<input type="hidden" id="fsi_bus_mil" value="${flightCommand.fsi_bus_mil}">
+				<input type="hidden" id="fsi_eco_mil" value="${flightCommand.fsi_eco_mil}">
+				<input type="hidden" id="fr_rsrv_seat_type" value="${rsrv.fr_rsrv_seat_type}">
+				<input type="hidden" id="fr_adult_pp" value="${rsrv.fr_adult_pp}">
+				<input type="hidden" id="fr_kid_pp" value="${rsrv.fr_kid_pp}">	
 					<div class="tab-content">
 						<div role="tabpanel" class="tab-pane" id="done">
 							<div class="booking-done">
@@ -77,22 +86,22 @@
 										<tr>
 											<td>
 												<p>
-													성인 <span><fmt:formatNumber value="${flightCommand.fsi_fir_pc}" pattern="#,###"/> 원</span>
+													성인 <span><input type="text" id="fr_seat_money_1" style="width:100px;text-align:center;" ></span>
 												</p>
 											</td>
 											<td>
 												<p>
-													${rsrv.fr_adult_pp} 명 <span><fmt:formatNumber value="${flightCommand.fsi_fir_pc * rsrv.fr_adult_pp}" pattern="#,###"/> 원</span>
+													${rsrv.fr_adult_pp} 명 <span><input type="text" id="fr_seat_money_2" style="width:100px;text-align:center;" ></span>
 												</p>
 											</td>
 											<td>
 												<p>
-													어린이 <span><fmt:formatNumber value="${flightCommand.fsi_fir_pc}" pattern="#,###"/> 원</span>
+													어린이 <span><input type="text" id="fr_seat_money_3" style="width:100px;text-align:center;" ></span>
 												</p>
 											</td>
 											<td>
 												<p>
-													${rsrv.fr_kid_pp} 명 <span><fmt:formatNumber value="${flightCommand.fsi_fir_pc * rsrv.fr_kid_pp}" pattern="#,###"/> 원</span>
+													${rsrv.fr_kid_pp} 명 <span><input type="text" id="fr_seat_money_4" style="width:100px;text-align:center;" ></span>
 												</p>
 											</td>
 										</tr>
@@ -106,7 +115,7 @@
 											<td></td>
 											<td>
 												<p>
-													<span><fmt:formatNumber value="${flightCommand.fsi_fir_mil * rsrv.fr_adult_pp + flightCommand.fsi_fir_mil * rsrv.fr_kid_pp}" pattern="#,###"/> 점</span>
+													<span><input type="text" id="fr_seat_mil" style="width:100px;text-align:center;" ></span>
 												</p>
 											</td>
 										</tr>
