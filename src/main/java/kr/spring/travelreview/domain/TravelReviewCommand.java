@@ -3,11 +3,14 @@ package kr.spring.travelreview.domain;
 import java.io.IOException;
 import java.sql.Date;
 
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 public class TravelReviewCommand {
 	private int tr_idx;//리뷰 번호
+	@NotEmpty
 	private String tr_title;//제목
+	@NotEmpty
 	private String tr_content;//내용
 	private int tr_hit;//조회수
 	private Date tr_reg_date;//작성일

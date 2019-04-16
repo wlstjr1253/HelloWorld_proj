@@ -40,6 +40,7 @@
 		</div> --%>
 		
 		<div class="col-xs-10 col-xs-offset-1">
+<<<<<<< HEAD
 			<c:if test="${count == 0}">
 				<div>
 					<div class="text-center margin-top margin-bottom"><h2>등록된 게시글이 없습니다.</h2></div>
@@ -47,12 +48,26 @@
 			</c:if>
 			
 			<c:if test="${count > 0}">
+=======
+		    <div align="right" class="col-xs-12margin-top-50">
+>>>>>>> f3485a42687a94d4065258ea3ef8bca16c7c4b01
 				<c:if test="${!empty user_id}">
 					<div align="right" class="margin-top-50">
 							<!-- <a class="button border_radius little button-black mb-20" href="write.do"><span>글쓰기</span></a> -->
 							<button class="btn btn-ok" onclick="location.href='write.do'"><span>글쓰기</span></button>
 					</div>
 				</c:if>
+<<<<<<< HEAD
+=======
+			</div>
+			<c:if test="${count == 0}">
+				<div>
+					<div class="text-center margin-top margin-bottom"><h2>등록된 게시글이 없습니다.</h2></div>
+				</div>
+			</c:if>
+			
+			<c:if test="${count > 0}">
+>>>>>>> f3485a42687a94d4065258ea3ef8bca16c7c4b01
 			<div class="table-responsive">
 				<table class="table table-striped">
 					<tr>

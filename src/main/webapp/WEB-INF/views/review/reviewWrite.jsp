@@ -18,16 +18,17 @@
 					<li>
 						<label for="tr_title">제목</label>
 						<form:input path="tr_title"/>
-						<form:errors path="tr_title" cssClass="error-color" />
+						<form:errors path="tr_title" style="color:white;" />
 					</li>
 					<li>
 					   <label for="tr_content">내용</label>			
 				       <form:textarea path="tr_content" style="height:250px;"/>
-				       <form:errors path="tr_content" cssClass="error-color"/>   
+				       <form:errors path="tr_content" style="color:white;" />   
 		            </li>
 		            <li>		
 					   <label for="tr_upload">파일업로드 </label> 
 				       <input id="tr_upload" name="tr_upload" type="file" class="form-control" style="height:50px;"/> 						
+		               <form:errors path="tr_upload" style="color:white;" /> 
 		            </li>
 		        </ul>
             </div>
