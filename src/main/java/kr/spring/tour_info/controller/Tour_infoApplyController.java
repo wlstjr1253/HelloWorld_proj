@@ -167,6 +167,17 @@ public class Tour_infoApplyController {
 		
 		return "redirect:/tour_info/applyList.do";
 	}
+	//가이드 쪽에서 신청 삭제
+		@RequestMapping("/tour_info/guideDelete.do")
+		public String submit2(@RequestParam("ta_idx") int ta_idx) {
+			if(log.isDebugEnabled()) {
+				log.debug("<<ta_idx>>:"+ta_idx);
+			}
+			
+			tour_infoService.deleteApply(ta_idx);
+			
+			return "redirect:/tour_info/GuideList.do";
+		}
 	
 	//========================================신청 결제 페이지(진석이거 임시로 가져온 거)========================================= 
 	/*@RequestMapping("/tour_info/tour_infoRsrv.do")

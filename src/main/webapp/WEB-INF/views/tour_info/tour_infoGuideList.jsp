@@ -31,6 +31,8 @@
 </div>
 <div class="container table-list">
 		<div class="row">
+		<br><br>
+		<br>
 			<div class="col-xs-12">
 				<!-- <div class=welcome-text> -->
 				<c:if test="${count == 0}">
@@ -42,9 +44,10 @@
 						<!-- <table class="table" style="width: 600px"> -->
 							<tr>
 								<th>투어 ID</th>
-								<th width="250">투어 명</th>
+								<th>투어 명</th>
 								<th>신청자</th>
 								<th>신청 일자</th>
+								<th>비고</th>
 								<!-- <th>조회수</th> -->
 							</tr>
 							<c:forEach var="tour_info" items="${list}">
@@ -53,7 +56,8 @@
 									<td>${tour_info.ti_id}</td>
 									<td><a href="detail.do?ti_id=${tour_info.ti_id}">${tour_info.ti_nm}</a></td>
 									<td>${tour_info.user_id}</td>
-									<td>${tour_info.ti_start_day}</td>
+									<td>${tour_info.ti_reg_dt}</td>
+									<td><a class="button border_radius little button-black mb-10" href="guideDelete.do?ta_idx=${tour_info.ta_idx}"><span>취소</span></a></td>
 								</tr>
 							</c:forEach>
 						</table>
@@ -63,7 +67,7 @@
 				<select name="keyfield" class="col-xs-2" >
        				<option value="user_id">신청자</option>
 					<option value="ti_id">투어 ID</option>
-					<option value="ta_idx">신청번호</option>
+					<option value="ti_nm">투어명</option>
 					<option value="all">전체</option>
 				</select>
 				<input type="text" name="keyword" id="keyword" class="col-xs-2" >

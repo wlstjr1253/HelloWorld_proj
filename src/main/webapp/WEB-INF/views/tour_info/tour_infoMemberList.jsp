@@ -48,7 +48,7 @@
 						   ${tour_info.ta_idx}
 						</td>
 						<td>
-							<a href="detail.do?ti_id=${tour_info.ti_nm}">${tour_info.ti_nm}</a>
+							<a href="detail.do?ti_id=${tour_info.ti_id}">${tour_info.ti_nm}</a>
 						</td>
 						<td>${tour_info.ti_id}</td>
 						<td>${tour_info.ti_reg_dt}</td>
