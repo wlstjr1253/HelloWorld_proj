@@ -20,7 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import kr.spring.board.domain.BoardCommand;
+import kr.spring.hotel.domain.HotelRsrvCommand;
+import kr.spring.hotel.domain.HotelVwCommand;
 import kr.spring.tour_info.domain.Tour_infoApplyCommand;
 import kr.spring.tour_info.service.Tour_infoService;
 import kr.spring.util.PagingUtil;
@@ -116,14 +117,15 @@ public class Tour_infoApplyController {
 		                            @RequestParam(value="keyword", defaultValue="")
 		                            String keyword,
 				                    HttpSession session) {
+			
+			String writer_user = (String)session.getAttribute("user_id");
+			
+			
 			Map<String,Object> map = new HashMap<String,Object>();//map 구조로 키필드와 키워드 넣어준다.
 			
 			map.put("keyfield", keyfield);
 			map.put("keyword", keyword);
-			
-			/*String user_id = (String)session.getAttribute("user_id");
-			
-			map.put("user_id", user_id);*/
+			map.put("user_id", writer_user);
 			
 			//총 글의 개수 또는 검색된 글의 개수
 			int count = tour_infoService.selectRowCountGuide(map);
@@ -154,7 +156,7 @@ public class Tour_infoApplyController {
 			return mav;
 		}
 	
-	//글 삭제
+	//신청 삭제
 	@RequestMapping("/tour_info/applyDelete.do")
 	public String submit(@RequestParam("ta_idx") int ta_idx) {
 		if(log.isDebugEnabled()) {
@@ -165,4 +167,69 @@ public class Tour_infoApplyController {
 		
 		return "redirect:/tour_info/applyList.do";
 	}
+	
+	//========================================신청 결제 페이지(진석이거 임시로 가져온 거)========================================= 
+	/*@RequestMapping("/tour_info/tour_infoRsrv.do")
+	public ModelAndView tour_infoRsrv(@ModelAttribute("command") @Valid HotelRsrvCommand hotelRsrvCommand, HttpSession session) {
+
+		hotelRsrvCommand.setUser_id((String)session.getAttribute("user_id"));
+		HotelVwCommand hotelVwCommand = tour_infoService.getRoomInfo(hotelRsrvCommand.getSr_id());
+		hotelVwCommand.setSt_cvntl_list(tour_infoService.selectCvntlList(hotelVwCommand.getSt_cvntl_id()));
+		
+		if(log.isDebugEnabled()) {
+			log.debug("<<hotelRsrvCommand>> : " + hotelRsrvCommand);
+			log.debug("<<hotelVwCommand>> : " + hotelVwCommand);
+		}
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("hotelRsrv");
+		mav.addObject("rsrv", hotelRsrvCommand);
+		mav.addObject("hotel", hotelVwCommand);
+
+		return mav;
+	}
+
+	@RequestMapping("/tour_info/tour_infoResult.do")
+	public ModelAndView hotelResult(@ModelAttribute("command") @Valid HotelRsrvCommand hotelRsrvCommand,
+			@RequestParam("cp_num") int cp_num, @RequestParam("cp_pin_num") int cp_pin_num,
+			@RequestParam("cp_year_month") String cp_year_month) {
+
+		HotelVwCommand hotelVwCommand = hotelService.getRoomInfo(hotelRsrvCommand.getSr_id());
+		hotelVwCommand.setSt_cvntl_list(hotelService.selectCvntlList(hotelVwCommand.getSt_cvntl_id()));
+		
+		Map<String,Object> map = new HashMap<String, Object>();
+		map.put("p_sr_id", hotelVwCommand.getSr_id());
+		map.put("p_user_id", hotelRsrvCommand.getUser_id());
+		map.put("p_total_pc", hotelRsrvCommand.getSrl_total_pc());
+		map.put("p_check_in_dt", hotelRsrvCommand.getSrl_check_in_dt());
+		map.put("p_check_out_dt", hotelRsrvCommand.getSrl_check_out_dt());
+		map.put("p_srl_nm", hotelRsrvCommand.getSrl_nm());
+		map.put("p_srl_email", hotelRsrvCommand.getSrl_email());
+		map.put("p_srl_phone", hotelRsrvCommand.getSrl_phone());
+		map.put("p_srl_adult_pp", hotelRsrvCommand.getSrl_adult_pp());
+		map.put("p_srl_kid_pp", hotelRsrvCommand.getSrl_kid_pp());
+		map.put("p_num", cp_num);
+		map.put("p_pin_num", cp_pin_num);
+		
+		String cp_ym[] = cp_year_month.split("/");
+		
+		map.put("p_year", Integer.parseInt(cp_ym[1]));
+		map.put("p_month", Integer.parseInt(cp_ym[0]));
+		
+		if(log.isDebugEnabled()) {
+			log.debug("<<hotelRsrvCommand>> : " + hotelRsrvCommand);
+			log.debug("<<hotelVwCommand>> : " + hotelVwCommand);
+			log.debug("<<map>> : " + map );
+		}
+		
+		hotelService.hotelRsrv(map);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("hotelResult");
+		mav.addObject("rsrv", hotelRsrvCommand);
+		mav.addObject("hotel", hotelVwCommand);
+
+		return mav;
+	}*/
+	
 }

@@ -37,7 +37,7 @@
 				<table class="table table-striped">
 					<tr>
 						<th>번호</th>
-						<th>회원 ID</th>
+						<th>투어명</th>
 						<th>투어 ID</th>
 						<th>신청일자</th>
 						<th>비고</th>
@@ -48,7 +48,7 @@
 						   ${tour_info.ta_idx}
 						</td>
 						<td>
-							${tour_info.user_id}
+							<a href="detail.do?ti_id=${tour_info.ti_nm}">${tour_info.ti_nm}</a>
 						</td>
 						<td>${tour_info.ti_id}</td>
 						<td>${tour_info.ti_reg_dt}</td>
