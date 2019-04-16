@@ -14,7 +14,8 @@ import kr.spring.travelreview.domain.TravelReviewCommand;
 public interface TravelReviewMapper {
 	public List<TravelReviewCommand> selectList(Map<String, Object> map);
 	public int selectRowCount(Map<String, Object> map);
-	@Insert("INSERT INTO travel_review (tr_idx,tr_title,tr_content,tr_reg_date,tr_img,user_id,pi_id,ti_id) VALUES (travel_review_seq.nextval, #{tr_title}, #{tr_content}, SYSDATE, #{tr_img}, #{user_id}, #{pi_id}, #{ti_id})")
+	@Insert("INSERT INTO travel_review (tr_idx,tr_title,tr_content,tr_reg_date,tr_img,user_id,pi_id,ti_id) "
+			+ "VALUES (travel_review_seq.nextval, #{tr_title}, #{tr_content}, SYSDATE, #{tr_img}, #{user_id}, #{pi_id}, #{ti_id})")
 	public void insert(TravelReviewCommand review);
 	@Select("SELECT * FROM travel_review WHERE tr_idx=#{tr_idx}")
 	public TravelReviewCommand selectBoard(Integer review);

@@ -17,8 +17,8 @@
     	<put-attribute name="title" value="항공권 예약" />
     	<put-attribute name="body" value="/WEB-INF/views/flight/flightRsrv.jsp" />
     </definition>
-    <definition name="flightPay" extends="main">
-    	<put-attribute name="title" value="항공권 결제" />
-    	<put-attribute name="body" value="/WEB-INF/views/flight/flightPay.jsp" />
+  	<definition name="flightResult" extends="main">
+    	<put-attribute name="title" value="항공권 예약 완료" />
+    	<put-attribute name="body" value="/WEB-INF/views/flight/flightResult.jsp" />
     </definition>
 </tiles-definitions>

@@ -3,32 +3,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </script>
-	<div class="welcome-section text-center ptb-110">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="breadcurbs-inner">
-						<div class="breadcrubs"> 
-							<h2>여행후기 수정</h2>
-							<div class="breadcrubs-menu">
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/main/main.do">Home<i class="mdi mdi-chevron-right"></i></a></li>
-									<li>Review</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 <!-- 중앙 컨텐츠 시작 -->
 <div class="container write-form w_800">
 	<!-- 컨텐츠 시작 -->
 	<div class="row">
-		<h1 class="col-xs-12 text-center margin-top"><span class="text-green">Hello World</span>  게시글 수정 하기</h1>
-		<section></section>
+		<div class="margin-top">
 			<form:form commandName="command" action="write.do" id="register_form" enctype="multipart/form-data" accept="image/*">
 			<form:hidden path="user_id"/>
 			<form:hidden path="pi_id" value="1"/>
@@ -58,6 +37,7 @@
 					onclick="location.href='list.do'">
 			</div>
 		    </form:form>
+		 </div>
 	</div>		
 </div>
 <!-- 중앙 컨텐츠 끝 -->

@@ -2,30 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 </script>
-	<div class="welcome-section text-center ptb-110">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="breadcurbs-inner">
-						<div class="breadcrubs"> 
-							<h2>여행후기 글쓰기</h2>
-							<div class="breadcrubs-menu">
-								<ul>
-									<li><a href="${pageContext.request.contextPath}/main/main.do">Home<i class="mdi mdi-chevron-right"></i></a></li>
-									<li>Review</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 <!-- 중앙 컨텐츠 시작 -->
 <div class="container write-form w_800">
 	<!-- 컨텐츠 시작 -->
 	<div class="row">
-		<h1 class="col-xs-12 text-center margin-top"><span class="text-green">Hello World</span> 와 추억을 남겨보세요.</h1>
+		<!-- <h1 class="col-xs-12 text-center margin-top"><span class="text-green">Hello World</span> 와 추억을 남겨보세요.</h1> -->
 		<section><br><br><br></section>
 			<form:form commandName="command" action="write.do" id="register_form" enctype="multipart/form-data" accept="image/*">
 			<form:hidden path="user_id"/>
