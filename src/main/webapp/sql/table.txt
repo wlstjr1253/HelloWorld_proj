@@ -1882,7 +1882,7 @@ alter table tour_info add (ti_select number default 0 not null);
 20190416
 alter table tour_info modify(ti_nm varchar2(50));
 ALTER TABLE tour_info DROP COLUMN nc_cd;
-ALTER TABLE tour_info MODIFY (ti_state number default 0 null);
+ALTER TABLE tour_info MODIFY (ti_state number);
 ALTER TABLE tour_info MODIFY ti_state default 0 null;
 
 --ITEM_BUY_HIST 테이블 수정사항
