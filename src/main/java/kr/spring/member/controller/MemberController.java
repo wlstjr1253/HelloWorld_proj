@@ -320,6 +320,10 @@ public class MemberController {
 		String user_id=(String)session.getAttribute("user_id");
 		keyword = user_id;
 		
+		if(log.isDebugEnabled()) {
+			log.debug("<<keyword>> : " + keyword);
+		}
+		
 		Map<String,Object> map = new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);

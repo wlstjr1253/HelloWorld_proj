@@ -1,65 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<style>
-input[type="text"],textarea{
-	background-color:#FFFFFF;
-	border:1px solid gray;
-}
-input[type="file"]{
-	color:#000000;
-	background-color:#FFFFFF;
-	border:none;
-}
-label,h2{
-	color:#000000 !important;
-}
-h2{
-	margin-top:50px;
-	margin-bottom:50px;
-}
-</style>
-</div>
 <!-- 중앙 컨텐츠 시작 -->
-<div class="tour_infoWrite write-form w_600">
+<div class="container write-form w_800">
 	<!-- 컨텐츠 시작 -->
-	<div class="container">
-		<div class="row">
-			<h2>여행후기 등록</h2>
-				<form:form commandName="command" action="write.do" enctype="multipart/form-data" id="register_form" cssClass="form-horizontal"
-				     accept="image/*">
-					<form:hidden path="user_id" value="dragon"/>
-					<form:hidden path="pi_id" value="1"/>
-					<form:hidden path="ti_id" value="1"/>
-					<form:errors element="div" cssClass="error-color" />
-					<div class="form-group">
-					    <label for="tr_title" class="col-md-2" id="tr_title">제목</label> 
-				        <div class="col-lg-6">
-				    		<form:input path="tr_title" cssClass="form-control"/>
-							<form:errors path="tr_title" cssClass="error-color" />
-					    </div>
-					 </div>	
-					<div class="form-group">
-					     <label for="tr_content" class="col-md-2">내용</label>
-					     <div class="col-lg-6">
-				               <form:textarea path="tr_content"/>
-				               <form:errors path="tr_content" cssClass="error-color"/>
-				        </div>
-		            </div>
-		             <div class="form-group">		
-							<label for="tr_upload" class="col-md-2">파일업로드 </label> 
-							<div class="col-lg-6">
-					          <input id="tr_upload" name="tr_upload" type="file" class="form-control" style="height:50px;"/> 
-							</div>
-		            </div>	
-					 <div class="form-group">
-					     <div class="btn-submit">
-						   <input type="submit" value="전송" class="btn btn-ok" id="tour_register">
-						   <input type="button" value="목록" class="btn btn-ok" onclick="location.href='list.do'"> 
-					     </div>
-					</div>
-			</form:form>
-		</div>
-	</div>
+	<div class="row">
+		<h1 class="col-xs-12 text-center margin-top"><span class="text-green">Hello World</span> 와 추억을 남겨보세요.</h1>
+		<section><br><br><br></section>
+			<form:form commandName="command" action="write.do" id="register_form">
+			<div class="row">
+				<form:errors element="div" cssClass="error-color" />
+				<ul class="col-xs-6 col-xs-offset-3 flightForm">
+					<li>
+						<label for="tr_title">제목</label>
+						<form:input path="tr_title"/>
+						<form:errors path="tr_title" cssClass="error-color" />
+					</li>
+				
+				
+					<li>
+					   <label for="tr_content">내용</label>			
+				       <form:textarea path="tr_content" style="height:250px;"/>
+				       <form:errors path="tr_content" cssClass="error-color"/>   
+		            </li>
+		            <li>		
+					   <label for="tr_upload">파일업로드 </label> 
+				       <input id="tr_upload" name="tr_upload" type="file" class="form-control" style="height:50px;"/> 						
+		            </li>
+		        </ul>
+            </div>
+            <div class="btn-submit col-xs-12 margin-bottom">
+				<input type="submit" value="전송" class="btn btn-ok">
+				<input type="button" value="목록" class="btn btn-ok" 
+					onclick="location.href='list.do'">
+			</div>
+		    </form:form>
+	</div>		
 </div>
 <!-- 중앙 컨텐츠 끝 -->
