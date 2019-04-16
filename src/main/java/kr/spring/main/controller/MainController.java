@@ -11,6 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import kr.spring.tour_info.domain.Tour_infoCommand;
 import kr.spring.tour_info.service.Tour_infoService;
+import kr.spring.travelreview.domain.TravelReviewCommand;
+import kr.spring.travelreview.service.TravelReviewService;
 
 @Controller
 public class MainController {
@@ -19,6 +21,8 @@ public class MainController {
 
 	@Resource
 	private Tour_infoService tour_infoService;
+	@Resource
+	private TravelReviewService travelReviewService;
 	/*private HotelService hotelService;*/
 
 	@RequestMapping("/main/main.do")
@@ -27,10 +31,17 @@ public class MainController {
 		if(log.isDebugEnabled()) log.debug("<<main>>");
 		
 		List<Tour_infoCommand> tour_list = tour_infoService.selectMainList();
+		List<TravelReviewCommand> review = travelReviewService.selectMainList();
+		
+		if(log.isDebugEnabled()) {
+			log.debug("<<tour_list>> : " + tour_list);
+			log.debug("<<review>> : " + review);
+		}
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("main");
 		mav.addObject("tour_list", tour_list);
+		mav.addObject("review", review);
 
 		return mav;
 	}

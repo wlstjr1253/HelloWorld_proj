@@ -124,7 +124,10 @@
 				    fsi_pass1_dt,
 				    fsi_fir_pc,
 					fsi_bus_pc,
-					fsi_eco_pc
+					fsi_eco_pc,
+					fsi_fir_mil,
+					fsi_bus_mil,
+					fsi_eco_mil
 				FROM flight_spot_info fsi LEFT OUTER JOIN flight_info fi USING (fi_id)
 			 	WHERE fsi.fsi_idx=#{fsi_idx}
 	</select>

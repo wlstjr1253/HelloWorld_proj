@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/flightRsrv.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/flightPayRsrv.js"></script>
+
 	<!--Welcome secton-->
 	<div class="welcome-section text-center ptb-110">
 		<div class="container">
@@ -42,6 +44,9 @@
 		<form action="flightResult.do" method="post" id="rsrv_form"> 
 			<input type="hidden" name="fsi_idx" value="${rsrv.fsi_idx}" />
 			<input type="hidden" name="user_id" value="${rsrv.user_id}" />
+			<input type="hidden" id="fsi_fir_pc" value="${flightCommand.fsi_fir_pc}">
+			<input type="hidden" id="fsi_bus_pc" value="${flightCommand.fsi_bus_pc}">
+			<input type="hidden" id="fsi_eco_pc" value="${flightCommand.fsi_eco_pc}">
 			<div class="row">
 				<!-- 수정예정 -->
 				<%-- <input type="hidden" name="user_id" value="suywook91" />
@@ -91,10 +96,12 @@
 											${flightCommand.fsi_arrive_city}(${flightCommand.fsi_arrive_nation})
 											</h3>
 											<div class="room_price">
-												<h4>FIRST CLASS</h4>
+												<h2 id="seat_class_type">Economy Class</h2>
 												<h5>총 가격</h5>
 												<h5>
-													<input type="text" id="total_pc_str" placeholder="0 원"><span>/?</span>
+													<input type="hidden" name="fr_total_pc" id="fr_total_pc">
+													<input type="text" id="total_pc_fr" style="width:100px;" placeholder="0 원">
+													<span>/<input type="text" id="total_pp_fr" style="width:100px;" placeholder="0 명"></span>
 												</h5>
 												<p>가격 시세는 일별로 변동이 있을 수 있으며 결제를 완료한 고객에게 먼저 예약이 완료 됩니다.</p>
 											</div>
@@ -105,45 +112,53 @@
 											<!-- 1열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
+												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
 													<input class="date-picker" type="text"
 														placeholder="arrive date"
 														value="${flightCommand.fsi_start_dt}"> 
-														<i class="mdi mdi-calendar-text"></i>
+														<i class="mdi mdi-calendar-text" style="padding-top:20px;"></i>
 												</div>
 												<div class="date-to mb-20">
+												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
 													<input type="text" value="${flightCommand.fsi_start_city}">
 												</div>
 												<div class="name mb-15">
-													<input type="number" name="fr_adult_pp" id="fr_adult_pp" placeholder="성인인원" />
+												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
+													<input type="number" min="0" name="fr_adult_pp" id="fr_adult_pp" class="select-booking cal" placeholder="성인인원" />
 												</div>
 											</div>
 											<!-- 1열 끝 -->
 											<!-- 2열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
+												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
 													<input class="date-picker" type="text"
 														placeholder="Departure Date"
 														value="${flightCommand.fsi_arrive_dt}"> 
-														<i class="mdi mdi-calendar-text"></i>
+														<i class="mdi mdi-calendar-text"  style="padding-top:20px;"></i>
 												</div>
 												<div class="date-to mb-20">
+													<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
 													<input type="text" value="${flightCommand.fsi_pass1_city}">
 												</div>
 												<div class="name mb-15">
-													<input type="number" name="fr_kid_pp" id="fr_kid_pp" placeholder="유아인원" />
+													<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
+													<input type="number" min="0" name="fr_kid_pp" id="fr_kid_pp" class="select-booking cal" placeholder="유아인원" />
 												</div>
 											</div>
 											<!-- 2열 끝 -->
 											<!-- 3열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
+												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
 													<input type="text" value="${flightCommand.fsi_arrive_city}">
 												</div>
 												<div class="select-option mb-20"> 
+												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
 													<select id="fr_rsrv_seat_type" name="fr_rsrv_seat_type">
-														<option value="FIR">First</option>
-														<option value="BUS">Business</option>
-														<option value="ECO" selected>economy</option>
+														<option value="FIR">First Class</option>
+														<option value="BUS">Business Class</option>
+														<option value="ECO" selected>Economy Class</option>
 													</select>
 												</div>
 											</div>

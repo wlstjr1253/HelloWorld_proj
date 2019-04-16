@@ -55,4 +55,9 @@ public class TravelReviewServiceImpl implements TravelReviewService {
 	public void delete(Integer review) {
 		travelReviewMapper.delete(review);
 	}
+
+	@Override
+	public List<TravelReviewCommand> selectMainList() {
+		return travelReviewMapper.selectMainList();
+	}
 }

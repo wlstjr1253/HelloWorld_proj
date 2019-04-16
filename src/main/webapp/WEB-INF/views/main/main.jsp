@@ -82,6 +82,11 @@
 	                </div>
                 </c:forEach>
             </div>
+			<div class="booking-form-list mt-10">
+				<div class="prve-next-box" align="right">
+					<button type="button" onclick="location.href='${pageContext.request.contextPath}/tour_info/list.do'">더 보기</button>
+				</div>
+			</div>
         </div>
     </div>
 </div>
@@ -103,7 +108,7 @@
                     <div class="col-md-4">
                         <div class="single-staff">
                             <div class="sraff-inner">
-                                <img src="${pageContext.request.contextPath}/resources/images/staff/staff1.jpg" alt="">
+                                <img src="${pageContext.request.contextPath}/resources/images/staff/staff1.jpg" width="500" height="300">
                                 <div class="staff-title">
                                     <span class="fas fa-plus"></span>
                                     <h2>Soleman</h2>
@@ -254,44 +259,33 @@
 <div class="container main-board-list mb-100">
     <div class="row">
         <div class="section-title mb-20">
-            <h2><span>여행 후기</span></h2>
+            <h2>여행 후기 <span>REVIEW</span></h2>
         </div>
         <table class="table table-striped table-responsive table-hover">
             <thead>
                 <tr>
-                    <th>등록일</th>
-                    <th>제목</th>
-                    <th>작성자</th>
+                	<th style="text-align: center;">글번호</th>
+                    <th style="text-align: center;">등록일</th>
+                    <th style="text-align: center;">제목</th>
+                    <th style="text-align: center;">작성자</th>
                 </tr>
             </thead>
             <tbody>
+            	<c:forEach var="review" items="${review}">
                 <tr>
-                    <td>2019.01.01</td>
-                    <td>즐거웠던 바르셀로나</td>
-                    <td>메시</td>
+                    <td>${review.tr_idx}</td>
+                    <td>${review.tr_reg_date}</td>
+                    <td><a href="${pageContext.request.contextPath}/review/detail.do?tr_idx=${review.tr_idx}" target="_blank">${review.tr_title}</a></td>
+                    <td>${review.user_id}</td>
                 </tr>
-                <tr>
-                    <td>2019.01.01</td>
-                    <td>즐거웠던 바르셀로나</td>
-                    <td>메시</td>
-                </tr>
-                <tr>
-                    <td>2019.01.01</td>
-                    <td>즐거웠던 바르셀로나</td>
-                    <td>메시</td>
-                </tr>
-                <tr>
-                    <td>2019.01.01</td>
-                    <td>즐거웠던 바르셀로나</td>
-                    <td>메시</td>
-                </tr>
-                <tr>
-                    <td>2019.01.01</td>
-                    <td>즐거웠던 바르셀로나</td>
-                    <td>메시</td>
-                </tr>
+                </c:forEach>
             </tbody>
         </table>
     </div>
+	<div class="booking-form-list mt-10">
+		<div class="prve-next-box" align="right">
+			<button type="button" onclick="location.href='${pageContext.request.contextPath}/review/list.do'">더 보기</button>
+		</div>
+	</div>
 </div>
 <!-- 여행후기 list -->
