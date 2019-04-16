@@ -31,7 +31,7 @@
 						</ul>
 					</form>
 					<c:if test="${fCount == 0}">
-					<div class="align-center">등록된 게시물이 없습니다.</div>
+					<div class="align-center">조회된 호텔이 없습니다.</div>
 					</c:if>
 					<c:if test="${fCount > 0}">
 					<div class="table-responsive">
@@ -42,11 +42,11 @@
 								<th>출발지</th>
 								<th>도착지</th>
 								<th>경유지1</th>
-								<th>경유지2</th>
+								
 								<th>출발시간</th>
 								<th>도착시간</th>
 								<th>경유1시간</th>
-								<th>경유2시간</th>
+								
 							</tr>
 							<c:forEach var="flight" items="${fList}">
 							<tr>
@@ -62,11 +62,11 @@
 								<td>${flight.fsi_start_city}</td>
 								<td>${flight.fsi_arrive_city}</td>
 								<td>${flight.fsi_pass1_city}</td>
-								<td>${flight.fsi_pass2_city}</td>
+								
 								<td>${flight.fsi_start_dt}</td>
 								<td>${flight.fsi_arrive_dt}</td>
 								<td>${flight.fsi_pass1_dt}</td>
-								<td>${flight.fsi_pass2_dt}</td>
+								
 								<td><input type="button" value="예약"
 				    										onclick="location.href='flightRsrv.do?fsi_idx=${flight.fsi_idx}'"></td>
 							</tr>
