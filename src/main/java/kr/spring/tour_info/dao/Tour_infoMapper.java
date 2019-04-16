@@ -56,7 +56,7 @@ public interface Tour_infoMapper {
      @Delete("DELETE FROM tour_apply WHERE ta_idx=#{ta_idx}")
      public void deleteApplyByNum(Integer ti_id);
      
-     public List<Tour_infoCommand> selectGuideList(Map<String,Object> map);
+     public List<Tour_infoApplyCommand> selectListGuide(Map<String,Object> map);
      public int selectRowCountGuide(Map<String,Object> map);
      
      

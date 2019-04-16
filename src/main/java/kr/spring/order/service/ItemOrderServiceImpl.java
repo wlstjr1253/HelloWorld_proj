@@ -1,6 +1,7 @@
 package kr.spring.order.service;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -10,7 +11,6 @@ import kr.spring.cart.dao.ItemCartMapper;
 import kr.spring.cart.domain.ItemCartCommand;
 import kr.spring.order.dao.ItemOrderMapper;
 import kr.spring.order.domain.ItemOrderCommand;
-import kr.spring.order.domain.ItemOrderDetailCommand;
 
 @Service("itemOrderService")
 public class ItemOrderServiceImpl implements ItemOrderService {
@@ -45,7 +45,7 @@ public class ItemOrderServiceImpl implements ItemOrderService {
 	}
 
 	@Override
-	public void insertOrder(ItemOrderCommand itemOrderCommand,List<ItemCartCommand> itemOrderlist,String user_id) {
+	public void insertOrder(ItemOrderCommand itemOrderCommand,List<ItemCartCommand> itemOrderlist,String user_id,List<String> ic_nums) {
 		itemOrderMapper.insertOrder(itemOrderCommand);
 		
 		for(ItemCartCommand item : itemOrderlist) {
@@ -53,9 +53,13 @@ public class ItemOrderServiceImpl implements ItemOrderService {
 			itemOrderMapper.insertDetailOrder(item);
 		}
 		
-		//회원 아이디별로 장바구니에 저장된 데이터 삭제
-		itemCartMapper.deleteCartByUser_id(user_id);
-		
+		if(ic_nums==null) {
+			//회원 아이디별로 장바구니에 저장된 데이터 삭제
+			itemCartMapper.deleteCartByUser_id(user_id);
+		}else {
+			//선택 상품을 장바구니에서 삭제
+			itemCartMapper.deleteCartByPart(ic_nums);
+		}
 	}
 
 	@Override
@@ -69,6 +73,18 @@ public class ItemOrderServiceImpl implements ItemOrderService {
 		// TODO Auto-generated method stub
 		
 	}
+
+	/*@Override
+	public List<ItemOrderCommand> selectItemBuyHist(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int selectItemBuyHistRowCount(String user_id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}*/
 
 
 

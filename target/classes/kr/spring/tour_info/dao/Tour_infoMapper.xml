@@ -107,7 +107,7 @@
  		 ]]>           
  	  </select>
  	  <!-- ======================나에게 신청한 인원 목록 보게 하기 ============================= -->
- 	  <select id="selectGuideList" parameterType="map" resultType="tour_infoApplyCommand"><!-- 조건 검색하는 셀렉트 -->
+ 	  <select id="selectListGuide" parameterType="map" resultType="tour_infoApplyCommand"><!-- 조건 검색하는 셀렉트 -->
 		SELECT 
 		   *
 		  FROM (SELECT

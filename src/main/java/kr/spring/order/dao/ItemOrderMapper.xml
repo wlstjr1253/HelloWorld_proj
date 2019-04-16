@@ -34,5 +34,20 @@
 								ORDER BY ibh_idx DESC)a) 
 		
 	</select> -->
+	
+<!-- 주문목록 -->
+	<!-- <select id="selectItemBuyHist" parameterType="map"
+		resultType="command">
+		SELECT
+		*
+		FROM 
+		item_buy_hist_detail
+		<where>
+			<if test="keyword != '' and keyfield == 'user_id'">
+				user_id like '%' || #{keyword} || '%'
+			</if>
+		</where>
+		WHERE user_id = #{keyword} 
+	</select> --> 
 
 </mapper>
