@@ -132,7 +132,7 @@
 				user_id like '%' || #{keyword} || '%'
 			</if>
 		</where>
-		ORDER BY ph_reg_dt ASC
+		ORDER BY ph_reg_dt DESC
 		<!-- WHERE user_id = #{keyword} --> 
 	</select>
 <!-- 

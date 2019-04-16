@@ -2,15 +2,23 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/manageGuide.js"></script>
-<!-- 중앙 컨텐츠 시작 -->
+	<div class="welcome-section text-center ptb-110">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="breadcurbs-inner">
+						<div class="breadcrubs">
+							<h2>가이드 관리</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+<!-- 중앙 컨텐츠 시작 -->
 <div class="container table-list">
 	<div class="row">
-		<br><br>
-		<h3 class="text-center">가이드 목록(관리자용)</h3>
-		<br>
-		
-		
 		<div class="col-xs-12">
 			<c:if test="${count == 0}">
 			<div class="align-center col-xs-12">가이드 신청 회원이 없습니다.</div>

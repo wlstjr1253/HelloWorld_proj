@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<!-- 전체 form start -->
-		<form action="flightRsrv.do" method="post" id="rsrv_form"> 
+		<form action="flightResult.do" method="post" id="rsrv_form"> 
 			<input type="hidden" name="fsi_idx" value="${rsrv.fsi_idx}" />
 			<input type="hidden" name="user_id" value="${rsrv.user_id}" />
 			<div class="row">
@@ -68,7 +68,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#done" data-toggle="tab">
+								<a>
 								<span class="tab-border">4</span>
 								<span>예약 완료</span>
 								</a>
@@ -140,7 +140,7 @@
 													<input type="text" value="${flightCommand.fsi_arrive_city}">
 												</div>
 												<div class="select-option mb-20"> 
-													<select id="fr_rsrv_seat_type">
+													<select id="fr_rsrv_seat_type" name="fr_rsrv_seat_type">
 														<option value="FIR">First</option>
 														<option value="BUS">Business</option>
 														<option value="ECO" selected>economy</option>
@@ -152,7 +152,7 @@
 									</div>
 									<div class="prve-next-box mt-20">
 										<div class="back-link">
-											<a href="#">Back</a>
+											<a href="${pageContext.request.contextPath}/main/main.do">Back</a>
 										</div>
 										<button type="button" id="next_2">다음</button>
 									</div> 
@@ -206,7 +206,7 @@
 										</div>
 										<div class="prve-next-box mt-20">
 											<div class="back-link">
-												<a href="#">Back</a>
+												<a id="next_2">Back</a>
 											</div>
 											<button type="button" id="next_3">다음</button>
 										</div>
