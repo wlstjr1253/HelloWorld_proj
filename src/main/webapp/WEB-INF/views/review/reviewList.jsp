@@ -47,12 +47,12 @@
 			</c:if>
 			
 			<c:if test="${count > 0}">
-			<div align="right" class="col-xs-12margin-top-50">
 				<c:if test="${!empty user_id}">
-					<!-- <a class="button border_radius little button-black mb-20" href="write.do"><span>글쓰기</span></a> -->
-					<a class="btn btn-ok" href="write.do"><span>글쓰기</span></a>
+					<div align="right" class="margin-top-50">
+							<!-- <a class="button border_radius little button-black mb-20" href="write.do"><span>글쓰기</span></a> -->
+							<button class="btn btn-ok" onclick="location.href='write.do'"><span>글쓰기</span></button>
+					</div>
 				</c:if>
-			</div>
 			<div class="table-responsive">
 				<table class="table table-striped">
 					<tr>
