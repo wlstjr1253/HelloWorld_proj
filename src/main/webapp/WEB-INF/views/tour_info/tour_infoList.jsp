@@ -2,67 +2,43 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<!-- <script type="text/javascript">
-	var result = '${result}';
-	if(result == 'success'){
-		alert('처리가 완료되었습니다.');
-	}
-</script> -->
-<!-- 목록 시작 -->
-</div>
-<div class="container table-list">
-	<div class="row">
-		<div class="col-xs-6 col-xs-offset-3">
-		<!-- <div class="col-md-6 col-sm-6"> -->
-			<div class="booking-box">
-				<div class="btn-list row">
-					<h3>투어 검색</h3>
-					<p>원하는 조건으로 투어를 검색하세요</p>
-				</div>
-				<div class="booking-form">
-					<form action="list.do" id="search_form" method="get">
- 						<div  class="travel-city">
- 						키워드 <input type="text" name="keyword">
-						 출발일자 <input type="date" name="keyword2">
-						   작성자 <input type="text" name="keyword3">
-						   </div>
-						   <!-- <select name="keyfield">
-						       <option value="ti_nm">투어명</option>
-						       <option value="ti_start_day">출발일자</option>
-						       <option value="all">키워드</option>
-					      </select>
-					           <input type="text" name="keyword" id="keyword">
-						</div> -->
-						<div class="submit-form">
-							<button type="submit">검색하기</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-		<%-- <div class="row">
-		<br>
-		<br>
-		<h3 class="text-center">투어 목록</h3>
-		<form action="list.do" id="search_form" method="get">
-			<!-- <div class="col-md-3 col-sm-3"> -->
-			<div class="col-xs-offset-2">
-				<ul>
-					<li><select name="keyfield">
-							<option value="ti_nm">투어명</option>
-							<option value="ti_start_day">출발 일자</option>
-							<option value="all">키워드</option>
-							<!-- 투어명하고 상세설명 두개를 포함해서? -->
-					</select></li>
-					<li><input type="text" name="keyword" id="keyword"></li>
-					<li><input type="submit" value="찾기"> <input
-						type="button" value="목록" onclick="location.href='list.do'">
-					</li>
-				</ul>
-			</div>
-		</form>
-	</div> --%>
+	<div class="welcome-section">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+	                <div class="booking-box">
+	                    <!-- S: flight-srch -->
+	                    <div class="flight-srch">
+	                        <div class="booking-title">
+	                            <h3>투어 검색</h3>
+	                            <p>원하는 조건으로 투어를 검색하세요</p>
+	                        </div>
+	                        <div class="booking-form">
+	                            <form action="list.do" id="search_form" method="get">
+	                                <div class="travel-city mb-15">
+	                                    <input type="text" name="keyword" placeholder="키워드">
+	                                </div>
+	                                <div class="row">
+	                                    <div class="b-date arrive mb-15 col-md-12">
+	                                        <input class="date-picker" type="text" name="keyword2" placeholder="출발일">
+	                                        <i class="mdi mdi-calendar-text"></i>
+	                                    </div>
+	                                </div>
+	                                <div class="travel-city mb-15">
+	                                    <input type="text" name="keyword3" placeholder="작성자">
+	                                </div>
+	                                <div class="submit-form">
+	                                    <button type="submit">검색하기</button>
+	                                </div>
+	                            </form>
+	                        </div>
+	                    </div>
+	                    <!-- E: flight-srch -->
+	                </div>
+	            </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container table-list">
 		<div class="row">
