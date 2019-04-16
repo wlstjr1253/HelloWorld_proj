@@ -86,21 +86,17 @@
  		 WHERE rnum >= #{start} AND rnum <= #{end}
  		 ]]>           
  	  </select>
- 	  <!-- 신청자 목록 -->
+ 	  <!-- 내가 신청한 목록 -->
       <select id="selectListApply" parameterType="map" resultType="tour_infoApplyCommand">
- 		SELECT
- 		  ta_idx,
- 		   user_id,
- 		    TO_CHAR(ti_reg_dt,'YYYY-MM-DD HH24:MI:SS') ti_reg_dt,
- 		    ti_id,
- 		    ti_state
- 		FROM (SELECT
+ 			SELECT
+ 		       *
+ 		       FROM (SELECT
  		         a.*,
- 		         rownum rnum
- 		       FROM(SELECT
- 		              *
- 		             FROM tour_apply_hist 
- 		             WHERE user_id = #{user_id}
+ 		           rownum rnum
+ 		             FROM(SELECT
+ 		              t.*,i.ti_nm
+ 		             FROM tour_apply_hist t JOIN tour_info i ON t.ti_id = i.ti_id
+ 		             WHERE t.user_id = #{user_id}
  		               ORDER BY ta_idx DESC)a)
  		 <![CDATA[
  		 WHERE rnum >= #{start} AND rnum <= #{end}
