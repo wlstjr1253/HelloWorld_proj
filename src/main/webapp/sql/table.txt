@@ -1869,6 +1869,8 @@ ALTER TABLE STAYING_ROOM ADD(SR_NM VARCHAR2(50));
 DROP TRIGGER PAYMENT_HIST_AI_TRG;
 DROP TRIGGER CVNTL_INFO_AI_TRG;
 /
+ALTER TABLE PAYMENT_HIST ADD(PH_KND NUMBER);
+COMMENT ON COLUMN PAYMENT_HIST.PH_KND IS '1:항공권/2:호텔/3:투어/4:대여물품';
 
 --강양구 투어 수정 내역 
 alter table tour_info add (uploadfile blob);
@@ -1876,6 +1878,12 @@ alter table tour_info add (user_id varchar2(20));
 alter table tour_info add (reg_date date);
 alter table tour_info add (re_cnt number);
 alter table tour_info add (ti_select number default 0 not null);
+추가 수정 사항
+20190416
+alter table tour_info modify(ti_nm varchar2(50));
+ALTER TABLE tour_info DROP COLUMN nc_cd;
+ALTER TABLE tour_info MODIFY (ti_state number);
+ALTER TABLE tour_info MODIFY ti_state default 0 null;
 
 --ITEM_BUY_HIST 테이블 수정사항
 alter table item_buy_hist add (ibh_email varchar2(50 byte)); --주문자 이메일주소

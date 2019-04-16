@@ -39,7 +39,9 @@
 			</div>
 		</div>
 		<!-- 전체 form start -->
-		<form action="rsrvWrite.do">
+		<form action="flightResult.do" method="post" id="rsrv_form"> 
+			<input type="hidden" name="fsi_idx" value="${rsrv.fsi_idx}" />
+			<input type="hidden" name="user_id" value="${rsrv.user_id}" />
 			<div class="row">
 				<!-- 수정예정 -->
 				<%-- <input type="hidden" name="user_id" value="suywook91" />
@@ -66,7 +68,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#done" data-toggle="tab">
+								<a>
 								<span class="tab-border">4</span>
 								<span>예약 완료</span>
 								</a>
@@ -92,7 +94,7 @@
 												<h4>FIRST CLASS</h4>
 												<h5>총 가격</h5>
 												<h5>
-													? <span>/?</span>
+													<input type="text" id="total_pc_str" placeholder="0 원"><span>/?</span>
 												</h5>
 												<p>가격 시세는 일별로 변동이 있을 수 있으며 결제를 완료한 고객에게 먼저 예약이 완료 됩니다.</p>
 											</div>
@@ -112,7 +114,7 @@
 													<input type="text" value="${flightCommand.fsi_start_city}">
 												</div>
 												<div class="name mb-15">
-													<input id="fr_adult_pp" placeholder="성인인원" />
+													<input type="number" name="fr_adult_pp" id="fr_adult_pp" placeholder="성인인원" />
 												</div>
 											</div>
 											<!-- 1열 끝 -->
@@ -128,7 +130,7 @@
 													<input type="text" value="${flightCommand.fsi_pass1_city}">
 												</div>
 												<div class="name mb-15">
-													<input id="fr_kid_pp" placeholder="유아인원" />
+													<input type="number" name="fr_kid_pp" id="fr_kid_pp" placeholder="유아인원" />
 												</div>
 											</div>
 											<!-- 2열 끝 -->
@@ -138,7 +140,7 @@
 													<input type="text" value="${flightCommand.fsi_arrive_city}">
 												</div>
 												<div class="select-option mb-20"> 
-													<select id="fr_rsrv_seat_type">
+													<select id="fr_rsrv_seat_type" name="fr_rsrv_seat_type">
 														<option value="FIR">First</option>
 														<option value="BUS">Business</option>
 														<option value="ECO" selected>economy</option>
@@ -150,7 +152,7 @@
 									</div>
 									<div class="prve-next-box mt-20">
 										<div class="back-link">
-											<a href="#">Back</a>
+											<a href="${pageContext.request.contextPath}/main/main.do">Back</a>
 										</div>
 										<button type="button" id="next_2">다음</button>
 									</div> 
@@ -165,30 +167,29 @@
 											<!-- 1열 -->
 											<div class="single-form-part">
 												<div class="name mb-15">
-													<input type="text" id="fr_fnm" placeholder="First Name(성)" />
+													<input type="text" name="fr_fnm" id="fr_fnm" placeholder="First Name(성)" />
 												</div>
 												<div class="name mb-15">
-													<input type="text" id="fr_phone" placeholder="휴대폰 번호" />
+													<input type="text" name="fr_phone" id="fr_phone" placeholder="휴대폰 번호" />
 												</div>
 											</div>
 											<!-- 2열 -->
 											<div class="single-form-part">
 												<div class="name mb-15">
-													<input type="text" id="fr_nm" placeholder="Last Name(이름)" />
+													<input type="text" name="fr_nm" id="fr_nm" placeholder="Last Name(이름)" />
 												</div>
 												<div class="name mb-15">
-													<input type="text" id="fr_passport" placeholder="여권 번호" />
+													<input type="text" name="fr_passport" id="fr_passport" placeholder="여권 번호" />
 												</div>
 											</div>
 											<!-- 3열 -->
 											<div class="single-form-part">
 												<div class="mail mb-15">
-													<input type="text" id="fr_email" placeholder="Your Email"
-														value="Your Email" />
+													<input type="email" name="fr_email" id="fr_email" placeholder="예약자 이메일" />
 													<i class="mdi mdi-calendar-text"></i>
 												</div>
 												<div class="select-option mb-20"> 
-													<select id="fr_age">
+													<select name="fr_age" id="fr_age">
 														<option>연령대</option>
 														<option value="10">10대</option>
 														<option value="20">20대</option>
@@ -205,7 +206,7 @@
 										</div>
 										<div class="prve-next-box mt-20">
 											<div class="back-link">
-												<a href="#">Back</a>
+												<a id="next_2">Back</a>
 											</div>
 											<button type="button" id="next_3">다음</button>
 										</div>
@@ -218,55 +219,29 @@
 									<div class="payment-form">
 										<div class="payment-form-list">
 											<div class="single_form">
-												<input type="text" placeholder="Card Holder Name">
+												<input type="text" name="cp_num" id="cp_num" placeholder="카드 번호">
 											</div>
 											<div class="single_form">
-												<input type="text" placeholder="Enter Creadit Card Number">
+												<input type="text" name="cp_pin_num" id="cp_pin_num" placeholder="카드 핀 넘버">
 											</div>
 											<div class="single_form">
-												<div class="select-date">
-													<select>
-														<option value="1" selected>Enter Month</option>
-														<option value="1">January</option>
-														<option value="1">February</option>
-														<option value="1">March</option>
-														<option value="1">April</option>
-														<option value="1">May</option>
-														<option value="1">June</option>
-														<option value="1">July</option>
-														<option value="1">August</option>
-														<option value="1">September</option>
-														<option value="1">October</option>
-														<option value="1">NOvember</option>
-														<option value="1">December</option>
-													</select>
-												</div>
-											</div>
-											<div class="single_form">
-												<div class="select-date">
-													<select>
-														<option value="1" selected>Enter Year</option>
-														<option value="1">2017</option>
-														<option value="1">2018</option>
-														<option value="1">2019</option>
-														<option value="1">2020</option>
-														<option value="1">2021</option>
-													</select>
-												</div>
+												<input type="text" name="cp_year_month" id="cp_year_month" placeholder="MM/YY">
 											</div>
 										</div>
 										<div class="pay-money-form mt-40">
 											<div class="payment-card">
 												<a><img src="${pageContext.request.contextPath}/resources/images/logo/pay-card.png" alt=""></a>
 											</div>
-											<div class="pay-order">
-												<button type="submit">결제하기</button>
+											<div class="prve-next-box" align="right">
+												<div class="back-link">
+													<a href="#">Back</a>
+												</div>
+												<button type="submit">결제</button>
 											</div> 
 										</div>
 									</div>
 								</div>
-							</div>
-								
+							</div>	
 						</div>
 					</div>
 				</div>

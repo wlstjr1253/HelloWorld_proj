@@ -12,8 +12,8 @@ import kr.spring.hotel.domain.HotelVwCommand;
 public interface HotelMapper {
  
 	// ¼÷¹Ú
-	public List<HotelCommand> selectHotelList();
-	public int selectHotelListRow();
+	public List<HotelCommand> selectHotelList(Map<String,Object> map);
+	public int selectHotelListRow(Map<String,Object> map);
 	@Select("SELECT * FROM STAYING_INFO WHERE ST_ID = #{st_id}")
 	public HotelCommand getHotelInfo(int st_id);
 	

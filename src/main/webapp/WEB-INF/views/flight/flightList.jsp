@@ -68,7 +68,7 @@
 								<td>${flight.fsi_pass1_dt}</td>
 								<td>${flight.fsi_pass2_dt}</td>
 								<td><input type="button" value="예약"
-				    										onclick="location.href='rsrvWrite.do?fsi_idx=${flight.fsi_idx}'"></td>
+				    										onclick="location.href='flightRsrv.do?fsi_idx=${flight.fsi_idx}'"></td>
 							</tr>
 							</c:forEach>
 						</table>

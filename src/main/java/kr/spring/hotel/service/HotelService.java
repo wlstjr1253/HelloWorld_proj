@@ -10,8 +10,8 @@ import kr.spring.hotel.domain.HotelVwCommand;
 public interface HotelService {
 
 	// ¼÷¹Ú
-	public List<HotelCommand> selectHotelList();
-	public int selectHotelListRow();
+	public List<HotelCommand> selectHotelList(Map<String,Object> map);
+	public int selectHotelListRow(Map<String,Object> map);
 	public HotelCommand getHotelInfo(int st_id);
 	 
 	// ¹æ

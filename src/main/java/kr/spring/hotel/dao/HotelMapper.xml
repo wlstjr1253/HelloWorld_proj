@@ -4,12 +4,35 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.spring.hotel.dao.HotelMapper">
 
-	<select id="selectHotelList" resultType="hotelCommand">
-		SELECT * FROM STAYING_INFO ORDER BY ST_ID
+	<select id="selectHotelList" parameterType="map" resultType="hotelCommand">
+		SELECT
+			DISTINCT ST_ID,
+			ST_NM,
+			NC_CD,
+			ST_TYPE,
+			ST_ADDR,
+			ST_CVNTL,
+			ST_CONTENT,
+			ST_CHECK_IN,
+			ST_CHECK_OUT
+		FROM 
+			STAYING_VW 
+		WHERE 
+			(NC_CD = #{hotel_nc} or 'ALL' = #{hotel_nc}) AND 
+			(ST_TYPE = #{hotel_type} or 'ALL' = #{hotel_type}) AND 
+			SR_MAX_PP >= #{hotel_adult} + #{hotel_kid} 
+		ORDER BY ST_ID
 	</select>
 	 
-	<select id="selectHotelListRow" resultType="integer">
-		SELECT COUNT(*) FROM STAYING_INFO
+	<select id="selectHotelListRow" parameterType="map" resultType="integer">
+		SELECT 
+			COUNT(DISTINCT ST_ID)
+		FROM 
+			STAYING_VW  
+		WHERE 
+			(NC_CD = #{hotel_nc} or 'ALL' = #{hotel_nc}) AND 
+			(ST_TYPE = #{hotel_type} or 'ALL' = #{hotel_type}) AND 
+			SR_MAX_PP >= #{hotel_adult} + #{hotel_kid}
 	</select>
 
 	<select id="selectRoomList" parameterType="integer" resultType="hotelVwCommand">

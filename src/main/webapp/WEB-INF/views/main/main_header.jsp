@@ -18,33 +18,28 @@
                         </div>
                         <div class="booking-form">
                             <form action="${pageContext.request.contextPath}/flight/list.do" id="flight_reg_form">
+                          	<label>      
+                               	<input type="radio" value="on" checked>
+                               	<div></div>
+                               	 왕복
+                          	</label>
+                          	<label>      
+                                <input type="radio" value="on">
+                            	 편도
+                            </label>   
                                 <div class="travel-city mb-15">
-                                    <input type="text" placeholder="여행 도시">
+                                    <input type="text" value="fsi_start_city" placeholder="출발 도시">
                                 </div>
-                                <div class="row">
-                                    <div class="travel-city mb-15 col-md-6">
-                                        <input type="text" placeholder="출발 도시">
-                                    </div>
-                                    <div class="select-book mb-15 col-md-6">
-                                        <select name="book" class="select-booking">
-                                            <option value="0" selected>인원</option>
-                                            <option value="1">1명</option>
-                                            <option value="2">2명</option>
-                                            <option value="3">3명</option>
-                                            <option value="4">4명</option>
-                                            <option value="5">5명</option>
-                                            <option value="6">6명</option>
-                                            <option value="7">7명이상</option>
-                                        </select>
-                                    </div>
+                                <div class="travel-city mb-15">
+                                    <input type="text" value="fsi_arrive_city" placeholder="도착 도시">
                                 </div>
                                 <div class="row">
                                     <div class="b-date arrive mb-15 col-md-6">
-                                        <input class="date-picker" type="text" placeholder="출발일">
+                                        <input class="date-picker" type="text" value="fsi_start_dt" placeholder="출발일">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                     <div class="b-date departure mb-15 col-md-6">
-                                        <input class="date-picker" type="text" placeholder="귀국일">
+                                        <input class="date-picker" type="text" value="fsi_arrive_dt" placeholder="귀국일">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                 </div>
@@ -63,29 +58,29 @@
 					        <p>얼마없는 호텔을 검색해 보세요! 나오면 사고 없음 딴데 가보고</p>
 					    </div>
 					    <div class="booking-form">
-					        <form action="${pageContext.request.contextPath}/hotel/hotelList.do" id="hotel_reg_form">
+					        <form action="${pageContext.request.contextPath}/hotel/hotelList.do" id="hotel_reg_form" method="post">
 					         <div class="select-book mb-15">
 					             <select <%-- class="select-booking" --%> name="hotel_nc" id="hotel_nc">
-			                        <option value="" selected>숙박 도시 선택</option>
+			                        <option value="ALL" selected>숙박 도시 선택</option>
 			                    </select>
 					         </div>
 					        	<div class="row">
 					             <div class="b-date arrive mb-15 col-md-6">
-					                 <input name="hotel_check_in" class="date-picker" type="text" placeholder="체크인 날짜">
+					                 <input name="hotel_check_in" class="date-picker" type="text" placeholder="체크인 날짜" autocomplete="off">
 					                 <i class="mdi mdi-calendar-text"></i>
 					             </div>
 					             <div class="b-date departure mb-15 col-md-6">
-					                 <input name="hotel_check_out" class="date-picker" type="text" placeholder="체크아웃 날짜">
+					                 <input name="hotel_check_out" class="date-picker" type="text" placeholder="체크아웃 날짜" autocomplete="off">
 					                 <i class="mdi mdi-calendar-text"></i>
 					             </div>
 					            </div>
 					            <div class="row">
 					                <div class="select-book mb-15 col-md-4">
 					                    <select name="hotel_type" class="select-booking">
-					                        <option value="" selected>호텔 종류</option>
-					                        <option value="1">호텔</option>
-					                        <option value="2">모텔</option>
-					                        <option value="3">게스트 하우스</option>
+					                        <option value="ALL" selected>호텔 종류</option>
+					                        <option value="HOTEL">호텔</option>
+					                        <option value="MOTEL">모텔</option>
+					                        <option value="GUEST">게스트 하우스</option>
 					                    </select>
 					                </div>
 					                <div class="select-book mb-15 col-md-4">
@@ -102,7 +97,7 @@
 					                    </select>
 					                </div>
 					                <div class="select-book mb-15 col-md-4">
-					                    <select name="book_kid" class="select-booking">
+					                    <select name="hotel_kid" class="select-booking">
 					                        <option value="0" selected>어린이</option>
 					                        <option value="1">1</option>
 					                        <option value="2">2</option>
@@ -141,9 +136,9 @@
                     </h1>
                     <!-- <p class="welcome-desc">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p> -->
                         <p class="welcome-desc">많은 여행자들에게 부담없는 가격으로 인기를 얻고 있는 패키지! <br> 현지인에게 안내받는 효율만점 투어! <br> Hello World 만의 특별한 여행을 즐겨 보세요!</p>
-                        <div class="explore">
+                        <%-- <div class="explore">
                             <a href="${pageContext.request.contextPath}/packTour/packTour.jsp">패키지/투어 떠나기</a>
-                        </div>
+                        </div> --%>
                     </div>
                 </div>
             </div>

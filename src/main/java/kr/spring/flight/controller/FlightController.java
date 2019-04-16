@@ -21,7 +21,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.spring.flight.domain.FlightCommand;
+import kr.spring.flight.domain.FlightRsrvCommand;
 import kr.spring.flight.service.FlightService;
+import kr.spring.hotel.domain.HotelRsrvCommand;
+import kr.spring.hotel.domain.HotelVwCommand;
 import kr.spring.util.PagingUtil;
 
 @Controller
@@ -33,76 +36,13 @@ public class FlightController {
 	@Resource
 	private FlightService flightService;
 	
-	// 자바 빈 초기화
+	/*// 자바 빈 초기화
 	@ModelAttribute("fCommand")
 	public FlightCommand initCommand() {
 				
 		return new FlightCommand();
-	}
-	
-
-	
-	/*// =============== 항공권 등록 =============== // 
-	@RequestMapping(value="/admin/flightWrite.do", method=RequestMethod.GET)
-	public String flightForm(HttpSession session, Model model) {
-		String id = (String)session.getAttribute("user_id");
-		
-		FlightCommand fcommand = new FlightCommand();
-		
-		model.addAttribute("fcommand", fcommand);
-		
-		return "flightWrite";
 	}*/
-	
-	/*@RequestMapping(value="/admin/flightWrite.do", method=RequestMethod.POST)
-	@ResponseBody
-	public Map<String, String> insertFlight(@ModelAttribute("fCommand")
-							   @Valid FlightCommand flightCommand,
-							   BindingResult result,
-							   HttpSession session) {
-		
-		if (log.isDebugEnabled()) {
-			log.debug("<<flightCommand>> : " + flightCommand);
-		}
-		Map<String, String> map = new HashMap<String, String>();
-		
-		// 유효성 체크
-		if (result.hasErrors()) {
-			
-			if (log.isDebugEnabled()) {
-				List<FieldError> list = result.getFieldErrors();
-				for(FieldError f : list) {
-					log.debug("<<hasErrors>> : " + f.toString());
-				}
-			}
-			map.put("result", "error");
-			return map;
-		}
-		
-		String user_id = (String)session.getAttribute("user_id");
-		
-		if (user_id == null) {
-			// 로그인 안됨
-			map.put("result", "logout");
-		} else {
-		}		
 
-		// 항공권 등록
-		flightService.insertFlight(flightCommand);
-		map.put("result", "success");
-		return map;
-	}*/
-	
-	// 항공사 검색
-//	@RequestMapping(value="/admin/searchCompany.do", method=RequestMethod.POST)
-//	@ResponseBody
-//	public Map<Stirng, String> searchCompany(@ModelAttribute("command") 
-//								@Valid FlightCommand flightCommand, 
-//								)	{
-//  }
-	
-	
-	
 	// =============== 항공권 조회 =============== //
 	@RequestMapping(value="/flight/list.do")
 	public ModelAndView process(
@@ -144,7 +84,69 @@ public class FlightController {
 		
 		return mav;
 		
+	} 
+	
+	@RequestMapping("/flight/flightRsrv.do")
+	public ModelAndView hotelRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand, HttpSession session) {
+
+		flightRsrvCommand.setUser_id((String)session.getAttribute("user_id"));
+		FlightCommand flightCommand = flightService.selectFlight(flightRsrvCommand.getFsi_idx());
+		
+		if(log.isDebugEnabled()) {
+			log.debug("<<flightRsrvCommand>> : " + flightRsrvCommand);
+			log.debug("<<flightCommand>> : " + flightCommand);
+		}
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("flightRsrv");
+		mav.addObject("rsrv", flightRsrvCommand);
+		mav.addObject("flightCommand", flightCommand);
+
+		return mav;
 	}
 	
-	
+	@RequestMapping("/flight/flightResult.do")
+	public ModelAndView flightRsrv(@ModelAttribute("command") @Valid FlightRsrvCommand flightRsrvCommand,
+			@RequestParam("cp_num") int cp_num, @RequestParam("cp_pin_num") int cp_pin_num,
+			@RequestParam("cp_year_month") String cp_year_month) {
+
+		FlightCommand flightCommand = flightService.selectFlight(flightRsrvCommand.getFsi_idx());
+
+		Map<String,Object> map = new HashMap<String, Object>();
+		map.put("p_fsi_idx", flightCommand.getFsi_idx());
+		map.put("p_user_id", flightRsrvCommand.getUser_id());
+		map.put("p_rsrv_seat", flightRsrvCommand.getFr_rsrv_seat_type());
+		map.put("p_fr_adult_pp", flightRsrvCommand.getFr_adult_pp());
+		map.put("p_fr_kid_pp", flightRsrvCommand.getFr_kid_pp());
+		map.put("p_fr_nm", flightRsrvCommand.getFr_nm());
+		map.put("p_fr_email", flightRsrvCommand.getFr_email());
+		map.put("p_fr_phone", flightRsrvCommand.getFr_phone());
+		map.put("p_fr_passport", flightRsrvCommand.getFr_passport());
+		map.put("p_fr_age", flightRsrvCommand.getFr_age());
+		map.put("p_fr_fnm", flightRsrvCommand.getFr_fnm());
+		map.put("p_total_pc", flightRsrvCommand.getFr_total_pc());
+		map.put("p_num", cp_num);
+		map.put("p_pin_num", cp_pin_num);
+		
+		String cp_ym[] = cp_year_month.split("/");
+		
+		map.put("p_year", Integer.parseInt(cp_ym[1]));
+		map.put("p_month", Integer.parseInt(cp_ym[0]));
+		
+		if(log.isDebugEnabled()) {
+			log.debug("<<flightRsrvCommand>> : " + flightRsrvCommand);
+			log.debug("<<flightCommand>> : " + flightCommand);
+			log.debug("<<map>> : " + map );
+		}
+		
+		flightService.flightRsrv(map);
+		
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("flightRsrv");
+		mav.addObject("rsrv", flightRsrvCommand);
+		mav.addObject("flightCommand", flightCommand);
+
+		return mav;
+	}
 }
