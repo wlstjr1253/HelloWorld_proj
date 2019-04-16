@@ -18,33 +18,28 @@
                         </div>
                         <div class="booking-form">
                             <form action="${pageContext.request.contextPath}/flight/list.do" id="flight_reg_form">
+                          	<label>      
+                               	<input type="radio" value="on" checked>
+                               	<div></div>
+                               	 왕복
+                          	</label>
+                          	<label>      
+                                <input type="radio" value="on">
+                            	 편도
+                            </label>   
                                 <div class="travel-city mb-15">
-                                    <input type="text" placeholder="여행 도시">
+                                    <input type="text" value="fsi_start_city" placeholder="출발 도시">
                                 </div>
-                                <div class="row">
-                                    <div class="travel-city mb-15 col-md-6">
-                                        <input type="text" placeholder="출발 도시">
-                                    </div>
-                                    <div class="select-book mb-15 col-md-6">
-                                        <select name="book" class="select-booking">
-                                            <option value="0" selected>인원</option>
-                                            <option value="1">1명</option>
-                                            <option value="2">2명</option>
-                                            <option value="3">3명</option>
-                                            <option value="4">4명</option>
-                                            <option value="5">5명</option>
-                                            <option value="6">6명</option>
-                                            <option value="7">7명이상</option>
-                                        </select>
-                                    </div>
+                                <div class="travel-city mb-15">
+                                    <input type="text" value="fsi_arrive_city" placeholder="도착 도시">
                                 </div>
                                 <div class="row">
                                     <div class="b-date arrive mb-15 col-md-6">
-                                        <input class="date-picker" type="text" placeholder="출발일">
+                                        <input class="date-picker" type="text" value="fsi_start_dt" placeholder="출발일">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                     <div class="b-date departure mb-15 col-md-6">
-                                        <input class="date-picker" type="text" placeholder="귀국일">
+                                        <input class="date-picker" type="text" value="fsi_arrive_dt" placeholder="귀국일">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                 </div>
