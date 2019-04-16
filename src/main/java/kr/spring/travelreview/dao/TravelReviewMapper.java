@@ -20,7 +20,7 @@ public interface TravelReviewMapper {
 	@Select("SELECT * FROM travel_review WHERE tr_idx=#{tr_idx}")
 	public TravelReviewCommand selectBoard(Integer review);
 	@Update("UPDATE travel_review SET tr_hit=tr_hit+1 WHERE tr_idx=#{tr_idx}")
-	public void updateHit(Integer review);
+	public void updateHit(Integer tr_idx);
 	public void update(TravelReviewCommand review);
 	@Delete("DELETE FROM travel_review WHERE tr_idx=#{tr_idx}")
 	public void delete(Integer review);

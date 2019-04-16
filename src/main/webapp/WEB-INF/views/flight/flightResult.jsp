@@ -85,9 +85,45 @@
 													${rsrv.fr_adult_pp} 명 <span><fmt:formatNumber value="${flightCommand.fsi_fir_pc * rsrv.fr_adult_pp}" pattern="#,###"/> 원</span>
 												</p>
 											</td>
-											
+											<td>
+												<p>
+													어린이 <span><fmt:formatNumber value="${flightCommand.fsi_fir_pc}" pattern="#,###"/> 원</span>
+												</p>
+											</td>
+											<td>
+												<p>
+													${rsrv.fr_kid_pp} 명 <span><fmt:formatNumber value="${flightCommand.fsi_fir_pc * rsrv.fr_kid_pp}" pattern="#,###"/> 원</span>
+												</p>
+											</td>
 										</tr>
-										
+										<tr class="row2">
+											<td>
+												<p>
+													마일리지
+												</p>
+											</td>
+											<td></td>
+											<td></td>
+											<td>
+												<p>
+													<span><fmt:formatNumber value="${flightCommand.fsi_fir_mil * rsrv.fr_adult_pp + flightCommand.fsi_fir_mil * rsrv.fr_kid_pp}" pattern="#,###"/> 점</span>
+												</p>
+											</td>
+										</tr>
+										<tr class="row3">
+											<td>
+												<p>
+													총액
+												</p>
+											</td>
+											<td></td>
+											<td></td>
+											<td>
+												<p>
+													<span><fmt:formatNumber value="${rsrv.fr_total_pc}" pattern="#,###"/> 원</span>
+												</p>
+											</td>
+										</tr>
 									</table>
 								</div>
 								<div class="booking-done-description">
