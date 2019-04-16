@@ -49,9 +49,7 @@
 			<div align="right" class="col-xs-12margin-top-50">
 				<c:if test="${!empty user_id}">
 					<!-- <a class="button border_radius little button-black mb-20" href="write.do"><span>글쓰기</span></a> -->
-					<div class="write-form">
-							<a class="btn btn-ok" href="write.do"><span>글쓰기</span></a>
-					</div>
+					<a class="btn btn-ok" href="write.do"><span>글쓰기</span></a>
 				</c:if>
 			</div>
 			<div class="table-responsive">
