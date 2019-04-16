@@ -119,28 +119,27 @@
 		               t.ti_start_day,
 		               t.user_id,
 		              
-		            FROM tour_apply_hist t LEFT OUTER JOIN (SELECT ti_id,
-		                                                      ta_idx,
+		            FROM tour_apply_hist t RIGHT OUTER JOIN (SELECT ti_id,
 		                                                       user_id
 		                                            FROM tour_info
 		                                            GROUP BY ti_id)r
 		            ON t.ti_id = r.ti_id
-		            <where>
-		            	<if test="keyword != '' and keyfield == 'user_id'">
-		            		b.title like '%' || #{keyword} || '%'
-		            	</if>
-		            	<if test="keyword != '' and keyfield == 'ti_id'">
-		            		b.id like '%' || #{keyword} || '%'
-		            	</if>
-		            	<if test="keyword != '' and keyfield == 'ta_idx'">
-		            		b.content like '%' || #{keyword} || '%'
-		            	</if>
-		            	<if test="keyword != '' and keyfield == 'all'">
-		            		b.title like '%' || #{keyword} || '%' or 
-		            		b.id like '%' || #{keyword} || '%'or
-		            		b.content like '%' || #{keyword} || '%'
-		            	</if>
-		            </where>
+			        <where>
+							<if test="keyword != '' and keyfield == 'user_id'">
+								user_id like '%' || #{keyword} || '%'
+							</if>
+							<if test="keyword != '' and keyfield == 'ti_id'">
+								ti_id like '%' || #{keyword} || '%'
+							</if>
+							<if test="keyword != '' and keyfield == 'ta_idx'">
+								ta_idx like '%' || #{keyword} || '%'
+							</if>
+							<if test="keyword != '' and keyfield == 'all'">
+								user_id like '%' || #{keyword} || '%' or
+								ti_id like '%' || #{keyword} || '%'or
+								ta_idx like '%' || #{keyword} || '%'
+							</if>
+					</where>
 		            ORDER BY t.ti_id DESC)a)
 		    <![CDATA[
 		  WHERE rnum >= #{start} AND rnum <= #{end}
@@ -152,13 +151,13 @@
 		   FROM tour_info 
 		 <where>
 			<if test="keyword != '' and keyfield == 'user_id'">
-				ti_nm like '%' || #{keyword} || '%'
+				user_id like '%' || #{keyword} || '%'
 			</if>
 			<if test="keyword != '' and keyfield == 'ti_id'">
-				user_id like '%' || #{keyword} || '%'
+				ti_id like '%' || #{keyword} || '%'
 			</if>
 			<if test="keyword != '' and keyfield == 'ta_idx'">
-				user_id like '%' || #{keyword} || '%'
+				ta_idx like '%' || #{keyword} || '%'
 			</if>
 			<if test="keyword != '' and keyfield == 'all'">
 				user_id like '%' || #{keyword} || '%' or
