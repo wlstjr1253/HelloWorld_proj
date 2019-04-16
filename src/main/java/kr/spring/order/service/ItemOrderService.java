@@ -1,6 +1,9 @@
 package kr.spring.order.service;
 
 import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.annotations.Select;
 
 import kr.spring.cart.domain.ItemCartCommand;
 import kr.spring.order.domain.ItemOrderCommand;
@@ -15,8 +18,11 @@ public interface ItemOrderService {
 	//public List<ItemOrderDetailCommand> getListOrderDetail(int order_num);	//주문번호별 주문상세
 	public ItemOrderCommand getOrderDetail(int ibh_idx,String user_id);	//ID,주문번호별 주문상세
 	
-	public void insertOrder(ItemOrderCommand itemOrderCommand,List<ItemCartCommand> itemOrderlist, String user_id);	//주문등록
+	public void insertOrder(ItemOrderCommand itemOrderCommand,List<ItemCartCommand> itemOrderlist, String user_id,List<String> ic_nums);	//주문등록
 	public void updateOrder(ItemOrderCommand itemOrderCommand);	
 	public void deleteOrder(Integer num);
+	
+	/*public List<ItemOrderCommand> selectItemBuyHist(Map<String, Object> map);
+	public int selectItemBuyHistRowCount(String user_id);*/
 
 }

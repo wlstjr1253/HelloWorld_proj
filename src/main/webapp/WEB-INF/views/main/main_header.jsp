@@ -66,11 +66,11 @@
 					         </div>
 					        	<div class="row">
 					             <div class="b-date arrive mb-15 col-md-6">
-					                 <input name="hotel_check_in" class="date-picker" type="text" placeholder="체크인 날짜">
+					                 <input name="hotel_check_in" class="date-picker" type="text" placeholder="체크인 날짜" autocomplete="off">
 					                 <i class="mdi mdi-calendar-text"></i>
 					             </div>
 					             <div class="b-date departure mb-15 col-md-6">
-					                 <input name="hotel_check_out" class="date-picker" type="text" placeholder="체크아웃 날짜">
+					                 <input name="hotel_check_out" class="date-picker" type="text" placeholder="체크아웃 날짜" autocomplete="off">
 					                 <i class="mdi mdi-calendar-text"></i>
 					             </div>
 					            </div>

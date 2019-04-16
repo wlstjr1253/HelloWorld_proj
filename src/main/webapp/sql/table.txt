@@ -1879,8 +1879,11 @@ alter table tour_info add (reg_date date);
 alter table tour_info add (re_cnt number);
 alter table tour_info add (ti_select number default 0 not null);
 추가 수정 사항
+20190416
 alter table tour_info modify(ti_nm varchar2(50));
-
+ALTER TABLE tour_info DROP COLUMN nc_cd;
+ALTER TABLE tour_info MODIFY (ti_state number);
+ALTER TABLE tour_info MODIFY ti_state default 0 null;
 
 --ITEM_BUY_HIST 테이블 수정사항
 alter table item_buy_hist add (ibh_email varchar2(50 byte)); --주문자 이메일주소
@@ -2013,3 +2016,14 @@ ALTER TABLE USER_INFO MODIFY(USER_PW VARCHAR2(50));
 
 --한소라 19-04-15  ITEM_CATEGORY 테이블 컬럼 삭제
 ALTER TABLE item_category DROP COLUMN ict_cm;
+
+
+--변문경 19-04-16 
+--ITEM_BUY_HIST 테이블 IBH_REQUEST 수정(안되면 삭제했다가 다시만들어주세욥)
+ALTER TABLE ITEM_BUY_HIST MODIFY(IBH_REQUEST VARCHAR2(3000));
+
+--ITEM_BUY_HIST_DETAIL 테이블 수정
+ALTER TABLE ITEM_BUY_HIST_DETAIL MODIFY(I_RENT_NC VARCHAR2(20));
+ALTER TABLE ITEM_BUY_HIST_DETAIL MODIFY(I_RETURN_NC VARCHAR2(20));
+
+

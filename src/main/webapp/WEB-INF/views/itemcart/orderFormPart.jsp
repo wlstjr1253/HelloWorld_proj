@@ -132,9 +132,10 @@
 
 			</form:form> --%>
 			
-			<form:form commandName="command" id="orderForm" action="orderForm.do">
+			<form:form commandName="command" id="orderForm" action="orderSubmitPart.do">
 				<input type="hidden" name="i_num" id="i_num" value="${param.i_num}">
 				<input type="hidden" name="user_id" id="user_id" value="${user_id}">
+				<input type="hidden" name="checked_num" value="${checked_num}">
 				<div>
 				<br><br>
 					<div class="name mb-15">

@@ -93,13 +93,12 @@ public class Tour_infoServiceImpl implements Tour_infoService{
 	}
 	@Override
 	public List<Tour_infoApplyCommand> selectListGuide(Map<String, Object> map) {
-		// TODO Auto-generated method stub//--------------------------------------------------------------------수정중
-		return null;
+		// --------------------------------------------------------------------수정중
+		return tour_infoMapper.selectListGuide(map);
 	}
 	@Override
 	public int selectRowCountGuide(Map<String, Object> map) {
-		// TODO Auto-generated method stub
-		return 0;
+		return tour_infoMapper.selectRowCountGuide(map);
 	}
 	
 }
