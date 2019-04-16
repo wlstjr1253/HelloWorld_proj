@@ -15,4 +15,7 @@ public interface TravelReviewService {
 	public void updateHit(Integer num);
 	public void update(TravelReviewCommand review);
 	public void delete(Integer num);
+	
+	// main »£√‚
+	public List<TravelReviewCommand> selectMainList();
 }
