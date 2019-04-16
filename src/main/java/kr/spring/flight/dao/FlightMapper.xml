@@ -4,8 +4,7 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.spring.flight.dao.FlightMapper">
 
-	<select id="selectFlightList" parameterType="map" 
-								  resultType="flightCommand">
+	<select id="selectFlightList" parameterType="map" resultType="flightCommand">
 		SELECT
 		   *
 		FROM (SELECT
@@ -60,8 +59,7 @@
 		WHERE rnum >= #{start} AND rnum <= #{end}
 		]]> 
 	</select>
-	<select id="selectFlightRowCount" parameterType="map" 
-									  resultType="integer">
+	<select id="selectFlightRowCount" parameterType="map" resultType="integer">
 		SELECT
 		  COUNT(*)
 		      FROM (SELECT
@@ -110,6 +108,27 @@
 					</where>)		
 	</select>
 
+	<select id="selectFlight" parameterType="string" resultType="flightCommand">
+	
+		     SELECT
+				    fsi_idx,
+				    fi_logo,
+				    fi_nm,   
+				    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_start_nation,
+				    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_start_city,
+				    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_arrive_nation,					    
+				    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_arrive_place) AS fsi_arrive_city,
+				    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_pass1_place) AS fsi_pass1_city,
+				    fsi_start_dt,
+				    fsi_arrive_dt,
+				    fsi_pass1_dt,
+				    fsi_fir_pc,
+					fsi_bus_pc,
+					fsi_eco_pc
+				FROM flight_spot_info fsi LEFT OUTER JOIN flight_info fi USING (fi_id)
+			 	WHERE fsi.fsi_idx=#{fsi_idx}
+	</select>
+
 	<insert id="flightRsrv" parameterType="map" statementType="CALLABLE">
 		{
 			CALL SP_FLIGHT_RSRV(
@@ -132,27 +151,5 @@
 			)
 		}
 	</insert>
-
-	<select id="selectFlight" parameterType="string" 
-								  resultType="flightCommand">
-	
-		     SELECT
-				    fsi_idx,
-				    fi_logo,
-				    fi_nm,   
-				    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_start_nation,
-				    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_start_city,
-				    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_arrive_nation,					    
-				    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_arrive_place) AS fsi_arrive_city,
-				    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_pass1_place) AS fsi_pass1_city,
-				    fsi_start_dt,
-				    fsi_arrive_dt,
-				    fsi_pass1_dt,
-				    fsi_fir_pc,
-					fsi_bus_pc,
-					fsi_eco_pc
-				FROM flight_spot_info fsi LEFT OUTER JOIN flight_info fi USING (fi_id)
-			 	WHERE fsi.fsi_idx=#{fsi_idx}
-	</select>
 
 </mapper>
