@@ -40,8 +40,8 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<div class="booking-rooms-tab" style="width: 100%;">
-					<ul class="nav" role="tablist" style="width: 100%;">
+				<div class="booking-rooms-tab" align="center">
+					<ul class="nav" role="tablist">
 						<li class="active">
 							<a>
 							<span class="tab-border">1</span>
@@ -60,9 +60,9 @@
 							<span>결제 정보</span>
 							</a>
 						</li>
-						<li class="col-md-3">
+						<li>
 							<a href="#done" data-toggle="tab" id="page_4">
-								<span class="tab-border">3</span>
+								<span class="tab-border">4</span>
 								<span>예약 완료</span>
 							</a>
 						</li>
@@ -101,6 +101,11 @@
 					</div>
 				</div>
 			</div>
+			<div class="prve-next-box mt-20" align="center">
+				<div class="back-link">
+					<a href="${pageContext.request.contextPath}/main/main.do">홈으로</a>
+				</div>
+			</div> 
 		</div>
 	</div>
 </div>

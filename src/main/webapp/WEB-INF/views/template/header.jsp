@@ -42,7 +42,7 @@
 	                                        	<a>항공권/호텔<i class="fa fa-angle-down"></i></a>
 												<ul class="dropdown_menu">
 													<li>
-														<a href="#">항공권 예매</a>
+														<a href="${pageContext.request.contextPath}/flight/list.do">항공권 예매</a>
 													</li>
 													<li>
 														<a href="${pageContext.request.contextPath}/hotel/hotelList.do">호텔 예약</a>
