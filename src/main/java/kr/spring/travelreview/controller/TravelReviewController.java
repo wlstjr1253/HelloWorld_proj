@@ -64,6 +64,10 @@ public class TravelReviewController {
 			log.debug("<<travelReviewCommand>> : " + travelReviewCommand);
 		}
 
+		if(travelReviewCommand.getTr_img().length==0) {
+			result.rejectValue("tr_upload", "notExistFile");
+		}
+	
 		// 유효성 체크
 		if (result.hasErrors()) {
 			return "reviewWrite";
