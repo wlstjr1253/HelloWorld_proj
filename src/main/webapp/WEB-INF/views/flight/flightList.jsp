@@ -41,7 +41,7 @@
 									              fn:endsWith(flight.fi_logo,'.GIF') ||
 									              fn:endsWith(flight.fi_logo,'.png') ||
 									              fn:endsWith(flight.fi_logo,'.PNG')}">
-									<td><img src="${pageContext.request.contextPath}/resources/images/logo/${flight.fi_logo}" style="max-width:40px;"></td>
+									<td><img src="${pageContext.request.contextPath}/resources/images/logo/${flight.fi_logo}" style="max-width:80px;"></td>
 									</c:if>
 									<td>${flight.fi_nm}</td>
 									<td>${flight.fsi_start_city}</td>
