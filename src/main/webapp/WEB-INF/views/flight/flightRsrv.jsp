@@ -99,9 +99,9 @@
 												<h2 id="seat_class_type">Economy Class</h2>
 												<h5>총 가격</h5>
 												<h5>
-													<input type="hidden" name="fr_total_pc" id="fr_total_pc">
-													<input type="text" id="total_pc_fr" style="width:100px;" placeholder="0 원">
-													<span>/<input type="text" id="total_pp_fr" style="width:100px;" placeholder="0 명"></span>
+													<input type="hidden" name="fr_total_pc" id="fr_total_pc"> 
+													<input type="text" id="total_pc_fr" disabled  style="width:100px;background-color:transparent;border:none;" placeholder="0 원">
+													<span>/<input type="text" id="total_pp_fr" disabled style="width:100px;background-color:transparent;border:none;" placeholder="0 명"></span>
 												</h5>
 												<p>가격 시세는 일별로 변동이 있을 수 있으며 결제를 완료한 고객에게 먼저 예약이 완료 됩니다.</p>
 											</div>
@@ -112,49 +112,49 @@
 											<!-- 1열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
-												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
-													<input class="date-picker" type="text"
+												<span style="color:white;padding-bottom:5px;display: inline-block;">가는날</span>
+													<input class="date-picker" type="text" disabled
 														placeholder="arrive date"
 														value="${flightCommand.fsi_start_dt}"> 
 														<i class="mdi mdi-calendar-text" style="padding-top:20px;"></i>
 												</div>
 												<div class="date-to mb-20">
-												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
-													<input type="text" value="${flightCommand.fsi_start_city}">
+												<span style="color:white;padding-bottom:5px;display: inline-block;">출발도시</span>
+													<input type="text" disabled value="${flightCommand.fsi_start_city}">
 												</div>
 												<div class="name mb-15">
-												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
-													<input type="number" min="0" name="fr_adult_pp" id="fr_adult_pp" class="select-booking cal" placeholder="성인인원" />
+												<span style="color:white;padding-bottom:5px;display: inline-block;">어른</span>
+													<input type="number" min="0" name="fr_adult_pp" id="fr_adult_pp" class="select-booking cal" placeholder="0" />
 												</div>
 											</div>
 											<!-- 1열 끝 -->
 											<!-- 2열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
-												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
-													<input class="date-picker" type="text"
+												<span style="color:white;padding-bottom:5px;display: inline-block;">오는날</span>
+													<input class="date-picker" type="text" disabled
 														placeholder="Departure Date"
 														value="${flightCommand.fsi_arrive_dt}"> 
 														<i class="mdi mdi-calendar-text"  style="padding-top:20px;"></i>
 												</div>
 												<div class="date-to mb-20">
-													<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
-													<input type="text" value="${flightCommand.fsi_pass1_city}">
+													<span style="color:white;padding-bottom:5px;display: inline-block;">경유도시</span>
+													<input type="text" disabled value="${flightCommand.fsi_pass1_city}">
 												</div>
 												<div class="name mb-15">
 													<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
-													<input type="number" min="0" name="fr_kid_pp" id="fr_kid_pp" class="select-booking cal" placeholder="유아인원" />
+													<input type="number" min="0" name="fr_kid_pp" id="fr_kid_pp" class="select-booking cal" placeholder="0" />
 												</div>
 											</div>
 											<!-- 2열 끝 -->
 											<!-- 3열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
-												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
-													<input type="text" value="${flightCommand.fsi_arrive_city}">
+												<span style="color:white;padding-bottom:5px;display: inline-block;">도착도시</span>
+													<input type="text" disabled value="${flightCommand.fsi_arrive_city}">
 												</div>
 												<div class="select-option mb-20"> 
-												<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
+												<span style="color:white;padding-bottom:5px;display: inline-block;">좌석등급</span>
 													<select id="fr_rsrv_seat_type" name="fr_rsrv_seat_type">
 														<option value="FIR">First Class</option>
 														<option value="BUS">Business Class</option>
@@ -184,8 +184,9 @@
 												<div class="name mb-15">
 													<input type="text" name="fr_fnm" id="fr_fnm" placeholder="First Name(성)" />
 												</div>
-												<div class="name mb-15">
-													<input type="text" name="fr_phone" id="fr_phone" placeholder="휴대폰 번호" />
+												<div class="mail mb-15">
+													<input type="text" name="fr_phone" id="fr_phone" placeholder="예약자 연락처" />
+													<i class="mdi mdi-phone"></i>
 												</div>
 											</div>
 											<!-- 2열 -->
@@ -201,7 +202,7 @@
 											<div class="single-form-part">
 												<div class="mail mb-15">
 													<input type="email" name="fr_email" id="fr_email" placeholder="예약자 이메일" />
-													<i class="mdi mdi-calendar-text"></i>
+													<i class="mdi mdi-email"></i>
 												</div>
 												<div class="select-option mb-20"> 
 													<select name="fr_age" id="fr_age">
@@ -232,7 +233,7 @@
 							<div role="tabpanel" class="tab-pane" id="payment">
 								<div class="payment-info">
 									<div class="payment-form">
-										<div class="payment-form-list">
+										<div class="payment-form-list" align="center">
 											<div class="single_form">
 												<input type="text" name="cp_num" id="cp_num" placeholder="카드 번호">
 											</div>

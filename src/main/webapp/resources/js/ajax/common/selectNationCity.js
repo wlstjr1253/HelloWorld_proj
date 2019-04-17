@@ -12,12 +12,18 @@
 		success : function(data){
 			var nc_map = data.ncList;
 			var hotel_nc = '';
+			var flight_s_nc = '';
+			var flight_a_nc = '';
 			
 			$(nc_map).each(function(index, item){
 				hotel_nc += '<option value="' + item.nc_cd + '">' + item.nc_city + ' / ' + item.nc_nation + '</option>';
+				flight_s_nc += '<option value="' + item.nc_cd + '">' + item.nc_city + ' / ' + item.nc_nation + '</option>';
+				flight_a_nc += '<option value="' + item.nc_cd + '">' + item.nc_city + ' / ' + item.nc_nation + '</option>';
 			});
 			
 			$('#hotel_nc').append(hotel_nc);
+			$('#flight_s_nc').append(flight_s_nc);
+			$('#flight_a_nc').append(flight_a_nc);
 		},
 		error : function(){
 			alert('도시 목록 호출시 네트워크 오류');
