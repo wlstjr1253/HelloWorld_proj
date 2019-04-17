@@ -16,18 +16,28 @@ $(document).ready(function(){
 	});
 });
 </script>
+<div class="welcome-section text-center ptb-110">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="breadcurbs-inner">
+						<div class="breadcrubs">
+							<h2><i class="far fa-folder"></i>&nbsp;여행물품 카테고리 목록</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="container table-list">
 	<div class="row"><br><br>
-		<h2 class="text-center">
-			<i class="far fa-folder"></i>&nbsp;여행물품 카테고리 목록
-		</h2>
 		
 		<div class="table-responsive">
 		<div class="btn-submit pull-right">   
 		<button type="button" value="물품등록" class="btn btn-ok" 
 				onclick="location.href='categoryWrite.do'">카테고리 등록</button>
-		</div>
+		</div><br><br>
 			<table class="table table-striped">
 				
 					<tr>

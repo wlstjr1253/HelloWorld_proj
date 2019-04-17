@@ -41,4 +41,7 @@ public interface Tour_infoService {
 
 	// main 호출
 	public List<Tour_infoCommand> selectMainList();
+	
+	//관리자 삭제
+	public void deleteAdmin(Integer ti_id);
 }

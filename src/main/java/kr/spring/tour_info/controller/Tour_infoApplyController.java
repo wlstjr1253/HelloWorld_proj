@@ -20,8 +20,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import kr.spring.hotel.domain.HotelRsrvCommand;
-import kr.spring.hotel.domain.HotelVwCommand;
 import kr.spring.tour_info.domain.Tour_infoApplyCommand;
 import kr.spring.tour_info.service.Tour_infoService;
 import kr.spring.util.PagingUtil;

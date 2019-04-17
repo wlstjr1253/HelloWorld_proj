@@ -59,10 +59,11 @@ public interface Tour_infoMapper {
      public List<Tour_infoApplyCommand> selectListGuide(Map<String,Object> map);
      public int selectRowCountGuide(Map<String,Object> map);
      
-     
-     
-     
      // main 호출
      @Select("SELECT * FROM (SELECT * FROM TOUR_INFO ORDER BY TI_ID DESC) WHERE ROWNUM < 5")
      public List<Tour_infoCommand> selectMainList();
+     
+     //관리자 삭제
+     @Delete("DELETE FROM tour_info WHERE ti_id=#{ti_id}")
+     public void deleteAdmin(Integer ti_id);
 }
