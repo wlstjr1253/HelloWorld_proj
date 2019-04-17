@@ -31,11 +31,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="b-date arrive mb-15 col-md-6">
-                                        <input class="date-picker" type="text" name="fsi_start_dt" placeholder="출발일">
+                                        <input class="date-picker" type="text" name="fsi_start_dt" id="fsi_start_dt" placeholder="출발일">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                     <div class="b-date departure mb-15 col-md-6">
-                                        <input class="date-picker" type="text" name="fsi_arrive_dt" placeholder="귀국일">
+                                        <input class="date-picker" type="text" name="fsi_arrive_dt" id="fsi_arrive_dt" placeholder="귀국일">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                 </div>
