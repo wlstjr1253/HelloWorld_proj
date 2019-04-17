@@ -27,11 +27,9 @@
 						fsi_start_city like '%' || #{keyword} || '%' or
 						fsi_arrive_city like '%' || #{keyword} || '%'
 					</if>
-					<if test="keyword != '' and keyfield == 'fsi_start_dt'">
-						fsi_start_dt like '%' || #{keyword} || '%'
-					</if>
-					<if test="keyword != '' and keyfield == 'fsi_arrive_dt'">
-						fsi_arrive_dt like '%' || #{keyword} || '%'
+					<if test="start_dt != '' or arrive_dt != ''">
+						(substr(fsi_start_dt,1,10) = '' || #{start_dt} || '') or
+						(substr(fsi_start_dt,1,10) = '' || #{arrive_dt} || '') 
 					</if>
 				</where>
 		      ORDER BY fsi_start_dt ASC)a)
@@ -58,11 +56,9 @@
 							fsi_start_city like '%' || #{keyword} || '%' or
 							fsi_arrive_city like '%' || #{keyword} || '%'
 						</if>
-						<if test="keyword != '' and keyfield == 'fsi_start_dt'">
-							fsi_start_dt like '%' || #{keyword} || '%'
-						</if>
-						<if test="keyword != '' and keyfield == 'fsi_arrive_dt'">
-							fsi_arrive_dt like '%' || #{keyword} || '%'
+						<if test="start_dt != '' or arrive_dt != ''">
+							(substr(fsi_start_dt,1,10) = '' || #{start_dt} || '') or
+							(substr(fsi_start_dt,1,10) = '' || #{arrive_dt} || '') 
 						</if>
 					</where>		
 	</select>

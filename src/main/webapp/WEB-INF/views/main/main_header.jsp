@@ -17,9 +17,14 @@
                             <p>얼마없는 항공권을 검색해 보세요! 나오면 사고 없음 딴데 가보고</p>
                         </div>
                         <div class="booking-form">
-                            <form action="${pageContext.request.contextPath}/flight/list.do" id="flight_reg_form">
-                            
-                                <div class="select-book mb-15">
+                            <form action="${pageContext.request.contextPath}/flight/list.do" id="flight_reg_form" method="get">
+                            	<ul style="width:200px;">
+                            		<li style="float:left;"><label style="color:white;width:40px;margin-top:17px;">왕복</label></li>
+                            		<li style="float:left;"><input type="radio" id="back" name="flight_type" style="width:20px;"></li>
+                            		<li style="float:left;"><label style="color:white;width:40px;margin-top:17px;margin-left:10px;">편도</label></li>
+                            		<li style="float:left;"><input type="radio" id="noback" name="flight_type" style="width:20px;"></li>
+                            	</ul>
+                                <div class="select-book mb-15" style="clear:left;">
 	                                <select <%-- class="select-booking" --%> name="flight_s_nc" id="flight_s_nc">
 				                        <option value="ALL" selected>출발 도시 선택</option>
 				                    </select>
@@ -31,11 +36,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="b-date arrive mb-15 col-md-6">
-                                        <input class="date-picker" type="text" name="fsi_start_dt" id="fsi_start_dt" placeholder="출발일">
+                                        <input class="date-picker" type="text" name="start_dt" id="start_dt" placeholder="출발일">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                     <div class="b-date departure mb-15 col-md-6">
-                                        <input class="date-picker" type="text" name="fsi_arrive_dt" id="fsi_arrive_dt" placeholder="귀국일">
+                                        <input class="date-picker" type="text" name="arrive_dt" id="arrive_dt" placeholder="귀국일">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                 </div>

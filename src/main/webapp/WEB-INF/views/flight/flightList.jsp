@@ -18,7 +18,10 @@
 						</h2>
 						
 						<c:if test="${fCount == 0}">
-						<div class="align-center">조회된 항공권이 없습니다.</div>
+							<div class="col-md-12 pb-80">
+								<br><br>
+								조회된 항공권이 없습니다.
+							</div>
 						</c:if>
 						<c:if test="${fCount > 0}">
 						<div class="table-responsive margin-top-50">
