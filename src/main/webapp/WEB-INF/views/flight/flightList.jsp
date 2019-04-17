@@ -18,7 +18,10 @@
 						</h2>
 						
 						<c:if test="${fCount == 0}">
-						<div class="align-center">조회된 항공권이 없습니다.</div>
+							<div class="col-md-12 pb-80">
+								<br><br>
+								조회된 항공권이 없습니다.
+							</div>
 						</c:if>
 						<c:if test="${fCount > 0}">
 						<div class="table-responsive margin-top-50">
@@ -41,13 +44,15 @@
 									              fn:endsWith(flight.fi_logo,'.GIF') ||
 									              fn:endsWith(flight.fi_logo,'.png') ||
 									              fn:endsWith(flight.fi_logo,'.PNG')}">
-									<td><img src="${pageContext.request.contextPath}/resources/images/logo/${flight.fi_logo}" style="max-width:80px;"></td>
+									<td><img src="${pageContext.request.contextPath}/resources/images/logo/${flight.fi_logo}" style="max-width:100px;"></td>
 									</c:if>
 									<td>${flight.fi_nm}</td>
 									<td>${flight.fsi_start_city}</td>
 									<td>${flight.fsi_arrive_city}</td>
 									<td>${flight.fsi_start_dt}</td>
-									<td></td>
+									<td>
+										-><br>비행시간
+									</td>
 									<td>${flight.fsi_arrive_dt}</td>
 									<td><input type="button" value="예약"
 					    										onclick="location.href='flightRsrv.do?fsi_idx=${flight.fsi_idx}'"></td>

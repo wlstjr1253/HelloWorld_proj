@@ -112,9 +112,9 @@
 											<!-- 1열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
-												<span style="color:white;padding-bottom:5px;display: inline-block;">가는날</span>
+												<span style="color:white;padding-bottom:5px;display: inline-block;">출발시간</span>
 													<input class="date-picker" type="text" disabled
-														placeholder="arrive date"
+														placeholder="Departure Date"
 														value="${flightCommand.fsi_start_dt}"> 
 														<i class="mdi mdi-calendar-text" style="padding-top:20px;"></i>
 												</div>
@@ -131,9 +131,9 @@
 											<!-- 2열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
-												<span style="color:white;padding-bottom:5px;display: inline-block;">오는날</span>
+												<span style="color:white;padding-bottom:5px;display: inline-block;">도착시간</span>
 													<input class="date-picker" type="text" disabled
-														placeholder="Departure Date"
+														placeholder="Arrive Date"
 														value="${flightCommand.fsi_arrive_dt}"> 
 														<i class="mdi mdi-calendar-text"  style="padding-top:20px;"></i>
 												</div>

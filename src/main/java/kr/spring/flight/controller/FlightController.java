@@ -46,28 +46,36 @@ public class FlightController {
 	// =============== 항공권 조회 =============== //
 	@RequestMapping(value="/flight/list.do")
 	public ModelAndView process(
-			@RequestParam(value="flight_s_nc", defaultValue="ALL") 
+			/*@RequestParam(value="flight_s_nc", defaultValue="ALL") 
 			String flight_s_nc,
 			@RequestParam(value="flight_a_nc", defaultValue="ALL") 
-			String flight_a_nc,
+			String flight_a_nc,*/
 			@RequestParam(value="pageNum", defaultValue="1")
 			int currentPage,
 			@RequestParam(value="keyfield",defaultValue="")
 			String keyfield,
 			@RequestParam(value="keyword", defaultValue="")
-			String keyword) {
+			String keyword,
+			@RequestParam(value="start_dt", defaultValue="")
+			String start_dt,
+			@RequestParam(value="arrive_dt", defaultValue="")
+			String arrive_dt) {
 		
 		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("flight_s_nc", flight_s_nc);
-		map.put("flight_a_nc", flight_a_nc);
+		/*map.put("flight_s_nc", flight_s_nc);
+		map.put("flight_a_nc", flight_a_nc);*/
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
+		map.put("start_dt", start_dt);
+		map.put("arrive_dt", arrive_dt);
 		
 		// 등록된 항공권 갯수
 		int flightCount = flightService.selectFlightRowCount(map);
 		
 		if (log.isDebugEnabled()) {
 			log.debug("<<flightCount>> : " + flightCount);
+			log.debug("<<start_dt>> : " + start_dt);
+			log.debug("<<fsi_arrive_dt>> : " + arrive_dt);
 		}
 		
 		PagingUtil page =
