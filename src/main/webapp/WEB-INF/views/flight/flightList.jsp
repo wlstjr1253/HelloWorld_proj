@@ -27,15 +27,12 @@
 									<th>로고</th>
 									<th>항공사</th>
 									<th>출발지</th>
-									<th>도착지</th>
 									<th>경유지1</th>
-									
+									<th>도착지</th>
 									<th>출발시간</th>
-									<th>도착시간</th>
 									<th>경유1시간</th>
+									<th>도착시간</th>
 									<th></th>
-									
-									
 								</tr>
 								<c:forEach var="flight" items="${fList}">
 								<tr>
@@ -49,13 +46,11 @@
 									</c:if>
 									<td>${flight.fi_nm}</td>
 									<td>${flight.fsi_start_city}</td>
-									<td>${flight.fsi_arrive_city}</td>
 									<td>${flight.fsi_pass1_city}</td>
-									
+									<td>${flight.fsi_arrive_city}</td>
 									<td>${flight.fsi_start_dt}</td>
-									<td>${flight.fsi_arrive_dt}</td>
 									<td>${flight.fsi_pass1_dt}</td>
-									
+									<td>${flight.fsi_arrive_dt}</td>
 									<td><input type="button" value="예약"
 					    										onclick="location.href='flightRsrv.do?fsi_idx=${flight.fsi_idx}'"></td>
 								</tr>

@@ -51,7 +51,7 @@ $(function(){
 
 	$('#rsrv_form').on('submit', function(){
 		if(!fr_submit) {
-			alert('예약 정보를 다시 입력해주세요.');
+			alert('예약 정보(인원)를 다시 입력해주세요.');
 			return false;
 		}
 	});
