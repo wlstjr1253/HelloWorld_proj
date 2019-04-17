@@ -87,7 +87,7 @@
 	                                        	<a href="#"><i class="fas fa-cog"></i> <i class="fa fa-angle-down"></i></a>
 	                                            <ul class="dropdown_menu">
 				<li><a href="${pageContext.request.contextPath}/admin/flightWrite.do">항공권 등록</a></li>
-				<li><a href="personal-information.html">투어 내역</a></li>
+				<li><a href="${pageContext.request.contextPath}/tour_info/adminList.do">투어 내역</a></li>
 				<li><a href="${pageContext.request.contextPath}/item/admin_itemList.do">관리자여행물품메뉴</a></li>
 				<li><a href="${pageContext.request.contextPath}/item/categorylist.do">관리자카테고리메뉴</a></li>
 				<li><a href="${pageContext.request.contextPath}/member/guideList.do">가이드 관리</a></li>

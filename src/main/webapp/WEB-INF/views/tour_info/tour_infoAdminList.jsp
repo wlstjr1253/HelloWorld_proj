@@ -58,7 +58,7 @@
 								<th width="250">투어 명</th>
 								<th>작성자</th>
 								<th>시작 일자</th>
-								<!-- <th>비고</th> -->
+								<th>비고</th>
 							</tr>
 							<c:forEach var="tour_info" items="${list}">
 								<tr>
@@ -67,11 +67,12 @@
 											(${tour_info.re_cnt})</a></td>
 									<td>${tour_info.user_id}</td>
 									<td>${tour_info.ti_start_day}</td>
+									<td><a class="button border_radius little button-black mb-10" href="adminDelete.do?ti_id=${tour_info.ti_id}"><span>삭제</span></a></td>
 								</tr>
 							</c:forEach>
 						</table>
 					</div>
-					<div class="text-center col-xs-12 paging">${pagingHtml}</div>
+					<div class="align-center">${pagingHtml}</div>
 				</c:if>
 			</div>
 		</div>
