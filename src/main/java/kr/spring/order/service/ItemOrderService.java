@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Select;
 
 import kr.spring.cart.domain.ItemCartCommand;
+import kr.spring.member.domain.MemberCommand;
 import kr.spring.order.domain.ItemOrderCommand;
 import kr.spring.order.domain.ItemOrderDetailCommand;
 
@@ -22,7 +23,7 @@ public interface ItemOrderService {
 	public void updateOrder(ItemOrderCommand itemOrderCommand);	
 	public void deleteOrder(Integer num);
 	
-	/*public List<ItemOrderCommand> selectItemBuyHist(Map<String, Object> map);
-	public int selectItemBuyHistRowCount(String user_id);*/
+	public List<ItemOrderCommand> selectItemBuyHist(Map<String, Object> map);
+	/*public int selectItemBuyHistRowCount(String user_id);*/
 
 }

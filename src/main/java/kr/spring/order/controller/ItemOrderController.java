@@ -226,23 +226,28 @@ public class ItemOrderController {
 
 
 
-	/*//=========주문 내역 =========//
-	@RequestMapping("/itemcart/mypage.do")
-	public ModelAndView processMypage(
-			@RequestParam(value="pageNum", defaultValue="1")int currentPage,
-			@RequestParam(value="keyfield", defaultValue="user_id")String keyfield,
-			@RequestParam(value="keyword", defaultValue="")String keyword,
-			HttpSession session
-			) {
-		String user_id=(String)session.getAttribute("user_id");
-		keyword = user_id;
+	/*// ================ 주문확인 ================ //
+		@RequestMapping("/itemcart/mypage.do")
+		public String mypage(HttpSession session,Model model, 
+				@Valid ItemOrderCommand itemOrderCommand) {
+			String user_id=(String)session.getAttribute("user_id");
+			int ibh_idx=(Integer)session.getAttribute("ibh_idx");
 
 
+			ItemOrderCommand item = itemOrderService.getOrderDetail(ibh_idx,user_id);
 
-		Map<String,Object> map = new HashMap<String, Object>();
-		map.put("keyfield", keyfield);
-		map.put("keyword", keyword);
+			if (log.isDebugEnabled()) {
+				log.debug("<<itemOrderCommand>> : "+itemOrderCommand);
+			}
 
+			//뽑아낸 데이터는 모델에 넣어준다. 뷰에서 자바빈에 접근해서 사용 할 수 있도록.
+			model.addAttribute("item",item);
+			
+
+			return "mypage";
+		}*/
+		
+		/*
 		// 총 결제 갯수 또는 검색된 결제의 갯수
 		//어떤 결제??? 대여? 투어 결제? 항공권 결제? 호텔 결제?
 		int count = itemOrderService.selectItemBuyHistRowCount(user_id);

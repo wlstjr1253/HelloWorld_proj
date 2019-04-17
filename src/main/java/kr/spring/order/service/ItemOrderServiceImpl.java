@@ -74,12 +74,13 @@ public class ItemOrderServiceImpl implements ItemOrderService {
 		
 	}
 
-	/*@Override
+	@Override
 	public List<ItemOrderCommand> selectItemBuyHist(Map<String, Object> map) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/*
 	@Override
 	public int selectItemBuyHistRowCount(String user_id) {
 		// TODO Auto-generated method stub
