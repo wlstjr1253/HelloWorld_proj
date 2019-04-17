@@ -125,7 +125,6 @@
                         <span class="cd-words-wrapper coloring">
                             <b class="is-visible">항공권</b>
                             <b>호텔</b>
-                            <b>패키지</b>
                             <b>투어</b>
                             <b>아이템</b>
                         </span>
