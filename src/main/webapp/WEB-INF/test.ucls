@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <interface id="1" language="java" name="kr.spring.cart.dao.ItemCartMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/cart/dao/ItemCartMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="312" x="16862" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" language="java" name="kr.spring.travelreview.service.TravelReviewServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/travelreview/service/TravelReviewServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="320" x="7400" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="kr.spring.common.service.CommonService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/common/service/CommonService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="221" x="11674" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="kr.spring.category.service.ItemCategoryServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/category/service/ItemCategoryServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="253" x="19759" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="kr.spring.member.email.Email" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/email/Email.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="143" x="14178" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="kr.spring.order.service.ItemOrderService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/order/service/ItemOrderService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="415" x="17214" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" language="java" name="kr.spring.travelreview.domain.TravelReviewCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/travelreview/domain/TravelReviewCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="639" width="176" x="183" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="kr.spring.hotel.service.HotelServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/hotel/service/HotelServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="301" x="8264" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="kr.spring.travelreview.controller.TravelReviewController" 
+    project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/travelreview/controller/TravelReviewController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="279" width="464" x="7760" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="kr.spring.itemReview.service.ItemReviewServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/itemReview/service/ItemReviewServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="259" x="18305" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="11" language="java" name="kr.spring.member.dao.MemberMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/dao/MemberMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="441" width="326" x="14923" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="12" language="java" name="kr.spring.order.service.ItemOrderServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/order/service/ItemOrderServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="415" x="16738" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="kr.spring.flight.domain.FlightCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/flight/domain/FlightCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="1557" width="185" x="399" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="14" language="java" name="kr.spring.flight.dao.FlightMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/flight/dao/FlightMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="303" x="8962" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="15" language="java" name="kr.spring.package_info.service.Package_infoServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/package_info/service/Package_infoServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="169" x="624" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="16" language="java" name="kr.spring.hotel.service.HotelService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/hotel/service/HotelService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="301" x="8605" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="17" language="java" name="kr.spring.hotel.domain.HotelRsrvCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/hotel/domain/HotelRsrvCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="801" width="184" x="833" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="kr.spring.tour_info.domain.Tour_infoReplyCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/domain/Tour_infoReplyCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="423" width="166" x="1057" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="19" language="java" name="kr.spring.flight.service.FlightService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/flight/service/FlightService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="303" x="9305" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="20" language="java" name="kr.spring.common.service.CommonServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/common/service/CommonServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="221" x="11413" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="21" language="java" name="kr.spring.member.service.MemberService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/service/MemberService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="369" width="326" x="15392" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="22" language="java" name="kr.spring.hotel.controller.HotelController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/hotel/controller/HotelController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="317" x="8605" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="kr.spring.util.PagingUtil" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/util/PagingUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="257" x="1263" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="kr.spring.itemReview.domain.ItemReviewCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/itemReview/domain/ItemReviewCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="423" width="155" x="1560" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="kr.spring.hotel.domain.CvntlInfoCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/hotel/domain/CvntlInfoCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="150" x="20701" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="26" language="java" name="kr.spring.cart.service.ItemCartService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/cart/service/ItemCartService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="312" x="17669" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="27" language="java" name="kr.spring.board.controller.BoardReplyAjaxController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/board/controller/BoardReplyAjaxController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="440" x="10091" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="kr.spring.common.domain.NationCityCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/common/domain/NationCityCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="148" x="1755" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="29" language="java" name="kr.spring.tour_info.service.Tour_infoService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/service/Tour_infoService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="441" width="354" x="12369" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="30" language="java" name="kr.spring.travel.controller.TravelController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/travel/controller/TravelController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="197" x="9305" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="kr.spring.flight.service.FlightServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/flight/service/FlightServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="303" x="8962" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="kr.spring.package_tour_rsrv_log.Package_tour_rsrv_logMapper" 
+    project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/package_tour_rsrv_log/Package_tour_rsrv_logMapper.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="201" x="1943" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="33" language="java" name="kr.spring.category.dao.ItemCategoryMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/category/dao/ItemCategoryMapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="253" x="19759" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="34" language="java" name="kr.spring.member.controller.MemberController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/controller/MemberController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="423" width="340" x="14543" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="kr.spring.board.service.BoardServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/board/service/BoardServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="315" width="336" x="11037" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="36" language="java" name="kr.spring.itemReview.service.ItemReviewService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/itemReview/service/ItemReviewService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="259" x="18604" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="37" language="java" name="kr.spring.tour_info.controller.Tour_infoController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/controller/Tour_infoController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="297" width="442" x="11874" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="kr.spring.tour_info.controller.Tour_infoApplyController" 
+    project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/controller/Tour_infoApplyController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="470" x="12356" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="kr.spring.category.domain.ItemCategoryCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/category/domain/ItemCategoryCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="158" x="2184" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="40" language="java" name="kr.spring.category.service.ItemCategoryService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/category/service/ItemCategoryService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="253" x="20052" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="41" language="java" name="kr.spring.common.dao.CommonMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/common/dao/CommonMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="221" x="11413" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="42" language="java" name="kr.spring.item.service.ItemService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/item/service/ItemService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="272" x="18903" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="43" language="java" name="kr.spring.tour_info.controller.Tour_infoReplyAjaxController" 
+    project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/controller/Tour_infoReplyAjaxController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="463" x="12866" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="44" language="java" name="kr.spring.package_info.dao.Package_infoMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/package_info/dao/Package_infoMapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="318" x="2382" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="45" language="java" name="kr.spring.member.domain.MemberCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/domain/MemberCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="981" width="193" x="2740" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="kr.spring.member.service.MemberServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/service/MemberServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="387" width="326" x="14923" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="kr.spring.board.domain.BoardReplyCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/board/domain/BoardReplyCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="423" width="155" x="2973" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="kr.spring.board.view.DownloadView" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/board/view/DownloadView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="480" x="3168" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="kr.spring.item.domain.ItemCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/item/domain/ItemCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="639" width="161" x="3688" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" name="kr.spring.cart.domain.ItemCartCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/cart/domain/ItemCartCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="747" width="161" x="3889" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="kr.spring.member.controller.MemberAdminController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/controller/MemberAdminController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="262" x="15289" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="52" language="java" name="kr.spring.travelreview.service.TravelReviewService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/travelreview/service/TravelReviewService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="320" x="7760" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="53" language="java" name="kr.spring.itemReview.controller.ItemReviewController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/itemReview/controller/ItemReviewController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="328" x="18604" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="54" language="java" name="kr.spring.package_info.domain.Package_infoCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/package_info/domain/Package_infoCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="1179" width="188" x="4090" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="55" language="java" name="kr.spring.util.LoginException" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/util/LoginException.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="111" x="4318" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="56" language="java" name="kr.spring.flight.controller.FlightController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/flight/controller/FlightController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="318" x="9542" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="57" language="java" name="kr.spring.package_tour_rsrv_log.controller.Package_tour_rsrv_logController" 
+    project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/package_tour_rsrv_log/controller/Package_tour_rsrv_logController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="214" x="4469" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="58" language="java" name="kr.spring.tour_info.dao.Tour_infoMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/dao/Tour_infoMapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="441" width="354" x="13784" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="59" language="java" name="kr.spring.board.domain.BoardCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/board/domain/BoardCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="693" width="161" x="4723" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="60" language="java" name="kr.spring.tour_info.domain.Tour_infoRsrvCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/domain/Tour_infoRsrvCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="161" x="4924" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="61" language="java" name="kr.spring.member.controller.FindPasswordAjaxController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/controller/FindPasswordAjaxController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="258" x="14245" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="62" language="java" name="kr.spring.util.DurationFromNow" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/util/DurationFromNow.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="204" x="5125" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="63" language="java" name="kr.spring.board.service.BoardService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/board/service/BoardService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="336" x="10571" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="64" language="java" name="kr.spring.util.CipherTemplate" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/util/CipherTemplate.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="226" x="14562" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="65" language="java" name="kr.spring.member.controller.MemberConfirmIdAjaxController" 
+    project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/controller/MemberConfirmIdAjaxController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="207" x="15591" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="66" language="java" name="kr.spring.order.controller.ItemOrderController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/order/controller/ItemOrderController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="369" x="17545" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="67" language="java" name="kr.spring.board.controller.BoardController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/board/controller/BoardController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="297" width="426" x="10571" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="68" language="java" name="kr.spring.interceptor.LoginCheckInterceptor" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/interceptor/LoginCheckInterceptor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="356" x="15838" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="69" language="java" name="kr.spring.item.service.ItemServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/item/service/ItemServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="189" width="272" x="19447" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="70" language="java" name="kr.spring.tour_info.service.Tour_infoServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/service/Tour_infoServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="459" width="354" x="13851" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="71" language="java" name="kr.spring.travelreview.dao.TravelReviewMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/travelreview/dao/TravelReviewMapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="320" x="7400" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="72" language="java" name="kr.spring.category.controller.ItemCategoryController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/category/controller/ItemCategoryController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="465" x="20052" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="73" language="java" name="kr.spring.main.controller.MainController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/main/controller/MainController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="151" x="9900" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="74" language="java" name="kr.spring.tour_info.domain.Tour_infoApplyCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/domain/Tour_infoApplyCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="477" width="166" x="5369" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="75" language="java" name="kr.spring.tour_info.domain.Tour_infoCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/domain/Tour_infoCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="1071" width="177" x="5575" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="76" language="java" name="kr.spring.tour_info.controller.Tour_infoAdminController" 
+    project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/tour_info/controller/Tour_infoAdminController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="315" width="442" x="13369" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="77" language="java" name="kr.spring.hotel.domain.HotelCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/hotel/domain/HotelCommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="837" width="248" x="20557" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="78" language="java" name="kr.spring.package_tour_rsrv_log.domain.Package_tour_rsrv_logCommand" 
+    project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/package_tour_rsrv_log/domain/Package_tour_rsrv_logCommand.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="477" width="216" x="5792" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="79" language="java" name="kr.spring.member.controller.FindIdAjaxController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/controller/FindIdAjaxController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="196" x="16234" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="80" language="java" name="kr.spring.hotel.domain.HotelVwCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/hotel/domain/HotelVwCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="1431" width="248" x="20845" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="81" language="java" name="kr.spring.itemReview.dao.ItemReviewMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/itemReview/dao/ItemReviewMapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="259" x="18305" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="82" language="java" name="kr.spring.order.domain.ItemOrderCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/order/domain/ItemOrderCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="747" width="165" x="6048" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="83" language="java" name="kr.spring.order.domain.ItemOrderDetailCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/order/domain/ItemOrderDetailCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="693" width="172" x="6253" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="84" language="java" name="kr.spring.cart.controller.ItemCartController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/cart/controller/ItemCartController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="311" x="17954" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="85" language="java" name="kr.spring.member.controller.MemberConfirmEmailAjaxController" 
+    project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/controller/MemberConfirmEmailAjaxController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="228" x="16470" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="86" language="java" name="kr.spring.package_info.service.Package_infoService" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/package_info/service/Package_infoService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="63" width="145" x="6465" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="87" language="java" name="kr.spring.board.dao.BoardMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/board/dao/BoardMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="336" x="11037" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="88" language="java" name="kr.spring.member.email.EmailSender" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/member/email/EmailSender.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="161" x="14361" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="89" language="java" name="kr.spring.board.view.ImageView" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/board/view/ImageView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="480" x="6650" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="90" language="java" name="kr.spring.item.controller.ItemController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/item/controller/ItemController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="441" width="435" x="18972" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="91" language="java" name="kr.spring.cart.service.ItemCartServiceImpl" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/cart/service/ItemCartServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="312" x="17193" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="92" language="java" name="kr.spring.common.controller.CommonAjaxController" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/common/controller/CommonAjaxController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="160" x="11674" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="93" language="java" name="kr.spring.flight.domain.FlightRsrvCommand" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/flight/domain/FlightRsrvCommand.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="855" width="190" x="7170" y="-655"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="94" language="java" name="kr.spring.hotel.dao.HotelMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/hotel/dao/HotelMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="301" x="8264" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="95" language="java" name="kr.spring.item.dao.ItemMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/item/dao/ItemMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="272" x="19447" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="96" language="java" name="kr.spring.order.dao.ItemOrderMapper" project="HelloWorld_proj" 
+    file="/HelloWorld_proj/src/main/java/kr/spring/order/dao/ItemOrderMapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="339" x="16483" y="942"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <association id="97">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="98" name="tour_infoService"/>      
+      <multiplicity id="99" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="100">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="52"/>  
+  </realization>  
+  <association id="101">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="102" name="memberService"/>      
+      <multiplicity id="103" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="104">    
+    <end type="SOURCE" refId="43" navigable="false">      
+      <attribute id="105" name="tour_infoService"/>      
+      <multiplicity id="106" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="107">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="108">    
+    <end type="SOURCE" refId="70" navigable="false">      
+      <attribute id="109" name="tour_infoMapper"/>      
+      <multiplicity id="110" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="58" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="111">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="112" name="flightMapper"/>      
+      <multiplicity id="113" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="114">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="115" name="cipherAES"/>      
+      <multiplicity id="116" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="64" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="117">    
+    <end type="SOURCE" refId="61" navigable="false">      
+      <attribute id="118" name="email"/>      
+      <multiplicity id="119" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="120">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="42"/>  
+  </realization>  
+  <association id="121">    
+    <end type="SOURCE" refId="90" navigable="false">      
+      <attribute id="122" name="itemCategoryService"/>      
+      <multiplicity id="123" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="124">    
+    <end type="SOURCE" refId="70"/>    
+    <end type="TARGET" refId="29"/>  
+  </realization>  
+  <association id="125">    
+    <end type="SOURCE" refId="46" navigable="false">      
+      <attribute id="126" name="memberMapper"/>      
+      <multiplicity id="127" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="128">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="129" name="itemCartMapper"/>      
+      <multiplicity id="130" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="131">    
+    <end type="SOURCE" refId="61" navigable="false">      
+      <attribute id="132" name="emailSender"/>      
+      <multiplicity id="133" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="88" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="134">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="135" name="itemReviewMapper"/>      
+      <multiplicity id="136" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="81" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="137">    
+    <end type="SOURCE" refId="80" navigable="false">      
+      <attribute id="138" name="st_cvntl_list"/>      
+      <multiplicity id="139" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="140">    
+    <end type="SOURCE" refId="92" navigable="false">      
+      <attribute id="141" name="commonService"/>      
+      <multiplicity id="142" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="143">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="144" name="itemCategoryMapper"/>      
+      <multiplicity id="145" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="146">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="147" name="itemOrderMapper"/>      
+      <multiplicity id="148" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="96" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="149">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="40"/>  
+  </realization>  
+  <realization id="150">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <association id="151">    
+    <end type="SOURCE" refId="66" navigable="false">      
+      <attribute id="152" name="itemCartService"/>      
+      <multiplicity id="153" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="154">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
+  <association id="155">    
+    <end type="SOURCE" refId="90" navigable="false">      
+      <attribute id="156" name="itemService"/>      
+      <multiplicity id="157" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="158">    
+    <end type="SOURCE" refId="67" navigable="false">      
+      <attribute id="159" name="boardService"/>      
+      <multiplicity id="160" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="63" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="161">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="162" name="hotelService"/>      
+      <multiplicity id="163" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="164">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="165" name="commonMapper"/>      
+      <multiplicity id="166" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="167">    
+    <end type="SOURCE" refId="79" navigable="false">      
+      <attribute id="168" name="memberService"/>      
+      <multiplicity id="169" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="170">    
+    <end type="SOURCE" refId="73" navigable="false">      
+      <attribute id="171" name="tour_infoService"/>      
+      <multiplicity id="172" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="173">    
+    <end type="SOURCE" refId="77" navigable="false">      
+      <attribute id="174" name="st_cvntl_list"/>      
+      <multiplicity id="175" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="176">    
+    <end type="SOURCE" refId="61" navigable="false">      
+      <attribute id="177" name="memberService"/>      
+      <multiplicity id="178" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="179">    
+    <end type="SOURCE" refId="69" navigable="false">      
+      <attribute id="180" name="itemMapper"/>      
+      <multiplicity id="181" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="95" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="182">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="183" name="boardMapper"/>      
+      <multiplicity id="184" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="87" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="185">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="186" name="itemReviewService"/>      
+      <multiplicity id="187" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="188">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="189" name="travelReviewService"/>      
+      <multiplicity id="190" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="52" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="191">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="192" name="tour_infoService"/>      
+      <multiplicity id="193" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="194">    
+    <end type="SOURCE" refId="91" navigable="false">      
+      <attribute id="195" name="itemCartMapper"/>      
+      <multiplicity id="196" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="197">    
+    <end type="SOURCE" refId="72" navigable="false">      
+      <attribute id="198" name="itemCategoryService"/>      
+      <multiplicity id="199" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="200">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="201" name="memberService"/>      
+      <multiplicity id="202" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="203">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <association id="204">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="205" name="hotelMapper"/>      
+      <multiplicity id="206" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="94" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="207">    
+    <end type="SOURCE" refId="76" navigable="false">      
+      <attribute id="208" name="tour_infoService"/>      
+      <multiplicity id="209" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="210">    
+    <end type="SOURCE" refId="84" navigable="false">      
+      <attribute id="211" name="itemCartService"/>      
+      <multiplicity id="212" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="213">    
+    <end type="SOURCE" refId="68" navigable="false">      
+      <attribute id="214" name="memberService"/>      
+      <multiplicity id="215" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="216">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="217" name="itemService"/>      
+      <multiplicity id="218" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="219">    
+    <end type="SOURCE" refId="91"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <realization id="220">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="63"/>  
+  </realization>  
+  <association id="221">    
+    <end type="SOURCE" refId="66" navigable="false">      
+      <attribute id="222" name="itemService"/>      
+      <multiplicity id="223" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="224">    
+    <end type="SOURCE" refId="73" navigable="false">      
+      <attribute id="225" name="travelReviewService"/>      
+      <multiplicity id="226" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="52" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="227">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="228" name="memberService"/>      
+      <multiplicity id="229" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="230">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="231" name="flightService"/>      
+      <multiplicity id="232" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="233">    
+    <end type="SOURCE" refId="66" navigable="false">      
+      <attribute id="234" name="itemOrderService"/>      
+      <multiplicity id="235" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="236">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="237" name="travelReviewMapper"/>      
+      <multiplicity id="238" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="71" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="239">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <association id="240">    
+    <end type="SOURCE" refId="65" navigable="false">      
+      <attribute id="241" name="memberService"/>      
+      <multiplicity id="242" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="243">    
+    <end type="SOURCE" refId="56" navigable="false">      
+      <attribute id="244" name="flightService"/>      
+      <multiplicity id="245" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="246">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="36"/>  
+  </realization>  
+  <association id="247">    
+    <end type="SOURCE" refId="90" navigable="false">      
+      <attribute id="248" name="itemReviewService"/>      
+      <multiplicity id="249" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="250">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="251" name="boardService"/>      
+      <multiplicity id="252" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="63" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
