@@ -252,9 +252,8 @@ public class ItemOrderController {
 
 	// 전송된 데이터 처리
 	@RequestMapping(value="/itemcart/orderSubmitPart.do")
-	public String submitPart(@RequestParam("checked_num") String checked_num, 
-			@ModelAttribute("command") ItemOrderCommand itemOrderCommand,
-			BindingResult result,HttpSession session) {
+	public String submitPart(@RequestParam("checked_num") String checked_num,
+			@ModelAttribute("command") ItemOrderCommand itemOrderCommand,HttpSession session) {
 
 
 		// 유효성 체크
@@ -262,21 +261,17 @@ public class ItemOrderController {
 				return "orderForm";
 			}*/
 
-		//주문번호 생성
-		int order_num = itemOrderService.getOrderNum();
-		itemOrderCommand.setIbh_idx(order_num);
-
 		if (log.isDebugEnabled()) {
 			log.debug("<<itemOrderCommand>> : " + itemOrderCommand);
 		}
 
 		List<String> ic_nums =Arrays.asList(checked_num.split(","));			
 		//상세정보 처리를 위해서 장바구니 테이블에 저장된 정보 호출
-		List<ItemCartCommand> itemOrderlist = itemCartService.selectCartListChosen(ic_nums);
+		//List<ItemCartCommand> itemOrderlist = itemCartService.selectCartListChosen(ic_nums);
 
 		String user_id = (String)session.getAttribute("user_id");
 		// 글쓰기
-		itemOrderService.insertOrder(itemOrderCommand,itemOrderlist,user_id,ic_nums);
+		//itemOrderService.insertOrder(itemOrderCommand,itemOrderlist,user_id,ic_nums);
 
 		// RedirectAttributes 객체는 리다이렉트 시점에 한 번만 사용되는
 		// 데이터를 전송.

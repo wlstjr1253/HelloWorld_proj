@@ -85,7 +85,6 @@ td.price {
 				
 				<!-- 탭1 상세보기 시작 -->
 				<div class="tab-pane active" id="booking">
-					<c:forEach var="itemCart" items="${list}">
 						<table class="table table-striped">
 							<thead>
 								<tr>
@@ -101,6 +100,7 @@ td.price {
 								</tr>
 							</thead>
 
+					<c:forEach var="itemCart" items="${list}">
 							<tr>
 								<td class="nm"><a
 									href="${pageContext.request.contextPath}/itemDetail.do?i_num=${itemCart.i_num}">
@@ -116,7 +116,7 @@ td.price {
 
 							</tr>
 
-							<tr>
+					</c:forEach>
 							<tr>
 								<td class="price" colspan="6"><br> 총 주문 금액 : <fmt:formatNumber
 										pattern="###,###,###" value="${getTotalById}" />원<br></td>
@@ -126,24 +126,8 @@ td.price {
 
 							</tbody>
 						</table>
-						<div class="single-room-booking-form mt-60">
-							<div class="booking_form_inner">
-								<div class="single-form-part">
-									<div class="date-to">
-										<input class="date-picker" type="text"
-											value="${itemCart.i_rent_day}" disabled> <i
-											class="mdi mdi-calendar-text"></i>
-									</div>
-								</div>
-								<div class="single-form-part">
-									<div class="date-to">
-										<input type="text" class="date-picker"
-											value="${itemCart.i_return_day}" disabled> <i
-											class="mdi mdi-calendar-text"></i>
-									</div>
-								</div>
+						
 	
-					</c:forEach>
 
 
 					<div class="single-form-part">
@@ -218,10 +202,12 @@ td.price {
 				<div class="tab-pane" id="personal">
 					<div class="personal-info-details">
 
-						<form:form commandName="command" id="orderForm"
+						<%-- <form:form commandName="command" id="orderForm"
 							action="orderSubmitPart.do">
-							<input type="hidden" name="i_num" id="i_num"
-								value="${param.i_num}">
+							<input type="text" name="i_num" id="i_num"
+								value="3">
+							<input type="text" name="list" id="list"
+								value="${list}">
 							<input type="hidden" name="user_id" id="user_id"
 								value="${user_id}">
 							<input type="hidden" name="checked_num" value="${checked_num}">
@@ -266,7 +252,46 @@ td.price {
 							<button type="button" onclick="location.href='${pageContext.request.contextPath}/itemcart/orderCheck.do'">결제</button>
 						</div>
 					</div>
-				</form:form>
+				</form:form> --%>
+				<form action="orderSubmitPart.do" method="post" id="rsrv_form">
+					<input type="hidden" name="checked_num" value="${checked_num}">
+					<div class="booking-info-inner">
+						<div class="booking-form-list">
+							<div class="single-form-part">
+								<div class="name mb-15">
+									<input type="text" name="srl_nm" id="ibh_nm" placeholder="예약자명">
+								</div>
+								<div class="name mb-15">
+									<input type="text" name="cp_num" id="cp_num" placeholder="카드 번호">
+								</div>
+							</div>
+							<div class="single-form-part">
+								<div class="mail mb-15">
+									<input type="email" name="srl_email" id="ibh_email" placeholder="예약자 이메일">
+									<i class="mdi mdi-email"></i>
+								</div>
+								<div class="name mb-15">
+									<input type="text" name="cp_pin_num" id="cp_pin_num" placeholder="카드 핀 넘버">
+								</div>
+							</div>
+							<div class="single-form-part">
+								<div class="mail mb-15">
+									<input type="text" name="srl_phone" id="ibh_phone" placeholder="예약자 연락처">
+									<i class="mdi mdi-phone"></i>
+								</div>
+								<div class="name mb-15">
+									<input type="text" name="cp_year_month" id="cp_year_month" placeholder="MM/YY">
+								</div>
+							</div>
+						</div>
+						<div class="prve-next-box" align="right">
+							<div class="back-link">
+								<a class="before_2">이전</a>
+							</div>
+							<button type="submit">결제</button>
+						</div>
+					</div>
+				</form>
 			</div>
 						<section class="margin-bottom"></section>
 					</div>
