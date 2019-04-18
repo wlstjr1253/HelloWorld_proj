@@ -44,6 +44,9 @@ public class FlightCommand {
 	private int fsi_fir_mil;  // FisrtClass 付老府瘤
 	private int fsi_bus_mil;  // Business 付老府瘤
 	private int fsi_eco_mil;  // Economy 付老府瘤
+	private String fsi_flight_time;
+	private String fsi_start_place;
+	private String fsi_arrive_place;
 	
 	public int getFi_id() {
 		return fi_id;
@@ -207,7 +210,24 @@ public class FlightCommand {
 	public void setFsi_eco_mil(int fsi_eco_mil) {
 		this.fsi_eco_mil = fsi_eco_mil;
 	}
-	
+	public String getFsi_flight_time() {
+		return fsi_flight_time;
+	}
+	public void setFsi_flight_time(String fsi_flight_time) {
+		this.fsi_flight_time = fsi_flight_time;
+	}
+	public String getFsi_start_place() {
+		return fsi_start_place;
+	}
+	public void setFsi_start_place(String fsi_start_place) {
+		this.fsi_start_place = fsi_start_place;
+	}
+	public String getFsi_arrive_place() {
+		return fsi_arrive_place;
+	}
+	public void setFsi_arrive_place(String fsi_arrive_place) {
+		this.fsi_arrive_place = fsi_arrive_place;
+	}
 	@Override
 	public String toString() {
 		return "FlightCommand [fi_id=" + fi_id + ", fi_nm=" + fi_nm + ", fi_logo=" + fi_logo + ", fsi_idx=" + fsi_idx
@@ -220,7 +240,7 @@ public class FlightCommand {
 				+ ", fsi_fir_seat=" + fsi_fir_seat + ", fsi_bus_seat=" + fsi_bus_seat + ", fsi_eco_seat=" + fsi_eco_seat
 				+ ", fsi_fir_pc=" + fsi_fir_pc + ", fsi_bus_pc=" + fsi_bus_pc + ", fsi_eco_pc=" + fsi_eco_pc
 				+ ", fsi_fir_mil=" + fsi_fir_mil + ", fsi_bus_mil=" + fsi_bus_mil + ", fsi_eco_mil=" + fsi_eco_mil
-				+ "]";
+				+ ", fsi_flight_time=" + fsi_flight_time + "]";
 	}
 
 }

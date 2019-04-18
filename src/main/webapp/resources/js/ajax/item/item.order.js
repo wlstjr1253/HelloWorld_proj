@@ -17,6 +17,40 @@ $('#orderFormPart').on('submit', function() {
 		}
 });
 
+//장바구니 삭제
+$(document).on('click','.delete-btn',function(){
+	//댓글 번호
+	var re_num = $(this).attr('data-num');
+	//작성자 아이디
+	var id = $(this).attr('data-id');
+	
+	$.ajax({
+		type:'post',
+		url:'deleteReply.do',
+		data:{re_num:re_num,id:id},
+		dataType:'json',
+		cache:false,
+		timeout:30000,
+		success:function(data){
+			if(data.result == 'logout'){
+				alert('로그인해야 삭제할 수 있습니다.');
+			}else if(data.result == 'success'){
+				alert('삭제 완료!');
+				//새로 목록 호출
+				selectData(1,$('#num').val());
+			}else if(data.result == 'wrongAccess'){
+				alert('타인의 글을 삭제할 수 없습니다.');
+			}else{
+				alert('댓글 삭제시 오류 발생');
+			}
+		},
+		error:function(){
+			alert('댓글 삭제시 네트워크 오류');
+		}
+	});
+});
+
+
 
 /**
  * 상품 구매 ajax
