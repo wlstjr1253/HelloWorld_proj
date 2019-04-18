@@ -1779,8 +1779,8 @@ alter table tour_info add (user_id varchar2(20));
 alter table tour_info add (reg_date date);
 alter table tour_info add (re_cnt number);
 alter table tour_info add (ti_select number default 0 not null);
-추가 수정 사항
-20190416
+--추가 수정 사항
+--20190416
 alter table tour_info modify(ti_nm varchar2(50));
 ALTER TABLE tour_info DROP COLUMN nc_cd;
 ALTER TABLE tour_info MODIFY (ti_state number);
