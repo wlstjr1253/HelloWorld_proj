@@ -232,7 +232,7 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
-		map.put("ict_num", 1);
+		map.put("ict_num", 48);
 
 		//ÃÑ ±ÛÀÇ °¹¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ °¹¼ö
 		int count = itemService.selectRowCount(map);
