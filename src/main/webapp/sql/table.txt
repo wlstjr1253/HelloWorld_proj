@@ -1785,6 +1785,7 @@ alter table tour_info modify(ti_nm varchar2(50));
 ALTER TABLE tour_info DROP COLUMN nc_cd;
 ALTER TABLE tour_info MODIFY (ti_state number);
 ALTER TABLE tour_info MODIFY ti_state default 0 null;
+ALTER TABLE TOUR_REPLY DROP COLUMN TI_STAR;
 
 --ITEM_BUY_HIST 테이블 수정사항
 alter table item_buy_hist add (ibh_email varchar2(50 byte)); --주문자 이메일주소
