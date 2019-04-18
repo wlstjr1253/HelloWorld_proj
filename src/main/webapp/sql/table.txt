@@ -1785,6 +1785,7 @@ alter table tour_info modify(ti_nm varchar2(50));
 ALTER TABLE tour_info DROP COLUMN nc_cd;
 ALTER TABLE tour_info MODIFY (ti_state number);
 ALTER TABLE tour_info MODIFY ti_state default 0 null;
+ALTER TABLE TOUR_REPLY DROP COLUMN TI_STAR;
 
 --ITEM_BUY_HIST 테이블 수정사항
 alter table item_buy_hist add (ibh_email varchar2(50 byte)); --주문자 이메일주소
@@ -1997,3 +1998,10 @@ DROP TRIGGER FLIGHT_RSRV_LOG_AI_TRG;
 DROP TRIGGER FLIGHT_SPOT_INFO_AI_TRG;
 --추가
 ALTER TABLE FLIGHT_SPOT_INFO ADD(fsi_flight_time char(5));
+
+--한소라 FK키 삭제
+item_info
+ALTER TABLE item_info DROP CONSTRAINT FK_ITEM_INFO_I_NUM_ITEM_POST;
+
+item_review
+ALTER TABLE item_review DROP CONSTRAINT FK_ITEM_REVIEW_I_NUM_ITEM_POST;
