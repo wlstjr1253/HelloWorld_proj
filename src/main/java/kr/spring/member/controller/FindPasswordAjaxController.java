@@ -14,6 +14,7 @@ import kr.spring.member.domain.MemberCommand;
 import kr.spring.member.email.Email;
 import kr.spring.member.email.EmailSender;
 import kr.spring.member.service.MemberService;
+import kr.spring.util.CipherTemplate;
 
 @Controller
 public class FindPasswordAjaxController {
@@ -23,6 +24,8 @@ public class FindPasswordAjaxController {
 	private EmailSender emailSender;
 	@Autowired
 	private Email email;
+	
+	@Resource CipherTemplate cipherAES;
 	
 	//자바빈 초기화
 	@ModelAttribute("command")
@@ -61,13 +64,12 @@ public class FindPasswordAjaxController {
 			//이메일 보냈다는 알림창 띄우기
 			if (log.isDebugEnabled()) {
 				log.debug("<<----mailing 진입----->>");
-				
 			}
 			
 			//기본비밀번호를 임시비밀번호로 변경
 			String passwd = randomPassword(10);
-			//member.setPasswd(cipherAES.encrypt(passwd));
-			member.setUser_pw(passwd);
+			member.setUser_pw(cipherAES.encrypt(passwd));
+			//member.setUser_pw(passwd);
 			
 			//변경된 임시비밀번호를 DB에 저장
 			memberService.updateRandomPassword(member);

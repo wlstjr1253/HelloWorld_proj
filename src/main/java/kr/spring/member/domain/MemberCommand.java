@@ -70,8 +70,8 @@ public class MemberCommand {
 	}
 
 	// 비밀번호 일치 여부 체크
-	public boolean isCheckedPasswd(String user_pw) {
-		if (user_auth > 0 && user_pw.equals(user_pw)) {
+	public boolean isCheckedPasswd(String userPasswd) {
+		if (user_auth > 0 && user_pw.equals(userPasswd)) {
 			return true;
 		}
 		return false;

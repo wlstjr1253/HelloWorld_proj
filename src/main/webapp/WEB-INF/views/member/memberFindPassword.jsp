@@ -6,7 +6,7 @@
 <div class="container write-form w_800">
 	<div class="row">
 		<section><br><br><br></section>
-		<h3 class="col-xs-12 text-center">가입했던 아이디와 이메일로 비밀번호를 찾을 수 있습니다</h3>
+		<h3 class="col-xs-12 text-center">가입했던 아이디와 이메일로 비밀번호를 재설정 합니다</h3>
 		<section><br><br><br><br><br></section>
 		<form:form commandName="command" action="findPassword.do">
 			<div class="row">

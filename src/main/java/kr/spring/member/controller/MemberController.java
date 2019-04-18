@@ -93,13 +93,15 @@ public class MemberController {
 		
 		// 로그인 체크(id, 비밀번호 일치 여부 체크)
 		try {
-			MemberCommand member = 
-					memberService.selectMember(memberCommand.getUser_id());
+			MemberCommand member = 	memberService.selectMember(memberCommand.getUser_id());
 			boolean check = false;
 			
 			if (member != null) {
 				// 비밀번호 일치 여부 체크
-				check = member.isCheckedPasswd(memberCommand.getUser_pw());
+				check = member.isCheckedPasswd(cipherAES.encrypt(memberCommand.getUser_pw()));
+				if (log.isDebugEnabled()) {
+					log.debug("<<check>> : " + check);
+				}
 			}
 			
 			if (check) {
@@ -126,10 +128,8 @@ public class MemberController {
 			if (log.isDebugEnabled()) {
 				log.debug("<<인증 실패>>");
 			}
-			
-			return formLogin(); // 로그인폼 호출
 		}
-		
+		return formLogin(); // 로그인폼 호출
 	}
 	// header에서 member auth를 가져오도록 한다.
 	

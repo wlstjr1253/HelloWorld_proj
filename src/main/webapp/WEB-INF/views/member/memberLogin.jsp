@@ -10,7 +10,6 @@
 		<!-- <section class="text-center"><br><br></section> -->
 		<form:form commandName="command" action="login.do" id="flightForm">
 			<div class="row">
-			<form:errors element="div" cssClass="error-color" />
 			<ul class="col-xs-6 col-xs-offset-3 flightForm hello-form">
 				<li>
 					<label for="user_id">아이디</label>
@@ -23,6 +22,7 @@
 					<span id="check_pw"></span>
 					<form:password path="user_pw" placeholder="비밀번호를 입력하세요" />
 					<span class="text-white"><form:errors path="user_pw" cssClass="error-color"/></span>
+					<span class="text-white"><form:errors element="div" cssClass="error-color" /></span>
 				</li>
 			</ul>
 			</div>
