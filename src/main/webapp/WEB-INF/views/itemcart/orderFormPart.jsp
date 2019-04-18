@@ -136,8 +136,7 @@ td.price {
 						</div>
 					</div>
 				</div>
-				</div>
-				</div>
+
 <section class="margin-bottom"></section>
 		
 
