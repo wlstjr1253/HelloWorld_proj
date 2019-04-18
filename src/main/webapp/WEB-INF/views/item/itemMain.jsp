@@ -118,7 +118,7 @@
                     </div>
                   
                     
-                <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></div>
+                <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"></div><div class="owl-page"></div></div></div></div>
 			<!-- 추천상품 끝 -->
 		</div>
 	</div>
