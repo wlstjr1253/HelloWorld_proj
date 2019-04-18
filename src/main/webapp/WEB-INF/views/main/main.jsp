@@ -108,21 +108,16 @@
                     <div class="col-md-4">
                         <div class="single-staff">
                             <div class="sraff-inner">
-                                <img src="${pageContext.request.contextPath}/resources/images/staff/staff1.jpg" width="500" height="300">
+                                <img src="/HelloWorld_proj/resources/images/item/camera1.jpg">
                                 <div class="staff-title">
                                     <span class="fas fa-plus"></span>
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
+                                    <h2>카메라</h2>
+                                    <h5>[Nikon]D5300</h5>
                                 </div>
                                 <div class="staff-hover-desc">
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
-                                    <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr.</p>
-                                    <div class="scoial_icons">
-                                        <a href="#"><i class="mdi mdi-facebook"></i></a>
-                                        <a href="#"><i class="mdi mdi-rss"></i></a>
-                                        <a href="#"><i class="mdi mdi-google-plus"></i></a>
-                                        <a href="#"><i class="mdi mdi-instagram"></i></a>
+                                    <p>여행의 추억을 남기세요, 가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
+                                    <div>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=92'">상세보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -131,22 +126,19 @@
                     <div class="col-md-4">
                         <div class="single-staff">
                             <div class="sraff-inner">
-                                <img src="${pageContext.request.contextPath}/resources/images/staff/staff2.jpg" alt="">
+                                <img src="/HelloWorld_proj/resources/images/item/m1.png" alt="">
                                 <div class="staff-title">
                                     <span class="fas fa-plus"></span>
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
+                                    <h2>등산용품</h2>
+                                    <h5>등산용품세트</h5>
 
                                 </div>
                                 <div class="staff-hover-desc">
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
-                                    <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr.</p>
                                     <div class="scoial_icons">
-                                        <a href="#"><i class="mdi mdi-facebook"></i></a>
-                                        <a href="#"><i class="mdi mdi-rss"></i></a>
-                                        <a href="#"><i class="mdi mdi-google-plus"></i></a>
-                                        <a href="#"><i class="mdi mdi-instagram"></i></a>
+                                        <p>준비안된 초보 등산객들 위한 등산세트, 가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
+                                    <div>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=90'">상세보기</button>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -155,22 +147,17 @@
                     <div class="col-md-4">
                         <div class="single-staff">
                             <div class="sraff-inner">
-                                <img src="${pageContext.request.contextPath}/resources/images/staff/staff1.jpg" alt="">
+                                <img src="/HelloWorld_proj/resources/images/item/w1.jpg" alt="">
                                 <div class="staff-title">
                                     <span class="fas fa-plus"></span>
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
+                                    <h2>물놀이용품</h2>
+                                    <h5>스노쿨링세트</h5>
 
                                 </div>
                                 <div class="staff-hover-desc">
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
-                                    <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr.</p>
-                                    <div class="scoial_icons">
-                                        <a href="#"><i class="mdi mdi-facebook"></i></a>
-                                        <a href="#"><i class="mdi mdi-rss"></i></a>
-                                        <a href="#"><i class="mdi mdi-google-plus"></i></a>
-                                        <a href="#"><i class="mdi mdi-instagram"></i></a>
+                                     <p>즐거운 물놀이의 필수품, 가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
+                                    <div>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=88'">상세보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -179,22 +166,17 @@
                     <div class="col-md-4">
                         <div class="single-staff">
                             <div class="sraff-inner">
-                                <img src="${pageContext.request.contextPath}/resources/images/staff/staff2.jpg" alt="">
+                                <img src="/HelloWorld_proj/resources/images/item/camera6.jpg" alt="">
                                 <div class="staff-title">
                                     <span class="fas fa-plus"></span>
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
+                                    <h2>카메라</h2>
+                                    <h5>필름카메라</h5>
 
                                 </div>
                                 <div class="staff-hover-desc">
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
-                                    <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr.</p>
-                                    <div class="scoial_icons">
-                                        <a href="#"><i class="mdi mdi-facebook"></i></a>
-                                        <a href="#"><i class="mdi mdi-rss"></i></a>
-                                        <a href="#"><i class="mdi mdi-google-plus"></i></a>
-                                        <a href="#"><i class="mdi mdi-instagram"></i></a>
+                                    <p>여행의 추억을 남기세요, 가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
+                                    <div>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=186'">상세보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -203,22 +185,17 @@
                     <div class="col-md-4">
                         <div class="single-staff">
                             <div class="sraff-inner">
-                                <img src="${pageContext.request.contextPath}/resources/images/staff/staff1.jpg" alt="">
+                                <img src="/HelloWorld_proj/resources/images/item/ph1.jpg" alt="">
                                 <div class="staff-title">
                                     <span class="fas fa-plus"></span>
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
+                                    <h2>휴대폰용품</h2>
+                                    <h5>샤오미 보조배터리</h5>
 
                                 </div>
                                 <div class="staff-hover-desc">
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
-                                    <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr.</p>
-                                    <div class="scoial_icons">
-                                        <a href="#"><i class="mdi mdi-facebook"></i></a>
-                                        <a href="#"><i class="mdi mdi-rss"></i></a>
-                                        <a href="#"><i class="mdi mdi-google-plus"></i></a>
-                                        <a href="#"><i class="mdi mdi-instagram"></i></a>
+                                     <p>배터리가 없어도 당황하지 마세요,  가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
+                                    <div>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=121'">상세보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -227,22 +204,17 @@
                     <div class="col-md-4">
                         <div class="single-staff">
                             <div class="sraff-inner">
-                                <img src="${pageContext.request.contextPath}/resources/images/staff/staff2.jpg" alt="">
+                                <img src="/HelloWorld_proj/resources/images/item/pl1.PNG" alt="">
                                 <div class="staff-title">
                                     <span class="fas fa-minus"></span>
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
+                                    <h2>놀거리</h2>
+                                    <h5>보드게임</h5>
 
                                 </div>
                                 <div class="staff-hover-desc">
-                                    <h2>Soleman</h2>
-                                    <h5>hotel staff</h5>
-                                    <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr.</p>
-                                    <div class="scoial_icons">
-                                        <a href="#"><i class="mdi mdi-facebook"></i></a>
-                                        <a href="#"><i class="mdi mdi-rss"></i></a>
-                                        <a href="#"><i class="mdi mdi-google-plus"></i></a>
-                                        <a href="#"><i class="mdi mdi-instagram"></i></a>
+                                     <p>즐거운 여행 함께 놀아요,  가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
+                                    <div>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=122'">상세보기</button>
                                     </div>
                                 </div>
                             </div>

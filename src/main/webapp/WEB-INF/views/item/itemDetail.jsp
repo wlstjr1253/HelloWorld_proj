@@ -105,7 +105,7 @@ span#item_total_txt{
 		</div>
 	</div>
 	
-	
+	<br><br><br>
 	<div style="text-align:center;" class="col-md-12">
 	<ul class="nav nav-tabs col-xs-12">
 		<li class="active" style="width:50%;"><a href="#tab1" data-toggle="tab">상세보기</a></li>
@@ -114,7 +114,7 @@ span#item_total_txt{
 	<!-- 전체 탭 시작 -->
 	<div class="tab-content">
 		<!-- 탭1 상세보기 시작 -->
-		<div class="tab-pane active" id="tab1">
+		<div class="tab-pane active" id="tab1"><br><br>
 			<div style="text-align: center;">
 				${item.i_content}
 			</div>
