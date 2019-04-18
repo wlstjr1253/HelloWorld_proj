@@ -55,7 +55,7 @@
 					<div class="booking-rooms-tab" align="center">
 						<ul class="nav" role="tablist">
 							<li class="active">
-								<a href="#booking" data-toggle="tab">
+								<a href="#booking" data-toggle="tab" id="page_1">
 								<span class="tab-border">1</span>
 								<span>예약 정보</span>
 								</a>
@@ -112,9 +112,9 @@
 											<!-- 1열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
-												<span style="color:white;padding-bottom:5px;display: inline-block;">가는날</span>
+												<span style="color:white;padding-bottom:5px;display: inline-block;">출발시간</span>
 													<input class="date-picker" type="text" disabled
-														placeholder="arrive date"
+														placeholder="Departure Date"
 														value="${flightCommand.fsi_start_dt}"> 
 														<i class="mdi mdi-calendar-text" style="padding-top:20px;"></i>
 												</div>
@@ -124,16 +124,16 @@
 												</div>
 												<div class="name mb-15">
 												<span style="color:white;padding-bottom:5px;display: inline-block;">어른</span>
-													<input type="number" min="0" name="fr_adult_pp" id="fr_adult_pp" class="select-booking cal" placeholder="0" />
+													<input type="number" min="0" name="fr_adult_pp" id="fr_adult_pp" class="select-booking cal" value="0" />
 												</div>
 											</div>
 											<!-- 1열 끝 -->
 											<!-- 2열 시작 -->
 											<div class="single-form-part">
 												<div class="date-to mb-20">
-												<span style="color:white;padding-bottom:5px;display: inline-block;">오는날</span>
+												<span style="color:white;padding-bottom:5px;display: inline-block;">도착시간</span>
 													<input class="date-picker" type="text" disabled
-														placeholder="Departure Date"
+														placeholder="Arrive Date"
 														value="${flightCommand.fsi_arrive_dt}"> 
 														<i class="mdi mdi-calendar-text"  style="padding-top:20px;"></i>
 												</div>
@@ -143,7 +143,7 @@
 												</div>
 												<div class="name mb-15">
 													<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
-													<input type="number" min="0" name="fr_kid_pp" id="fr_kid_pp" class="select-booking cal" placeholder="0" />
+													<input type="number" min="0" name="fr_kid_pp" id="fr_kid_pp" class="select-booking cal" value="0" />
 												</div>
 											</div>
 											<!-- 2열 끝 -->
@@ -169,7 +169,7 @@
 										<div class="back-link">
 											<a href="${pageContext.request.contextPath}/main/main.do">Back</a>
 										</div>
-										<button type="button" id="next_2">다음</button>
+										<button type="button" id="next_1">다음</button>
 									</div> 
 								</div>
 							</div>
@@ -222,9 +222,9 @@
 										</div>
 										<div class="prve-next-box mt-20">
 											<div class="back-link">
-												<a id="next_2">Back</a>
+												<a class="before_2">Back</a>
 											</div>
-											<button type="button" id="next_3">다음</button>
+											<button type="button" id="next_2">다음</button>
 										</div>
 									</div>
 								</div>
@@ -250,7 +250,7 @@
 											</div>
 											<div class="prve-next-box" align="right">
 												<div class="back-link">
-													<a href="#">Back</a>
+													<a class="before_3">Back</a>
 												</div>
 												<button type="submit">결제</button>
 											</div> 

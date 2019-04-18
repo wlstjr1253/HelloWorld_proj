@@ -40,9 +40,9 @@ public interface ItemOrderMapper {
 	public void updateOrder(ItemOrderCommand itemOrderCommand);	
 	public void deleteOrder(Integer num);
 	
-	/*//마이페이지
-	//@Select("SELECT * FROM payment_hist WHERE user_id=#{user_id} ORDER BY ph_reg_dt DESC")
+	//마이페이지
+	@Select("SELECT * FROM item_buy_hist_detail WHERE user_id=#{user_id}")
 	public List<ItemOrderCommand> selectItemBuyHist(Map<String, Object> map);
-	@Select("SELECT COUNT(*) FROM item_buy_hist_detail WHERE user_id=#{user_id}")
+	/*@Select("SELECT COUNT(*) FROM item_buy_hist_detail WHERE user_id=#{user_id}")
 	public int selectItemBuyHistRowCount(String user_id);*/
 }

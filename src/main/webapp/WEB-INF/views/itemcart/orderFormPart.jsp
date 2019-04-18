@@ -5,18 +5,21 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <style>
-th{
-text-align:center;
+th {
+	text-align: center;
 }
-td.nm{
-text-align:left;
+
+td.nm {
+	text-align: left;
 }
-td.bt{
-text-align:center;
+
+td.bt {
+	text-align: center;
 }
-td.price{
-text-aglin:right;
-font-size:20px;
+
+td.price {
+	text-aglin: right;
+	font-size: 20px;
 }
 </style>
 
@@ -24,78 +27,96 @@ font-size:20px;
 
 <title>상품 대여</title>
 
-<body>
-	<!--Room booking start-->
-	<div class="container main-board-list mb-100">
+<div class="welcome-section text-center ptb-110">
+	<div class="container">
 		<div class="row">
-			<div class="section-title mb-80" style="text-align: center;">
-				<h4>대여/결제</h4>
-				<p>대여상품 및 결제금액 확인</p>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="breadcurbs-inner">
+					<div class="breadcrubs">
+						<h2>대여/결제</h2>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	</div>
+</div>
+</div>
 
-	<!-- 개인정보입력 -->
-	<%-- <c:forEach var="itemCart" items="${list}">
-				<div class="single-form-part">
-					<div class="name mb-15">
-						<input type="text"
-							placeholder="대여일자:${itemCart.i_rent_day}<br>반납일자:${itemCart.i_return_day}"
-							disabled>
-							<p>대여기간:${itemCart.i_rent_day}  ~  ${itemCart.i_return_day}</p>
-					</div>
+<!-- 탭 -->
 
-					<div class="name mb-15">
+<div class="booking-rooms-tab" style="width: 100%;">
+	<ul class="nav" style="width: 100%;">
+		<li class="active col-md-4"><a href="#booking" data-toggle="tab"
+			id="move_1"> <span class="tab-border">1</span> <span>대여물품
+					정보</span>
+		</a></li>
+		<li class="col-md-4"><a href="#personal" data-toggle="tab"
+			id="move_2"><span class="tab-border">2</span> <span>결제 정보</span></a></li>
+		<li class="col-md-3"><a> <span class="tab-border">3</span> <span>
+					대여 완료 </span>
+		</a></li>
+	</ul>
+</div>
 
-							<p>수령공항:${itemCart.i_rent_nc}  반납공항:${itemCart.i_return_nc}</p>
-					</div>
-				</div> 
-	</c:forEach> --%>
-	<div class="container main-board-list mb-50">
+
+
+<!-- 전체 탭 시작 -->
+<div class="room-booking ptb-80 white_bg">
+	<div class="container table-list">
 		<div class="row">
-			<div class="section-title mb-80" style="text-align: center;">
-				<h3>
-					<span>구매상품정보</span>
-				</h3>
-			</div>
-			<table class="table">
-					<thead>
+			<div class="tab-content">
+				<!-- 탭1 상세보기 시작 -->
+				<div class="tab-pane active" id="booking">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<br>
+								<br>
+								<br>
+								<th class="nm">상품명</th>
+								<th>수량</th>
+								<th>대여금액</th>
+								<th>대여기간</th>
+								<th>수령공항</th>
+								<th>반납공항</th>
+							</tr>
+						</thead>
+						<c:forEach var="itemCart" items="${list}">
+							<tr>
+								<td class="nm"><a
+									href="${pageContext.request.contextPath}/itemDetail.do?i_num=${itemCart.i_num}">
+										<img src="imageView.do?i_num=${itemCart.i_num}" width="70"
+										class="thumb-image"> ${itemCart.i_nm}
+								</a></td>
+								<td><br>${itemCart.ic_quan}</td>
+								<td><br>${itemCart.i_pc}</td>
+								<td><br>${itemCart.i_rent_day}~
+									${itemCart.i_return_day}</td>
+								<td><br>${itemCart.i_rent_nc}</td>
+								<td><br>${itemCart.i_return_nc}</td>
+
+							</tr>
+						</c:forEach>
 						<tr>
-							<th>상품명</th>
-							<th>수량</th>
-							<th>대여금액</th>
-							<th>대여기간</th>
-						<th>수령공항</th>
-						<th>반납공항</th>
+						<tr>
+							<td class="price" colspan="6"><br> 총 주문 금액 : <fmt:formatNumber
+									pattern="###,###,###" value="${getTotalById}" />원<br></td>
 						</tr>
-					</thead>
-				<c:forEach var="itemCart" items="${list}">
-					<tr>
-						<td><a
-							href="${pageContext.request.contextPath}/itemDetail.do?i_num=${itemCart.i_num}">
-								<img src="imageView.do?i_num=${itemCart.i_num}" width="100"
-								class="thumb-image"> ${itemCart.i_nm}
-						</a></td>
-						<td>${itemCart.ic_quan}</td>
-						<td>${itemCart.i_pc}</td>
-						<td>${itemCart.i_rent_day} ~ ${itemCart.i_return_day}</td>
-						<td>${itemCart.i_rent_nc}</td>
-						<td>${itemCart.i_return_nc}</td>
-
-					</tr>
-				</c:forEach>
-				<tr>
-
-					<td colspan="5" align="right">총 주문 금액 :<fmt:formatNumber
-							pattern="###,###,###" value="${getTotalById}" /><br>
-					</td>
-				</tr>
-				</tbody>
-			</table>
 
 
-			<%-- <form:form commandName="command" id="orderFormPart" action="orderForm.do"
+
+						</tbody>
+					</table>
+					<div class="single-form-part">
+						<div class="submit-form">
+							<button type="submit" class="next_1">다음으로</button>
+						</div>
+					</div>
+				</div>
+				<!-- 탭1 상세보기 끝 -->
+
+
+				<%-- <form:form commandName="command" id="orderFormPart" action="orderForm.do"
 				enctype="multipart/form-data">
 				<input type="hidden" name="i_num" id="i_num" value="${param.i_num}">
 				<input type="hidden" name="user_id" id="user_id" value="${user_id}">
@@ -144,95 +165,74 @@ font-size:20px;
 				</div>
 
 			</form:form> --%>
-			
-			<form:form commandName="command" id="orderForm" action="orderSubmitPart.do">
-				<input type="hidden" name="i_num" id="i_num" value="${param.i_num}">
-				<input type="hidden" name="user_id" id="user_id" value="${user_id}">
-				<input type="hidden" name="checked_num" value="${checked_num}">
-				<div>
-				<br><br>
-					<div class="name mb-15">
-						<input type="text" name="ibh_nm" id="ibh_nm" required="required"
-							placeholder="수령자 이름">
-					</div>
 
-					<div class="name mb-15">
-						<select name="ibh_pay">
-							<option value="0" selected>결제방식</option>
-							<option id="ibh_pay" value="1">카드결제</option>
-							<option id="ibh_pay" value="2">계좌이체</option>
-							<option id="ibh_pay" value="3">현금결제</option>
-						</select> <br>
-					</div>
+				<!-- 탭2 시작 -->
+				<div class="tab-pane" id="personal">
+					<form:form commandName="command" id="orderForm"
+						action="orderSubmitPart.do">
+						<input type="hidden" name="i_num" id="i_num"
+							value="${param.i_num}">
+						<input type="hidden" name="user_id" id="user_id"
+							value="${user_id}">
+						<input type="hidden" name="checked_num" value="${checked_num}">
+						<div>
+							<br> <br>
+							<div class="name mb-15">
+								<input type="text" name="ibh_nm" id="ibh_nm" required="required"
+									placeholder="수령자 이름">
+							</div>
 
-
-					<div class="name mb-15">
-						<input type="number" name="ibh_phone" id="ibh_phone" placeholder="연락 가능한 번호">
-					</div>
-					<div class="mail mb-15">
-						<input type="email" name="ibh_email" id="ibh_email"	placeholder="이메일 주소">
-					</div>
-
-				</div>
+							<div class="name mb-15">
+								<select name="ibh_pay">
+									<option value="0" selected>결제방식</option>
+									<option id="ibh_pay" value="1">카드결제</option>
+									<option id="ibh_pay" value="2">계좌이체</option>
+									<option id="ibh_pay" value="3">현금결제</option>
+								</select> <br>
+							</div>
 
 
+							<div class="name mb-15">
+								<input type="number" name="ibh_phone" id="ibh_phone"
+									placeholder="연락 가능한 번호">
+							</div>
+							<div class="mail mb-15">
+								<input type="email" name="ibh_email" id="ibh_email"
+									placeholder="이메일 주소">
+							</div>
 
-
-				<div class="request-box mt-15">
-					<textarea name="ibh_request" id="ibh_request"
-						placeholder="요청사항이 있으신가요?"></textarea>
-				</div>
-
-
-
-				<div class="prve-next-box mt-20">
-					<div class="back-link">
-						<a href="${pageContext.request.contextPath}/itemcart/cartList">뒤로가기</a>
-						<input type="submit" value="주문하기">
-					</div>
-				</div>
-
-			</form:form>
-		</div>
-	</div>
-
-
-	<%-- <!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">주문하시겠습니까?</h4>
-				</div>
-				<form:form commandName="command" id="orderForm"
-					action="orderForm.do" enctype="multipart/form-data">
-					<c:forEach var="orderForm" items="${list}">
-						<div class="modal-body">
-							수령자 이름 : ${orderForm.ibh_rent_nc}<br> 전화번호 :
-							${orderForm.ibh_phone}<br> 결제방식 : ${orderForm.ibh_pay}<br>
-							이메일 주소 : ${orderForm.ibh_email}<br> 대여공항 / 반납공항 :
-							${orderForm.ibh_rent_nc}/${orderForm.ibh_return_nc}<br> 대여일
-							/ 반납일 : ${orderForm.ibh_rent_day}/${orderForm.ibh_return_day} <br>
 						</div>
-					</c:forEach>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-danger" data-dismiss="modal">돌아가기</button>
-							<button type="submit" class="btn btn-primary"
-								data-dismiss="modal">주문하기</button>
+
+
+
+
+						<div class="request-box mt-15">
+							<textarea name="ibh_request" id="ibh_request"
+								placeholder="요청사항을 50자 이내로 적어주세요"></textarea>
+							<br> <span style="color: #aaa;" id="counter">(0 / 최대
+								50자)</span>
 						</div>
-				</form:form>
+
+
+
+
+
+						<div class="single-form-part">
+							<div class="submit-form">
+								<button type="submit">주문하기</button>
+								<button class="before_2">이전으로</button>
+							</div>
+						</div>
+						
+						
+
+					</form:form>
+				</div>
+				<section class="margin-bottom"></section>
 			</div>
 		</div>
-	</div> --%>
+	</div>
+</div>
 
-
-
-
-	<!--Room booking end-->
-</body>
-</html>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/ajax/item/item.order.js"></script>

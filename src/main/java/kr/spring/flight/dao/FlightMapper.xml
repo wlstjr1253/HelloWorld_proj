@@ -10,51 +10,29 @@
 		FROM (SELECT
 		        a.*,
 		        rownum rnum
-		      FROM (SELECT
-					    fsi_idx,
-					    fi_logo,
-					    fi_nm,
-					    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_start_nation,
-					    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_start_city,
-					    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_arrive_place) AS fsi_arrive_nation,
-					    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_arrive_place) AS fsi_arrive_city,
-					    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_pass1_place) AS fsi_pass1_nation,
-					    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_pass1_place) AS fsi_pass1_city,
-					    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_pass2_place) AS fsi_pass2_nation,
-					    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_pass2_place) AS fsi_pass2_city,
-					    fsi_start_dt,
-					    fsi_arrive_dt,
-					    fsi_pass1_dt,
-					    fsi_pass2_dt,
-					    fsi_reg_dt,
-					    fsi_state,
-					    fsi_fir_seat,
-					    fsi_bus_seat,
-					    fsi_eco_seat,
-					    fsi_fir_pc,
-					    fsi_bus_pc,
-					    fsi_eco_pc,
-					    fsi_fir_mil,
-					    fsi_bus_mil,
-					    fsi_eco_mil
-					FROM flight_spot_info fsi LEFT OUTER JOIN flight_info fi USING (fi_id)
-		            <where>
-						<if test="keyword != '' and keyfield == 'fi_nm'">
-							fi_nm like '%' || #{keyword} || '%'
-						</if>
-						<if test="keyword != '' and keyfield == 'fsi_start_city'">
-							(SELECT nc_city FROM nation_city WHERE nc_cd = fsi_start_place) like '%' || #{keyword} || '%'
-						</if>
-						<if test="keyword != '' and keyfield == 'fsi_arrive_city'">
-							fsi_arrive_city like '%' || #{keyword} || '%'
-						</if>
-						<if test="keyword != '' and keyfield == 'all'">
-							fi_nm like '%' || #{keyword} || '%' or
-							fsi_start_city like '%' || #{keyword} || '%' or
-							fsi_arrive_city like '%' || #{keyword} || '%'
-						</if>
-					</where>
-		            ORDER BY fsi.fsi_start_dt ASC)a)
+		      FROM (select * from flight_info_vw
+		      
+		        <where>
+					<if test="keyword != '' and keyfield == 'fi_nm'">
+						fi_nm like '%' || #{keyword} || '%'
+					</if>
+					<if test="keyword != '' and keyfield == 'fsi_start_city'">
+						fsi_start_city like '%' || #{keyword} || '%'
+					</if>
+					<if test="keyword != '' and keyfield == 'fsi_arrive_city'">
+						fsi_arrive_city like '%' || #{keyword} || '%'
+					</if>
+					<if test="keyword != '' and keyfield == 'all'">
+						fi_nm like '%' || #{keyword} || '%' or
+						fsi_start_city like '%' || #{keyword} || '%' or
+						fsi_arrive_city like '%' || #{keyword} || '%'
+					</if>
+					<if test="start_dt != '' or arrive_dt != ''">
+						(substr(fsi_start_dt,1,10) = '' || #{start_dt} || '') or
+						(substr(fsi_start_dt,1,10) = '' || #{arrive_dt} || '') 
+					</if>
+				</where>
+		      ORDER BY fsi_start_dt ASC)a)
 		<![CDATA[
 		WHERE rnum >= #{start} AND rnum <= #{end}
 		]]> 
@@ -62,40 +40,13 @@
 	<select id="selectFlightRowCount" parameterType="map" resultType="integer">
 		SELECT
 		  COUNT(*)
-		      FROM (SELECT
-					    fsi_idx,
-					    fi_logo,
-					    fi_nm,
-					    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_start_nation,
-					    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_start_place) AS fsi_start_city,
-					    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_arrive_place) AS fsi_arrive_nation,
-					    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_arrive_place) AS fsi_arrive_city,
-					    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_pass1_place) AS fsi_pass1_nation,
-					    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_pass1_place) AS fsi_pass1_city,
-					    (SELECT nc_nation FROM nation_city WHERE nc_cd = fsi_pass2_place) AS fsi_pass2_nation,
-					    (SELECT nc_city FROM nation_city WHERE nc_cd = fsi_pass2_place) AS fsi_pass2_city,
-					    fsi_start_dt,
-					    fsi_arrive_dt,
-					    fsi_pass1_dt,
-					    fsi_pass2_dt,
-					    fsi_reg_dt,
-					    fsi_state,
-					    fsi_fir_seat,
-					    fsi_bus_seat,
-					    fsi_eco_seat,
-					    fsi_fir_pc,
-					    fsi_bus_pc,
-					    fsi_eco_pc,
-					    fsi_fir_mil,
-					    fsi_bus_mil,
-					    fsi_eco_mil
-					FROM flight_spot_info fsi LEFT OUTER JOIN flight_info fi USING (fi_id)
+		      FROM flight_info_vw
 					<where>
 						<if test="keyword != '' and keyfield == 'fi_nm'">
 							fi_nm like '%' || #{keyword} || '%'
 						</if>
 						<if test="keyword != '' and keyfield == 'fsi_start_city'">
-							(SELECT nc_city FROM nation_city WHERE nc_cd = fsi_start_place) like '%' || #{keyword} || '%'
+							fsi_start_city like '%' || #{keyword} || '%'
 						</if>
 						<if test="keyword != '' and keyfield == 'fsi_arrive_city'">
 							fsi_arrive_city like '%' || #{keyword} || '%'
@@ -105,7 +56,11 @@
 							fsi_start_city like '%' || #{keyword} || '%' or
 							fsi_arrive_city like '%' || #{keyword} || '%'
 						</if>
-					</where>)		
+						<if test="start_dt != '' or arrive_dt != ''">
+							(substr(fsi_start_dt,1,10) = '' || #{start_dt} || '') or
+							(substr(fsi_start_dt,1,10) = '' || #{arrive_dt} || '') 
+						</if>
+					</where>		
 	</select>
 
 	<select id="selectFlight" parameterType="string" resultType="flightCommand">
