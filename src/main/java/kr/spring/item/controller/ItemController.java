@@ -101,13 +101,6 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
-		map.put("ict_num", 48);
-		map.put("ict_num", 50);
-		map.put("ict_num", 52);
-		map.put("ict_num", 54);
-		map.put("ict_num", 56);
-		map.put("ict_num", 58);
-		map.put("ict_num", 60);
 		
 		//ÃÑ ±ÛÀÇ °¹¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ °¹¼ö
 		int count = itemService.selectRowCount(map);
@@ -199,13 +192,6 @@ public class ItemController {
 				new HashMap<String, Object>();
 		map.put("keyfield", keyfield);
 		map.put("keyword", keyword);
-		map.put("ict_num", 48);
-		map.put("ict_num", 50);
-		map.put("ict_num", 52);
-		map.put("ict_num", 54);
-		map.put("ict_num", 56);
-		map.put("ict_num", 58);
-		map.put("ict_num", 60);
 		
 		//ÃÑ ±ÛÀÇ °¹¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ °¹¼ö
 		int count = itemService.selectRowCount(map);
