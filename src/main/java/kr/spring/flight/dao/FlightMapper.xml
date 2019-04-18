@@ -39,7 +39,7 @@
                       AND substr(fsi_start_dt,1,10) = '' || #{start_dt} || '' 
 					</if>
 					<if test="arrive_dt != ''">
-                      AND substr(fsi_arrive_dt,1,10) = '' || #{arrive_dt} || ''
+                      or substr(fsi_arrive_dt,1,10) = '' || #{arrive_dt} || ''
 					</if>
 				</trim>
 		      ORDER BY fsi_start_dt ASC)a)
@@ -78,7 +78,7 @@
                       AND substr(fsi_start_dt,1,10) = '' || #{start_dt} || '' 
 					</if>
 					<if test="arrive_dt != ''">
-                      AND substr(fsi_arrive_dt,1,10) = '' || #{arrive_dt} || ''
+                      or substr(fsi_arrive_dt,1,10) = '' || #{arrive_dt} || ''
 					</if>
 				</trim>		
 	</select>

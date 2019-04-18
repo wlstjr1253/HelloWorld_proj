@@ -124,7 +124,7 @@
 												</div>
 												<div class="name mb-15">
 												<span style="color:white;padding-bottom:5px;display: inline-block;">어른</span>
-													<input type="number" min="0" name="fr_adult_pp" id="fr_adult_pp" class="select-booking cal" value="0" />
+													<input type="number" min="0" name="fr_adult_pp" id="fr_adult_pp" class="select-booking cal" value="0" autocomplete="off"/>
 												</div>
 											</div>
 											<!-- 1열 끝 -->
@@ -143,7 +143,7 @@
 												</div>
 												<div class="name mb-15">
 													<span style="color:white;padding-bottom:5px;display: inline-block;">어린이</span>
-													<input type="number" min="0" name="fr_kid_pp" id="fr_kid_pp" class="select-booking cal" value="0" />
+													<input type="number" min="0" name="fr_kid_pp" id="fr_kid_pp" class="select-booking cal" value="0" autocomplete="off"/>
 												</div>
 											</div>
 											<!-- 2열 끝 -->
