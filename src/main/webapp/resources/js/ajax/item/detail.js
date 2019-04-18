@@ -14,7 +14,7 @@ $(document).ready(function(){
 		var total = $('#i_pc').val() * $('#ic_quan').val();
 		/*$('#item_total_txt').text('총주문 금액 : ' + $.number(total) + '원');*/
 		$('label').empty();
-		$('label').append(total);
+		$('label').append("<h4>"+total+"</h4>");
 	});
 	
 	/*//장바구니 상품 담기 유효성 체크
