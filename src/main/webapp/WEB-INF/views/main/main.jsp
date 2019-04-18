@@ -117,7 +117,7 @@
                                 <div class="staff-hover-desc">
                                     <p>여행의 추억을 남기세요, 가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
                                     <div>
-                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=17'">상세보기</button>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=56'">상세보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                 <div class="staff-hover-desc">
                                         <p>준비안된 초보 등산객들 위한 등산세트, 가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
                                     <div>
-                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=23'">상세보기</button>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=63'">상세보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@
                                 <div class="staff-hover-desc">
                                      <p>즐거운 물놀이의 필수품, 가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
                                     <div>
-                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=31'">상세보기</button>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=73'">상세보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@
                                 <div class="staff-hover-desc">
                                     <p>여행의 추억을 남기세요, 가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
                                     <div>
-                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=10'">상세보기</button>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=52'">상세보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +193,7 @@
                                 <div class="staff-hover-desc">
                                      <p>배터리가 없어도 당황하지 마세요,  가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
                                     <div>
-                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=32'">상세보기</button>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=74'">상세보기</button>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +212,7 @@
                                 <div class="staff-hover-desc">
                                      <p>즐거운 여행 함께 놀아요,  가까운 공항에서 픽업 가능합니다. <br>사지말고 대여하세요</p>
                                     <div>
-                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=37'">상세보기</button>
+                                        <button type="button" class="btn btn-warning" onclick="location.href='${pageContext.request.contextPath}/item/itemDetail.do?i_num=78'">상세보기</button>
                                     </div>
                                 </div>
                             </div>

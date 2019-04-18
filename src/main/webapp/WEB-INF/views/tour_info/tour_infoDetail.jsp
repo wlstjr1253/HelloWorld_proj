@@ -49,7 +49,7 @@
 		</p>
 		</div>
 		<hr size="1" width="50%">
-		<div class="btn-submit col-xs-4 align-right">       <!-- 작성자 일 경우만 보여짐 -->
+		<div class="btn btn-submit col-xs-4 align-right">       <!-- 작성자 일 경우만 보여짐 -->
 			<c:if test="${!empty user_id && user_id == tour_info.user_id}">
 				<input type="button" value="삭제"  onclick="location.href='delete.do?ti_id=${tour_info.ti_id}'">
 				<input type="button" value="수정" onclick="location.href='update.do?ti_id=${tour_info.ti_id}'">
@@ -65,7 +65,7 @@
 				                 <input type="hidden" name="user_id" value="${user_id}" id="user_id">
            		</form>
 		</c:if> --%>
-		<br><br><br><br><br><br>
+		<br><br><br><br>
 		     <!-- 모달 시작 -->
 		     <c:if test="${!empty user_id && user_id != tour_info.user_id}">
 		     <%-- <input type="hidden" name="ta_idx" value="${tour_info.ta_idx}" id="ta_idx"> --%>
@@ -118,9 +118,12 @@
 						<div role="tabpanel" class="tab-pane active" id="booking">
 							<div class="booking-info-deatils">
 								<div class="single-room-details fix">
-									<div class="room-img">
+								   <div class="room-img">
+		                            <img src="imageView.do?ti_id=${tour_info.ti_id}" width="182" height="182">        
+                                   </div>
+									<%-- <div class="room-img">
 										<img src="${tour_info.ti_img}" alt="" width="182" height="182"><!-- ti_img -->
-									</div>
+									</div> --%>
 									<div class="single-room-details pl-50">
 										<h3 class="s_room_title">${tour_info.ti_nm}</h3><!-- ti_nm -->
 										<div class="room_price">
@@ -217,7 +220,6 @@
 		     <!-- 모달 끝 -->
 		</div>
 	<div id="reply_div">
-           
 			<!-- <span class="reply-title">댓글 달기</span> -->
 			<span class="btn-submit col-xs-6">가이드 관련 코멘트</span>
 			<form id="re_form">
@@ -230,13 +232,12 @@
 				<div id="re_first">
 					<span class="letter-count">200/200</span>
 				</div>
-				<div id="re_second" class="align-right">
+				<div id="re_second" class="align-right ">
 					<input type="submit" value="전송">
 				</div>
 				</c:if>
 			</form>
 		</div>
-		
 		<!-- 댓글 목록 출력 -->
 		<div id="output"></div>
 		<div class="paging-button" style="display:none;">

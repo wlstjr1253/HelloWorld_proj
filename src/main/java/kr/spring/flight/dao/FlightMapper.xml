@@ -12,7 +12,7 @@
 		        rownum rnum
 		      FROM (select * from flight_info_vw
 		      
-		        <where>
+		        <trim prefix="WHERE" prefixOverrides="AND |OR ">
 					<if test="keyword != '' and keyfield == 'fi_nm'">
 						fi_nm like '%' || #{keyword} || '%'
 					</if>
@@ -27,11 +27,21 @@
 						fsi_start_city like '%' || #{keyword} || '%' or
 						fsi_arrive_city like '%' || #{keyword} || '%'
 					</if>
-					<if test="start_dt != '' or arrive_dt != ''">
-						(substr(fsi_start_dt,1,10) = '' || #{start_dt} || '') or
-						(substr(fsi_start_dt,1,10) = '' || #{arrive_dt} || '') 
+					
+					<if test="flight_s_nc != 'ALL'">
+						FSI_START_PLACE = '' || #{flight_s_nc} || ''
 					</if>
-				</where>
+					<if test="flight_a_nc != 'ALL'">
+                        AND FSI_ARRIVE_PLACE = '' || #{flight_a_nc} || ''
+					</if>
+					
+					<if test="start_dt != ''">
+                      AND substr(fsi_start_dt,1,10) = '' || #{start_dt} || '' 
+					</if>
+					<if test="arrive_dt != ''">
+                      AND substr(fsi_arrive_dt,1,10) = '' || #{arrive_dt} || ''
+					</if>
+				</trim>
 		      ORDER BY fsi_start_dt ASC)a)
 		<![CDATA[
 		WHERE rnum >= #{start} AND rnum <= #{end}
@@ -41,26 +51,36 @@
 		SELECT
 		  COUNT(*)
 		      FROM flight_info_vw
-					<where>
-						<if test="keyword != '' and keyfield == 'fi_nm'">
-							fi_nm like '%' || #{keyword} || '%'
-						</if>
-						<if test="keyword != '' and keyfield == 'fsi_start_city'">
-							fsi_start_city like '%' || #{keyword} || '%'
-						</if>
-						<if test="keyword != '' and keyfield == 'fsi_arrive_city'">
-							fsi_arrive_city like '%' || #{keyword} || '%'
-						</if>
-						<if test="keyword != '' and keyfield == 'all'">
-							fi_nm like '%' || #{keyword} || '%' or
-							fsi_start_city like '%' || #{keyword} || '%' or
-							fsi_arrive_city like '%' || #{keyword} || '%'
-						</if>
-						<if test="start_dt != '' or arrive_dt != ''">
-							(substr(fsi_start_dt,1,10) = '' || #{start_dt} || '') or
-							(substr(fsi_start_dt,1,10) = '' || #{arrive_dt} || '') 
-						</if>
-					</where>		
+				<trim prefix="WHERE" prefixOverrides="AND |OR ">
+					<if test="keyword != '' and keyfield == 'fi_nm'">
+						fi_nm like '%' || #{keyword} || '%'
+					</if>
+					<if test="keyword != '' and keyfield == 'fsi_start_city'">
+						fsi_start_city like '%' || #{keyword} || '%'
+					</if>
+					<if test="keyword != '' and keyfield == 'fsi_arrive_city'">
+						fsi_arrive_city like '%' || #{keyword} || '%'
+					</if>
+					<if test="keyword != '' and keyfield == 'all'">
+						fi_nm like '%' || #{keyword} || '%' or
+						fsi_start_city like '%' || #{keyword} || '%' or
+						fsi_arrive_city like '%' || #{keyword} || '%'
+					</if>
+				
+					<if test="flight_s_nc != 'ALL'">
+						FSI_START_PLACE = '' || #{flight_s_nc} || ''
+					</if>
+					<if test="flight_a_nc != 'ALL'">
+                        AND FSI_ARRIVE_PLACE = '' || #{flight_a_nc} || ''
+					</if>
+					
+					<if test="start_dt != ''">
+                      AND substr(fsi_start_dt,1,10) = '' || #{start_dt} || '' 
+					</if>
+					<if test="arrive_dt != ''">
+                      AND substr(fsi_arrive_dt,1,10) = '' || #{arrive_dt} || ''
+					</if>
+				</trim>		
 	</select>
 
 	<select id="selectFlight" parameterType="string" resultType="flightCommand">
@@ -82,7 +102,8 @@
 					fsi_eco_pc,
 					fsi_fir_mil,
 					fsi_bus_mil,
-					fsi_eco_mil
+					fsi_eco_mil,
+					fsi_flight_time
 				FROM flight_spot_info fsi LEFT OUTER JOIN flight_info fi USING (fi_id)
 			 	WHERE fsi.fsi_idx=#{fsi_idx}
 	</select>
