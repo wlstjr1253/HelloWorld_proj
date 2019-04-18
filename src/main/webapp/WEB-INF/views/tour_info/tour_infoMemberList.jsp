@@ -8,7 +8,7 @@
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="breadcurbs-inner">
 						<div class="breadcrubs">
-							<h2>투어 신청 목록</h2>
+							<h2>신청한 투어 목록</h2>
 							<div class="breadcrubs-menu">
 								<ul>
 									<li><a href="${pageContext.request.contextPath}/main/main.do">Home<i class="mdi mdi-chevron-right"></i></a></li>

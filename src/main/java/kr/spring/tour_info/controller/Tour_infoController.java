@@ -20,7 +20,10 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.spring.tour_info.service.Tour_infoService;
+import kr.spring.hotel.domain.HotelRsrvCommand;
+import kr.spring.hotel.domain.HotelVwCommand;
 import kr.spring.tour_info.domain.Tour_infoCommand;
+import kr.spring.tour_info.domain.Tour_infoRsrvCommand;
 import kr.spring.util.PagingUtil;
 
 @Controller
@@ -222,4 +225,5 @@ public class Tour_infoController {
 			tour_infoService.update(tour_infoCommand);
 			return "redirect:/tour_info/list.do";
    }
+		
 }
