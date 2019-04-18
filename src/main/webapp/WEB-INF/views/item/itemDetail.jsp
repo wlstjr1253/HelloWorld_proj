@@ -9,8 +9,8 @@
 		url('http://miuu227.godohosting.com/images/icon/ico_review.png')
 		no-repeat right 0;
 	background-size: auto 100%;
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
 	display: inline-block;
 	text-indent: -9999px;
 	cursor: pointer;
@@ -173,18 +173,18 @@ span#item_total_txt {
 					<input type="hidden" name="i_num" value="${list.i_num}"><tr style="color:white;">
 						<c:if test="${list.i_num==item.i_num}">
 							<p style="color:white;">
-							<div class="starRev">
+							
+							<span style="font-size:13pt;">${list.ir_content}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<span style="font-size:9pt;" class="align-right">${list.user_id}</span>&nbsp;&nbsp;
+							<span class="starRev">
 								<c:forEach begin="1" end="${list.ir_star}" >
 									<span class="ir_star on" data-value="${list.ir_star}">별${list.ir_star}</span>
 								</c:forEach>
 								<c:forEach begin="${list.ir_star + 1}" end="5" var="i">
 									<span class="ir_star" data-value="${i}">별${i}</span>
 								</c:forEach>
-							</div>
-							<span style="font-size:13pt;">${list.ir_content}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<span style="font-size:9pt;" class="align-right">${list.user_id}&nbsp;
-							<%-- <span>${list.ir_star}</span> --%>
-							${list.ir_reg_date}</span>
+							</span>&nbsp;&nbsp;
+							<span style="font-size:9pt;" class="align-right">${list.ir_reg_date}</span>
 							<c:if test="${!empty user_id && user_auth==3}"><button type="button" class="btn btn-danger" onclick="location.href='reviewDelete.do?ir_num=${list.ir_num}&i_num=${list.i_num}'">삭제</button></c:if>
 							</p>
 							<span><hr width="600px" style="color:gray;"></span>
