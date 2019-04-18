@@ -6,14 +6,15 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/ajax/tour_infoReply.js"></script>
 </div>
 <script type="text/javascript">
-$("#modal").modal('show').css({
+/* $("#modal").modal('show').css({
 	'margin-top': function (){
-		return -($this).height() / 2);
+		return -($this).height() /2);
 	},
 	'margin-left': function () {
-		return -($(this).width() / 2);
+		return -($(this).width() /2);
 	}
-});
+}); */
+
 </script>
 <div class="container">
 	<div class="row align-center">
@@ -32,16 +33,18 @@ $("#modal").modal('show').css({
 		</c:if>
 		<ul>
 		    <li><b>투어 ID : ${tour_info.ti_id}</b></li>
-			<li>1.작성자 : ${tour_info.user_id}</li>
-			<li>2.작성일자 : ${tour_info.reg_date}</li>
-			<li>3.투어 경비 : ${tour_info.ti_pc}</li>
-			<li>4.최소인원 : ${tour_info.ti_min_pp}</li>
-			<li>5.최대인원 : ${tour_info.ti_max_pp}</li>
-			<li>6.픽업 장소 : ${tour_info.ti_pickup_place}</li>
-			<li>7.픽업 시간 : ${tour_info.ti_pickup_time}</li>
+			<li>1. 작성자 : ${tour_info.user_id}</li>
+			<li>2. 작성일자 : ${tour_info.reg_date}</li>
+			<li>3. 투어 경비 : ${tour_info.ti_pc}</li>
+			<li>4. 시작일자 : ${tour_info.ti_start_day}</li>
+			<li>5. 종료일자 : ${tour_info.ti_end_day}</li>
+			<li>6. 최소인원 : ${tour_info.ti_min_pp}</li>
+			<li>7. 최대인원 : ${tour_info.ti_max_pp}</li>
+			<li>8. 픽업 장소 : ${tour_info.ti_pickup_place}</li>
+			<li>9. 픽업 시간 : ${tour_info.ti_pickup_time}</li>
 		</ul><br>
 		<p>
-		8.상세 내용<br>
+		10.상세 내용<br>
 			${tour_info.ti_content}
 		</p>
 		</div>
@@ -65,7 +68,14 @@ $("#modal").modal('show').css({
 		<br><br><br><br><br><br>
 		     <!-- 모달 시작 -->
 		     <c:if test="${!empty user_id && user_id != tour_info.user_id}">
+		     <%-- <input type="hidden" name="ta_idx" value="${tour_info.ta_idx}" id="ta_idx"> --%>
+           		      <c:if test="${tour_info.ti_state != 1}">
            		      <a href="#writeModal" class="btn btn-primary" data-toggle="modal">신청하기</a>
+           		      </c:if>
+           		      <c:if test="${tour_info.ti_state == 1}">
+           		      <a href="#" class="btn btn-primary" data-toggle="modal">신청완료</a>
+           		      </c:if>
+           		      
            				<div class="modal fade" id="writeModal">
            					<div class="modal-dialog modal-lg">
            						<form action="apply.do" method="post" id="tour_apply" enctype="multipart/form-data">

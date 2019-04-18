@@ -2,8 +2,6 @@ package kr.spring.tour_info.service;
 
 import java.util.List;
 import java.util.Map;
-
-import kr.spring.board.domain.BoardReplyCommand;
 import kr.spring.tour_info.domain.Tour_infoApplyCommand;
 import kr.spring.tour_info.domain.Tour_infoCommand;
 import kr.spring.tour_info.domain.Tour_infoReplyCommand;
@@ -44,4 +42,6 @@ public interface Tour_infoService {
 	
 	//관리자 삭제
 	public void deleteAdmin(Integer ti_id);
+	
+	 public List<Tour_infoApplyCommand> selectApplyList();
 }
