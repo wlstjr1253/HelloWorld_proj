@@ -105,33 +105,41 @@ span#item_total_txt{
 		</div>
 	</div>
 	
-	
+	<br><br><br>
 	<div style="text-align:center;" class="col-md-12">
 	<ul class="nav nav-tabs col-xs-12">
 		<li class="active" style="width:50%;"><a href="#tab1" data-toggle="tab">상세보기</a></li>
 		<li style="width:50%;"><a href="#tab2" data-toggle="tab">이용후기</a></li>
 	</ul></div><br>
 	<!-- 전체 탭 시작 -->
-	<div class="tab-content">
+	<div class="tab-content table-list">
+
 		<!-- 탭1 상세보기 시작 -->
 		<div class="tab-pane active" id="tab1">
-			<div style="text-align: center;">
-				${item.i_content}
+			<div class="row">
+				<div class="col-xs-12">
+					<div style="text-align: center;">
+						${item.i_content}
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- 탭1 상세보기 끝 -->
 		
 		<!-- 탭2 이용후기 시작 -->
 		<div class="tab-pane" id="tab2"><br><br><br>
-			<div style="text-align: center;">
-				<span style="color: white; font-size:12pt;"><br><br>※Hello World를 이용한 고객님들께서 직접 작성하신 후기입니다.</span>
+			<div class="row">
+				<div class="col-xs-12">
+					<span class="text-center"><br><br><br><h4 class="text-white"> ※Hello World를 이용한 고객님들께서 직접 작성하신 후기입니다.</h4><br><br></span>
+				</div>
 			</div>
-			<br><br>
+
 			<div class="col-xs-12">
 				<div style="text-align:center;">
 				<a href="itemreview.do?i_num=${item.i_num}"><button class="btn btn-ok" style="width:250px;">후기등록</button></a>
 				</div>
 			</div>
+			
 			<!-- 리뷰리스트 시작 -->
 			<div class="row">
 			<div class="col-xs-12"><br><br><br><br>
