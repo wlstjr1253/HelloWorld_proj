@@ -23,6 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import kr.spring.cart.domain.ItemCartCommand;
 import kr.spring.cart.service.ItemCartService;
+import kr.spring.hotel.domain.HotelVwCommand;
 import kr.spring.item.domain.ItemCommand;
 import kr.spring.item.service.ItemService;
 import kr.spring.member.domain.MemberCommand;
@@ -69,7 +70,7 @@ public class ItemOrderController {
 
 		return mav;
 	}
-	// ================ 장바구니 전체 상품 ================ //
+	/*// ================ 장바구니 전체 상품 ================ //
 	@RequestMapping(value="/itemcart/orderForm.do", method=RequestMethod.GET)
 	public ModelAndView insertOrder(HttpSession session) {
 		String user_id = (String)session.getAttribute("user_id");
@@ -93,18 +94,44 @@ public class ItemOrderController {
 
 		return mav;
 
-	}
+	}*/
+	
+	// ================ 장바구니 전체 상품 ================ //
+		@RequestMapping(value="/itemcart/orderForm.do", method=RequestMethod.GET)
+		public ModelAndView insertOrder(HttpSession session) {
+			String user_id = (String)session.getAttribute("user_id");
 
-	// 전송된 데이터 처리
+			int getTotalById = itemCartService.getTotalById(user_id);//장바구니 전체금액 호출
+
+			List<ItemCartCommand> list = itemCartService.selectCartList(user_id);
+
+			if (log.isDebugEnabled()) {
+				log.debug("<<list>> : " + list);
+			}
+
+			//Model이 들어간 이름은 리퀘스트에 담겨있고 el이 가져다씀
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("orderForm");
+			mav.addObject("list",list);
+			//mav에 담은걸 el이 뽑아서 사용한다 view에서
+
+
+			mav.addObject("getTotalById",getTotalById);	//주문상품 전체금액
+
+			return mav;
+
+		}
+
+	/*// 전송된 데이터 처리
 	@RequestMapping(value="/itemcart/orderForm.do", method=RequestMethod.POST)
 	public String submit(@ModelAttribute("command") @Valid ItemOrderCommand itemOrderCommand,
 			BindingResult result,HttpSession session) {
 
 
 		// 유효성 체크
-		/*if (result.hasErrors()) {
+		if (result.hasErrors()) {
 			return "orderForm";
-		}*/
+		}
 
 		//주문번호 생성
 		int order_num = itemOrderService.getOrderNum();
@@ -128,7 +155,65 @@ public class ItemOrderController {
 
 
 		return "redirect:/itemcart/orderCheck.do";
-	}
+	}*/
+	
+	// 전송된 데이터 처리
+		@RequestMapping(value="/itemcart/orderForm.do", method=RequestMethod.POST)
+		public String submit(@ModelAttribute("command") @Valid ItemOrderCommand itemOrderCommand,
+				BindingResult result,HttpSession session,
+				@RequestParam("cp_num") int cp_num, @RequestParam("cp_pin_num") int cp_pin_num,
+				@RequestParam("cp_year_month") String cp_year_month) {
+
+
+			//주문번호 생성
+			int order_num = itemOrderService.getOrderNum();
+			itemOrderCommand.setIbh_idx(order_num);
+
+			if (log.isDebugEnabled()) {
+				log.debug("<<itemOrderCommand>> : " + itemOrderCommand);
+			}
+
+			
+			
+			String user_id = (String)session.getAttribute("user_id");
+			//상세정보 처리를 위해서 장바구니 테이블에 저장된 정보 호출
+			List<ItemCartCommand> itemOrderlist = itemCartService.selectCartList(user_id);
+
+			ItemOrderDetailCommand itemOrderDetailCommand = itemOrderService.getOrderDetailById(itemOrderCommand.getUser_id());
+			
+			Map<String,Object> map = new HashMap<String, Object>();
+			map.put("P_USER_ID", itemOrderCommand.getUser_id());
+			map.put("P_TOTAL_PC", itemOrderCommand.getIbh_total());
+			map.put("P_RENT_DAY", itemOrderDetailCommand.getI_rent_day());
+			map.put("P_RETURN_DAY", itemOrderDetailCommand.getI_return_day());
+			map.put("P_RENT_NC", itemOrderDetailCommand.getI_rent_nc());
+			map.put("P_RETURN_NC", itemOrderDetailCommand.getI_return_nc());
+			map.put("P_I_NUM", itemOrderDetailCommand.getI_num());
+			map.put("P_ORDER_QUAN", itemOrderDetailCommand.getOrder_quan());
+			map.put("P_NM", itemOrderCommand.getIbh_nm());
+			map.put("P_EMAIL", itemOrderCommand.getIbh_email());
+			map.put("P_PHONE", itemOrderCommand.getIbh_phone());
+			map.put("P_REQUEST", itemOrderCommand.getIbh_request());
+			map.put("P_ITEM_NM", itemOrderDetailCommand.getItem_nm());
+			map.put("p_num", cp_num);
+			map.put("p_pin_num", cp_pin_num);
+			
+			String cp_ym[] = cp_year_month.split("/");
+			
+			map.put("p_year", Integer.parseInt(cp_ym[1]));
+			map.put("p_month", Integer.parseInt(cp_ym[0]));
+			
+			
+			// 글쓰기
+			itemOrderService.insertOrder(itemOrderCommand,itemOrderlist,user_id,null);
+
+			itemOrderService.ItemRsrv(map);
+
+			
+
+
+			return "redirect:/itemcart/orderCheck.do";
+		}
 
 
 	// ================ 장바구니 개별 상품 ================ //

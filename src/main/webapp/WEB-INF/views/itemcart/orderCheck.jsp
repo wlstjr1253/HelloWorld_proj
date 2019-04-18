@@ -27,10 +27,19 @@
 </div>
 </div>
 
+<div class="welcome-section text-center ptb-110">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title mb-60">
+                           <h2>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-suitcase-rolling"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>상품 대여</span>&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+					
+</div>
 
-<div class="container">
-   <div class="row">
-      <div class="col-md-12">
          <div class="booking-rooms-tab" style="width: 100%;">
             <ul class="nav" role="tablist" style="width: 100%;">
                <li class="col-md-4"><a href="#booking" data-toggle="disabled"
@@ -47,9 +56,7 @@
 
 
          </div>
-      </div>
-   </div>
-</div>
+
 
 
 <div class="our-news text-center ptb-80 white_bg">
@@ -58,8 +65,12 @@
          <div class="row">
             <div class="col-md-12">
                <div class="section-title mb-80">
-                  <div class="align-center">주문이 완료되었습니다!</div>
-                  <div class="align-center">주문내역은 회원정보에서 확인하실 수 있습니다.</div>
+                  <div class="align-center">
+<div class="section-title mb-60">
+                           <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>주문이 완료되었습니다.</strong>&nbsp;&nbsp;&nbsp;&nbsp;</h3><br>
+                           <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주문 내역은 회원 상세페이지에서 보실 수 있습니다.&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                        </div>
+                        </div>
 
 
                   <section class="margin-bottom"></section>
