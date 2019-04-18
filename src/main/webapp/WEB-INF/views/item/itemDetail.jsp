@@ -61,16 +61,22 @@ span#item_total_txt{
 					<select name="i_rent_nc" style="width:150px;">
 					<option>인천공항</option>
 					<option>김포공항</option>
-					<option>김포공항</option>
-					<option>김포공항</option>
-					<option>김포공항</option>
+					<option>제주공항</option>
+					<option>김해공항</option>
+					<option>청주공항</option>
+					<option>대구공항</option>
+					<option>양양공항</option>
+					<option>무안공항</option>
 					</select>&nbsp;&nbsp;&nbsp;&nbsp;
 					<select name="i_return_nc" style="width:150px;">
 					<option>인천공항</option>
 					<option>김포공항</option>
-					<option>김포공항</option>
-					<option>김포공항</option>
-					<option>김포공항</option>
+					<option>제주공항</option>
+					<option>김해공항</option>
+					<option>청주공항</option>
+					<option>대구공항</option>
+					<option>양양공항</option>
+					<option>무안공항</option>
 					</select>
 					<br><br>
 					<h6>&nbsp;&nbsp;구매수량<br>&nbsp;&nbsp;<br>
@@ -99,18 +105,19 @@ span#item_total_txt{
 		</div>
 	</div>
 	
-	<div style="text-align:center;">
+	
+	<div style="text-align:center;" class="col-md-12">
 	<ul class="nav nav-tabs col-xs-12">
-		<li class="active" style="width:600px;"><a href="#tab1" data-toggle="tab">상세보기</a></li>
-		<li style="width:600px;"><a href="#tab2" data-toggle="tab">이용후기</a></li>
+		<li class="active" style="width:50%;"><a href="#tab1" data-toggle="tab">상세보기</a></li>
+		<li style="width:50%;"><a href="#tab2" data-toggle="tab">이용후기</a></li>
 	</ul></div><br>
 	<!-- 전체 탭 시작 -->
 	<div class="tab-content">
 		<!-- 탭1 상세보기 시작 -->
 		<div class="tab-pane active" id="tab1">
-			<p class="col-xs-12">
+			<div style="text-align: center;">
 				${item.i_content}
-			</p>
+			</div>
 		</div>
 		<!-- 탭1 상세보기 끝 -->
 		
