@@ -22,6 +22,8 @@ public interface ItemOrderMapper {
 	//public List<ItemOrderDetailCommand> getListOrderDetail(int order_num);	//주문번호별 주문상세
 	public ItemOrderCommand getOrderDetail(int ibh_idx,String user_id);	//ID,주문번호별 주문상세
 	
+	@Select("SELECT * FROM ITEM_BUY_HIST_DETAIL WHERE USER_ID = #{user_id}")
+	public ItemOrderDetailCommand getOrderDetailById(String user_id);
 
 	@Insert("INSERT INTO item_buy_hist "
 			+ " (ibh_idx,  ibh_total, user_id, ibh_phone, ibh_nm, ibh_email, ibh_pay, ibh_request, reg_date) "
@@ -40,9 +42,14 @@ public interface ItemOrderMapper {
 	public void updateOrder(ItemOrderCommand itemOrderCommand);	
 	public void deleteOrder(Integer num);
 	
+	
+	
+	
+	public void ItemRsrv(Map<String,Object> map);
+
 	//마이페이지
-	@Select("SELECT * FROM item_buy_hist_detail WHERE user_id=#{user_id}")
-	public List<ItemOrderCommand> selectItemBuyHist(Map<String, Object> map);
+	/*@Select("SELECT * FROM item_buy_hist_detail WHERE user_id=#{user_id}")
+	public List<ItemOrderCommand> selectItemBuyHist(Map<String, Object> map);*/
 	/*@Select("SELECT COUNT(*) FROM item_buy_hist_detail WHERE user_id=#{user_id}")
 	public int selectItemBuyHistRowCount(String user_id);*/
 }

@@ -112,4 +112,9 @@ public class Tour_infoServiceImpl implements Tour_infoService{
 	public void deleteAdmin(Integer ti_id) {
 		tour_infoMapper.deleteAdmin(ti_id);
 	}
+	@Override
+	public List<Tour_infoApplyCommand> selectApplyList() {
+		return tour_infoMapper.selectApplyList();
+	}
+	
 }

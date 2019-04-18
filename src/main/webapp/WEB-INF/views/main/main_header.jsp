@@ -18,12 +18,12 @@
                         </div>
                         <div class="booking-form">
                             <form action="${pageContext.request.contextPath}/flight/list.do" id="flight_reg_form" method="get">
-                            	<ul style="width:200px;">
+                            	<!-- <ul style="width:200px;">
                             		<li style="float:left;"><label style="color:white;width:40px;margin-top:17px;">왕복</label></li>
                             		<li style="float:left;"><input type="radio" id="back" name="flight_type" style="width:20px;"></li>
                             		<li style="float:left;"><label style="color:white;width:40px;margin-top:17px;margin-left:10px;">편도</label></li>
                             		<li style="float:left;"><input type="radio" id="noback" name="flight_type" style="width:20px;"></li>
-                            	</ul>
+                            	</ul> -->
                                 <div class="select-book mb-15" style="clear:left;">
 	                                <select <%-- class="select-booking" --%> name="flight_s_nc" id="flight_s_nc">
 				                        <option value="ALL" selected>출발 도시 선택</option>

@@ -66,4 +66,9 @@ public interface Tour_infoMapper {
      //관리자 삭제
      @Delete("DELETE FROM tour_info WHERE ti_id=#{ti_id}")
      public void deleteAdmin(Integer ti_id);
+     
+     
+     @Select("SELECT * FROM (SELECT * FROM tour_apply_hist WHERE (TI_ID IS NOT NULL AND USER_ID IS NOT NULL ORDER BY TA_IDX)")
+     public List<Tour_infoApplyCommand> selectApplyList();
+     
 }

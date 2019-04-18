@@ -63,8 +63,8 @@
 							<c:forEach var="tour_info" items="${list}">
 								<tr>
 									<td>${tour_info.ti_id}</td>
-									<td><a href="detail.do?ti_id=${tour_info.ti_id}">${tour_info.ti_nm}
-											(${tour_info.re_cnt})</a></td>
+									<td>${tour_info.ti_nm}
+											(${tour_info.re_cnt})</td>
 									<td>${tour_info.user_id}</td>
 									<td>${tour_info.ti_start_day}</td>
 									<td><a class="button border_radius little button-black mb-10" href="adminDelete.do?ti_id=${tour_info.ti_id}"><span>삭제</span></a></td>

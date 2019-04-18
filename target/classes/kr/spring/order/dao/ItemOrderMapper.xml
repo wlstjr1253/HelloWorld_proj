@@ -4,6 +4,29 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
 <mapper namespace="kr.spring.order.dao.ItemOrderMapper">  
 
+	<insert id="ItemRsrv" parameterType="map" statementType="CALLABLE">
+		{
+			CALL SP_ITEM_BUY(
+				#{P_USER_ID},
+				#{P_TOTAL_PC},
+				#{P_NUM},
+				#{P_PIN_NUM},
+				#{P_YEAR},
+				#{P_MONTH},
+				#{P_PHONE},
+				#{P_NM},
+				#{P_EMAIL},
+				#{P_REQUEST},
+				#{P_ITEM_NM},
+				#{P_ORDER_QUAN},
+				#{P_I_NUM},
+				#{P_RENT_DAY}
+				#{P_RETURN_DAY}
+				#{P_RENT_NC}
+				#{P_RETURN_NC}
+			)
+		}
+	</insert>
 <!-- 주문등록 -->
 <!-- <insert id="insertOrder">
 	INSERT INTO 

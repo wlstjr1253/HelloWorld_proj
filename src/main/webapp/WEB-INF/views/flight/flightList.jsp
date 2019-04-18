@@ -47,15 +47,19 @@
 									<td><img src="${pageContext.request.contextPath}/resources/images/logo/${flight.fi_logo}" style="max-width:100px;"></td>
 									</c:if>
 									<td>${flight.fi_nm}</td>
-									<td>${flight.fsi_start_city}</td>
-									<td>${flight.fsi_arrive_city}</td>
-									<td>${flight.fsi_start_dt}</td>
+									<td>${flight.fsi_start_city}<br>(${flight.fsi_start_place})</td>
+									<td>${flight.fsi_arrive_city}<br>(${flight.fsi_arrive_place})</td>
+									<td>${fn:replace(flight.fsi_start_dt, ' ', '<br>')}</td>
 									<td>
-										-><br>비행시간
+										---------------><br>${flight.fsi_flight_time} 시간
 									</td>
-									<td>${flight.fsi_arrive_dt}</td>
-									<td><input type="button" value="예약"
-					    										onclick="location.href='flightRsrv.do?fsi_idx=${flight.fsi_idx}'"></td>
+									<td>${fn:replace(flight.fsi_arrive_dt, ' ', '<br>')}</td>
+									<%-- <td><input type="button" value="예약"
+					    										onclick="location.href='flightRsrv.do?fsi_idx=${flight.fsi_idx}'"></td> --%>
+					    			<td>
+					    			<a href="flightRsrv.do?fsi_idx=${flight.fsi_idx}" 
+					    				   class="button border_radius little button-black mb-20"><span>예약</span></a> 
+					    			</td>		
 								</tr>
 								</c:forEach>
 							</table>

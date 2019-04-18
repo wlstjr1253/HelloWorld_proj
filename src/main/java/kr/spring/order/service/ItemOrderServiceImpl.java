@@ -11,6 +11,7 @@ import kr.spring.cart.dao.ItemCartMapper;
 import kr.spring.cart.domain.ItemCartCommand;
 import kr.spring.order.dao.ItemOrderMapper;
 import kr.spring.order.domain.ItemOrderCommand;
+import kr.spring.order.domain.ItemOrderDetailCommand;
 
 @Service("itemOrderService")
 public class ItemOrderServiceImpl implements ItemOrderService {
@@ -76,6 +77,18 @@ public class ItemOrderServiceImpl implements ItemOrderService {
 
 	@Override
 	public List<ItemOrderCommand> selectItemBuyHist(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void ItemRsrv(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ItemOrderDetailCommand getOrderDetailById(String user_id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

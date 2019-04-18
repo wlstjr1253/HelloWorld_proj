@@ -17,7 +17,7 @@ $(function(){
 		var n_end_day = new Date(endArray[0], endArray[1], endArray[2]);
 		    //날짜를 숫자형태의 날짜 정보로 변환, 비교
 		if(n_start_day.getTime()> n_end_day.getTime()){
-			alert("종료날짜보다 시작날짜가 작아야 합니다.");
+			alert("종료날짜보다 시작날짜가 앞서야 합니다.");
 			return false;
 		}
 		    
