@@ -36,11 +36,11 @@
                                 </div>
                                 <div class="row">
                                     <div class="b-date arrive mb-15 col-md-6">
-                                        <input class="date-picker" type="text" name="start_dt" id="start_dt" placeholder="출발일">
+                                        <input class="date-picker" type="text" name="start_dt" id="start_dt" placeholder="출발일" autocomplete="off">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                     <div class="b-date departure mb-15 col-md-6">
-                                        <input class="date-picker" type="text" name="arrive_dt" id="arrive_dt" placeholder="귀국일">
+                                        <input class="date-picker" type="text" name="arrive_dt" id="arrive_dt" placeholder="귀국일" autocomplete="off">
                                         <i class="mdi mdi-calendar-text"></i>
                                     </div>
                                 </div>
