@@ -124,7 +124,7 @@
 	<select id="selectHotelList" parameterType="map"
 		resultType="memberCommand">
 		SELECT 
-			ST_NM, SRL_CHECK_IN_DT, SRL_CHECK_OUT_DT, ST_ADDR, USER_ID, SRL_TOTAL_PC
+			ST_NM, SRL_CHECK_IN_DT, SRL_CHECK_OUT_DT, ST_ADDR, SRL_NM, SRL_TOTAL_PC
 		FROM
 			STAYING_RSRV_LOG SRL 
 		LEFT OUTER JOIN 

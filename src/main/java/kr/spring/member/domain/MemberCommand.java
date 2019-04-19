@@ -37,7 +37,15 @@ public class MemberCommand {
 	private int ph_knd;
 	
 	//호텔 내역
-	private String st_nm,srl_check_in_dt,srl_check_out_dt,st_addr;
+	private String st_nm,srl_check_in_dt,srl_check_out_dt,st_addr,srl_nm;
+	public String getSrl_nm() {
+		return srl_nm;
+	}
+
+	public void setSrl_nm(String srl_nm) {
+		this.srl_nm = srl_nm;
+	}
+
 	private int srl_total_pc;
 	
 	//항공권 내역
