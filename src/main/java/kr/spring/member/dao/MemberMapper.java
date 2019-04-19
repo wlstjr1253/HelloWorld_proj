@@ -78,7 +78,7 @@ public interface MemberMapper {
 	//호텔 예매 내역
 	@Select("SELECT ST_NM, SRL_CHECK_IN_DT, SRL_CHECK_OUT_DT, ST_ADDR, USER_ID, SRL_TOTAL_PC "
 			+ "FROM STAYING_RSRV_LOG SRL LEFT OUTER JOIN STAYING_VW USING (SR_ID) WHERE user_id=#{user_id}")
-	public List<MemberCommand> selectHotelList(Map<String, Object> map);
+	public List<MemberCommand> selectHotelList(String user_id);
 	@Select("SELECT COUNT(*) FROM STAYING_RSRV_LOG SRL LEFT OUTER JOIN STAYING_VW USING (SR_ID) WHERE user_id=#{user_id}")
 	public int selectHotelRowCount(String user_id);
 	
@@ -86,7 +86,7 @@ public interface MemberMapper {
 	@Select("SELECT FSI_START_NATION, FSI_START_CITY, FSI_PASS1_NATION, FSI_PASS1_CITY, FSI_PASS2_NATION, FSI_PASS2_CITY, FSI_ARRIVE_NATION, "
 			+ "FSI_ARRIVE_CITY, FSI_START_DT, FSI_ARRIVE_DT, FR_RSRV_SEAT_TYPE, FI_NM, FR_TOTAL_PC "
 					+ "FROM FLIGHT_RSRV_LOG FRL LEFT OUTER JOIN FLIGHT_INFO_VW USING (FSI_IDX) WHERE user_id=#{user_id}")
-	public List<MemberCommand> selectFlightList(Map<String, Object> map);
+	public List<MemberCommand> selectFlightList(String user_id);
 	@Select("SELECT COUNT(*) FROM FLIGHT_RSRV_LOG FRL LEFT OUTER JOIN FLIGHT_INFO_VW USING (FSI_IDX) WHERE user_id=#{user_id}")
 	public int selectFlightRowCount(String user_id);
 }
