@@ -36,6 +36,160 @@ public class MemberCommand {
 	private Date ph_reg_dt;
 	private int ph_knd;
 	
+	//호텔 내역
+	private String st_nm,srl_check_in_dt,srl_check_out_dt,st_addr;
+	private int srl_total_pc;
+	
+	//항공권 내역
+	private String fsi_start_nation, fsi_start_city, fsi_pass1_nation, 
+					fsi_pass1_city, fsi_pass2_nation, fsi_pass2_city, 
+					fsi_arrive_nation, fsi_arrive_city, fsi_start_dt, 
+					fsi_arrive_dt, fr_rsrv_seat_type, fi_nm; 
+	public String getSt_nm() {
+		return st_nm;
+	}
+
+	public void setSt_nm(String st_nm) {
+		this.st_nm = st_nm;
+	}
+
+	public String getSrl_check_in_dt() {
+		return srl_check_in_dt;
+	}
+
+	public void setSrl_check_in_dt(String srl_check_in_dt) {
+		this.srl_check_in_dt = srl_check_in_dt;
+	}
+
+	public String getSrl_check_out_dt() {
+		return srl_check_out_dt;
+	}
+
+	public void setSrl_check_out_dt(String srl_check_out_dt) {
+		this.srl_check_out_dt = srl_check_out_dt;
+	}
+
+	public String getSt_addr() {
+		return st_addr;
+	}
+
+	public void setSt_addr(String st_addr) {
+		this.st_addr = st_addr;
+	}
+
+	public int getSrl_total_pc() {
+		return srl_total_pc;
+	}
+
+	public void setSrl_total_pc(int srl_total_pc) {
+		this.srl_total_pc = srl_total_pc;
+	}
+
+	public String getFsi_start_nation() {
+		return fsi_start_nation;
+	}
+
+	public void setFsi_start_nation(String fsi_start_nation) {
+		this.fsi_start_nation = fsi_start_nation;
+	}
+
+	public String getFsi_start_city() {
+		return fsi_start_city;
+	}
+
+	public void setFsi_start_city(String fsi_start_city) {
+		this.fsi_start_city = fsi_start_city;
+	}
+
+	public String getFsi_pass1_nation() {
+		return fsi_pass1_nation;
+	}
+
+	public void setFsi_pass1_nation(String fsi_pass1_nation) {
+		this.fsi_pass1_nation = fsi_pass1_nation;
+	}
+
+	public String getFsi_pass1_city() {
+		return fsi_pass1_city;
+	}
+
+	public void setFsi_pass1_city(String fsi_pass1_city) {
+		this.fsi_pass1_city = fsi_pass1_city;
+	}
+
+	public String getFsi_pass2_nation() {
+		return fsi_pass2_nation;
+	}
+
+	public void setFsi_pass2_nation(String fsi_pass2_nation) {
+		this.fsi_pass2_nation = fsi_pass2_nation;
+	}
+
+	public String getFsi_pass2_city() {
+		return fsi_pass2_city;
+	}
+
+	public void setFsi_pass2_city(String fsi_pass2_city) {
+		this.fsi_pass2_city = fsi_pass2_city;
+	}
+
+	public String getFsi_arrive_nation() {
+		return fsi_arrive_nation;
+	}
+
+	public void setFsi_arrive_nation(String fsi_arrive_nation) {
+		this.fsi_arrive_nation = fsi_arrive_nation;
+	}
+
+	public String getFsi_arrive_city() {
+		return fsi_arrive_city;
+	}
+
+	public void setFsi_arrive_city(String fsi_arrive_city) {
+		this.fsi_arrive_city = fsi_arrive_city;
+	}
+
+	public String getFsi_start_dt() {
+		return fsi_start_dt;
+	}
+
+	public void setFsi_start_dt(String fsi_start_dt) {
+		this.fsi_start_dt = fsi_start_dt;
+	}
+
+	public String getFsi_arrive_dt() {
+		return fsi_arrive_dt;
+	}
+
+	public void setFsi_arrive_dt(String fsi_arrive_dt) {
+		this.fsi_arrive_dt = fsi_arrive_dt;
+	}
+
+	public String getFr_rsrv_seat_type() {
+		return fr_rsrv_seat_type;
+	}
+
+	public void setFr_rsrv_seat_type(String fr_rsrv_seat_type) {
+		this.fr_rsrv_seat_type = fr_rsrv_seat_type;
+	}
+
+	public String getFi_nm() {
+		return fi_nm;
+	}
+
+	public void setFi_nm(String fi_nm) {
+		this.fi_nm = fi_nm;
+	}
+
+	public int getFr_total_pc() {
+		return fr_total_pc;
+	}
+
+	public void setFr_total_pc(int fr_total_pc) {
+		this.fr_total_pc = fr_total_pc;
+	}
+
+	private int fr_total_pc;
 	
 	public String getPh_pay_type() {
 		return ph_pay_type;
