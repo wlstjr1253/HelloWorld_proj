@@ -33,7 +33,7 @@
 			
 			<c:if test="${count > 0}">
 			<div class="table-responsive">
-				<table class="table table-striped">
+				<table class="table table-striped table-middle">
 					<tr>
 						<th>호텔 이름</th>
 						<th>체크인</th>

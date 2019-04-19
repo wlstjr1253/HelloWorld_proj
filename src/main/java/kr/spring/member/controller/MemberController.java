@@ -391,6 +391,8 @@ public class MemberController {
 			list = memberService.selectHotelList(map);
 		}
 		
+		
+		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("memberHotelList");
 		mav.addObject("count", count);
@@ -400,13 +402,13 @@ public class MemberController {
 		return mav;
 	}
 	
-	//호텔 목록
+	//항공권 목록
 	@RequestMapping("/member/memberFlightList.do")
 	public ModelAndView processFlightReservation(
 			@RequestParam(value="pageNum", defaultValue="1")int currentPage,
 			@RequestParam(value="keyfield", defaultValue="user_id")String keyfield,
 			@RequestParam(value="keyword", defaultValue="")String keyword,
-			HttpSession session
+			HttpSession session,Model model
 			) {
 		String user_id=(String)session.getAttribute("user_id");
 		keyword = user_id;
@@ -440,6 +442,7 @@ public class MemberController {
 		mav.addObject("count", count);
 		mav.addObject("memberFlightList", list);
 		mav.addObject("pagingHtml", page.getPagingHtml());
+		
 		
 		return mav;
 	}

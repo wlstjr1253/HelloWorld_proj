@@ -33,11 +33,13 @@
 			
 			<c:if test="${count > 0}">
 			<div class="table-responsive">
-				<table class="table table-striped">
+				<table class="table table-striped table-middle">
 					<tr>
 						<th>출발지</th>
-						<th>경유지</th>
-						<th>경유지2</th>
+						<c:if test="${!empty flight.fsi_pass1_city}">
+							<th>경유지</th>
+							<th>경유지2</th>
+						</c:if>
 						<th>도착지</th>
 						<th>출발 예정 시간</th>
 						<th>도착 예정 시간</th>
@@ -48,12 +50,18 @@
 					<c:forEach var="flight" items="${memberFlightList}">
 					<tr>
 						<td>${flight.fsi_start_city}</td>
-						<td>${flight.fsi_pass1_city}</td>
-						<td>${flight.fsi_pass2_city}</td>
+						<c:if test="${!empty flight.fsi_pass1_city}">
+							<td>${flight.fsi_pass1_city}</td>
+							<td>${flight.fsi_pass2_city}</td>
+						</c:if>
 						<td>${flight.fsi_arrive_city}</td>
 						<td>${flight.fsi_start_dt }</td>
 						<td>${flight.fsi_arrive_dt }</td>
-						<td>${flight.fr_rsrv_seat_type }</td>
+						<td>
+							<c:if test="${flight.fr_rsrv_seat_type=='FIR' }">퍼스트클래스</c:if>
+							<c:if test="${flight.fr_rsrv_seat_type=='BUS'}">비즈니스</c:if>
+							<c:if test="${flight.fr_rsrv_seat_type=='ECO' }">이코노미</c:if>
+						</td>
 						<td>${flight.fi_nm }</td>
 						<td>${flight.fr_total_pc }</td>
 					</tr>
