@@ -120,32 +120,41 @@
 		</where>
 	</select>
 	
-	<!-- pay history -->
-	<select id="selectPayHistory" parameterType="map"
+	<!-- hotel list -->
+	<select id="selectHotelList" parameterType="map"
 		resultType="memberCommand">
-		SELECT
-			user_id, ph_pay_type, ph_pay, ph_reg_dt, ph_knd
-		FROM 
-		payment_hist
+		SELECT 
+			ST_NM, SRL_CHECK_IN_DT, SRL_CHECK_OUT_DT, ST_ADDR, USER_ID, SRL_TOTAL_PC
+		FROM
+			STAYING_RSRV_LOG SRL 
+		LEFT OUTER JOIN 
+			STAYING_VW USING (SR_ID) 
 		<where>
 			<if test="keyword != '' and keyfield == 'user_id'">
 				user_id like '%' || #{keyword} || '%'
 			</if>
 		</where>
 		ORDER BY ph_reg_dt DESC
-		<!-- WHERE user_id = #{keyword} --> 
 	</select>
-<!-- 
-	<select id="selectRowCount" parameterType="map"
-		resultType="integer">
-		SELECT
-		COUNT(*)
-		FROM payment_hist
+	
+	<!-- flight list -->
+	<select id="selectFlightList" parameterType="map"
+		resultType="memberCommand">
+		SELECT 
+			FSI_START_NATION, FSI_START_CITY, FSI_PASS1_NATION, 
+			FSI_PASS1_CITY, FSI_PASS2_NATION, FSI_PASS2_CITY, 
+			FSI_ARRIVE_NATION, FSI_ARRIVE_CITY, FSI_START_DT, 
+			FSI_ARRIVE_DT, FR_RSRV_SEAT_TYPE, FI_NM, FR_TOTAL_PC
+		FROM 
+			FLIGHT_RSRV_LOG FRL 
+		LEFT OUTER JOIN 
+			FLIGHT_INFO_VW USING (FSI_IDX) 
 		<where>
 			<if test="keyword != '' and keyfield == 'user_id'">
-				m.user_id like '%' || #{keyword} || '%'
+				user_id like '%' || #{keyword} || '%'
 			</if>
 		</where>
-	</select> -->
+		ORDER BY fsi_start_dt DESC
+	</select>
 
 </mapper>
