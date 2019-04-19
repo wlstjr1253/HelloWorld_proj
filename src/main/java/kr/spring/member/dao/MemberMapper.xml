@@ -134,7 +134,7 @@
 				user_id like '%' || #{keyword} || '%'
 			</if>
 		</where>
-		ORDER BY ph_reg_dt DESC
+		ORDER BY srl_check_in_dt DESC
 	</select>
 	
 	<!-- flight list -->
