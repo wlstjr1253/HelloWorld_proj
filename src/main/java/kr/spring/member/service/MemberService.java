@@ -3,8 +3,6 @@ package kr.spring.member.service;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.ibatis.annotations.Update;
-
 import kr.spring.member.domain.MemberCommand;
 
 public interface MemberService {
@@ -41,4 +39,12 @@ public interface MemberService {
 	//결제 내역
 	public List<MemberCommand> selectPayHistory(Map<String, Object> map);
 	public int selectPayHistoryRowCount(String user_id);
+	
+	//호텔 내역
+	public List<MemberCommand> selectHotelList(Map<String, Object> map);
+	public int selectHotelListRowCount(String user_id);
+	
+	//호텔 내역
+	public List<MemberCommand> selectFlightList(Map<String, Object> map);
+	public int selectFlightListRowCount(String user_id);
 }
