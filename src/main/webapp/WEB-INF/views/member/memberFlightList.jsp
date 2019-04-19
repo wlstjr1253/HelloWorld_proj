@@ -47,10 +47,10 @@
 					</tr>
 					<c:forEach var="flight" items="${memberFlightList}">
 					<tr>
-						<td>${flight.fsi_start_place}</td>
-						<td>${flight.fsi_pass1_place}</td>
-						<td>${flight.fsi_pass2_place}</td>
-						<td>${flight.fsi_arrive_place}</td>
+						<td>${flight.fsi_start_city}</td>
+						<td>${flight.fsi_pass1_city}</td>
+						<td>${flight.fsi_pass2_city}</td>
+						<td>${flight.fsi_arrive_city}</td>
 						<td>${flight.fsi_start_dt }</td>
 						<td>${flight.fsi_arrive_dt }</td>
 						<td>${flight.fr_rsrv_seat_type }</td>
