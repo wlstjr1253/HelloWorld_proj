@@ -120,6 +120,28 @@
 		</where>
 	</select>
 	
+	<!-- pay history -->
+	<select id="selectPayHistory" parameterType="map"
+		resultType="memberCommand">
+		SELECT
+			user_id, ph_pay_type, ph_pay, ph_reg_dt, ph_knd
+		FROM 
+		payment_hist
+		SELECT 
+			ST_NM, SRL_CHECK_IN_DT, SRL_CHECK_OUT_DT, ST_ADDR, USER_ID, SRL_TOTAL_PC
+		FROM
+			STAYING_RSRV_LOG SRL 
+		LEFT OUTER JOIN 
+			STAYING_VW USING (SR_ID) 
+		<where>
+			<if test="keyword != '' and keyfield == 'user_id'">
+				user_id like '%' || #{keyword} || '%'
+			</if>
+		</where>
+		ORDER BY ph_reg_dt DESC
+		<!-- WHERE user_id = #{keyword} --> 
+	</select>
+	
 	<!-- hotel list -->
 	<select id="selectHotelList" parameterType="map"
 		resultType="memberCommand">
