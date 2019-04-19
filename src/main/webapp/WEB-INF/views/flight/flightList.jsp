@@ -25,7 +25,7 @@
 						</c:if>
 						<c:if test="${fCount > 0}">
 						<div class="table-responsive margin-top-50">
-							<table class="table table-striped"> 
+							<table class="table table-striped table-middle"> 
 								<tr>
 									<th></th>
 									<th>항공사</th>
