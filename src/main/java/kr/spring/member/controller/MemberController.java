@@ -375,13 +375,13 @@ public class MemberController {
 		
 		// 총 결제 갯수 또는 검색된 결제의 갯수
 		//어떤 결제??? 대여? 투어 결제? 항공권 결제? 호텔 결제?
-		int count = memberService.selectPayHistoryRowCount(user_id);
+		int count = memberService.selectHotelListRowCount(user_id);
 		 
 		if(log.isDebugEnabled()) {
 			log.debug("<<count>> : " + count);
 		}
 		
-		PagingUtil page = new PagingUtil(keyfield, keyword,currentPage, count,rowCount, pageCount, "memberPayHistory.do");
+		PagingUtil page = new PagingUtil(keyfield, keyword,currentPage, count,rowCount, pageCount, "memberHotelList.do");
 		map.put("start", page.getStartCount());
 		map.put("end", page.getEndCount());
 		
@@ -395,6 +395,50 @@ public class MemberController {
 		mav.setViewName("memberHotelList");
 		mav.addObject("count", count);
 		mav.addObject("memberHotelList", list);
+		mav.addObject("pagingHtml", page.getPagingHtml());
+		
+		return mav;
+	}
+	
+	//호텔 목록
+	@RequestMapping("/member/memberFlightList.do")
+	public ModelAndView processFlightReservation(
+			@RequestParam(value="pageNum", defaultValue="1")int currentPage,
+			@RequestParam(value="keyfield", defaultValue="user_id")String keyfield,
+			@RequestParam(value="keyword", defaultValue="")String keyword,
+			HttpSession session
+			) {
+		String user_id=(String)session.getAttribute("user_id");
+		keyword = user_id;
+		
+		if(log.isDebugEnabled()) {
+			log.debug("<<keyword>> : " + keyword);
+		}
+		
+		Map<String,Object> map = new HashMap<String, Object>();
+		map.put("keyfield", keyfield);
+		map.put("keyword", keyword);
+		
+		int count = memberService.selectFlightListRowCount(user_id);
+		 
+		if(log.isDebugEnabled()) {
+			log.debug("<<count>> : " + count);
+		}
+		
+		PagingUtil page = new PagingUtil(keyfield, keyword,currentPage, count,rowCount, pageCount, "memberFlightList.do");
+		map.put("start", page.getStartCount());
+		map.put("end", page.getEndCount());
+		
+		
+		List<MemberCommand> list = null;
+		if (count > 0) {
+			list = memberService.selectFlightList(map);
+		}
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("memberFlightList");
+		mav.addObject("count", count);
+		mav.addObject("memberFlightList", list);
 		mav.addObject("pagingHtml", page.getPagingHtml());
 		
 		return mav;

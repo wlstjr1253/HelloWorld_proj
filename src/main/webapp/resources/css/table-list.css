@@ -10,4 +10,5 @@
 .table-list .btn-ok:hover {background-color: rgba(0,0,0,.4); color: #fff;}
 .table-list .btn-small:hover {background-color: rgba(0,0,0,.4); color: #fff;}
 .table-list .text-white {color: #fff;}
+.table-list .text-black{color: #000;}
 .table-list .table-middle td {vertical-align: middle;}
