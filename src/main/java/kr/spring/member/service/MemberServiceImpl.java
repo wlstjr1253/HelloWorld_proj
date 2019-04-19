@@ -109,6 +109,26 @@ public class MemberServiceImpl implements MemberService {
 	public int selectPayHistoryRowCount(String user_id) {
 		return memberMapper.selectPayHistoryRowCount(user_id);
 	}
+
+	@Override
+	public List<MemberCommand> selectHotelList(Map<String, Object> map) {
+		return memberMapper.selectHotelList(map);
+	}
+
+	@Override
+	public int selectHotelListRowCount(String user_id) {
+		return memberMapper.selectFlightRowCount(user_id);
+	}
+
+	@Override
+	public List<MemberCommand> selectFlightList(Map<String, Object> map) {
+		return memberMapper.selectFlightList(map);
+	}
+
+	@Override
+	public int selectFlightListRowCount(String user_id) {
+		return memberMapper.selectFlightRowCount(user_id);
+	}
 	
 	
 	

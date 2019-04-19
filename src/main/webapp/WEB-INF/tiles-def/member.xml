@@ -53,5 +53,13 @@
     	<put-attribute name="title" value="결제 내역" />
     	<put-attribute name="body" value="/WEB-INF/views/member/memberPayHistory.jsp" />
     </definition>
+    <definition name="memberHotelList" extends="main">
+    	<put-attribute name="title" value="호텔 내역" />
+    	<put-attribute name="body" value="/WEB-INF/views/member/memberHotelList.jsp" />
+    </definition>
+    <definition name="memberFlightList" extends="main">
+    	<put-attribute name="title" value="항공권 내역" />
+    	<put-attribute name="body" value="/WEB-INF/views/member/memberFlightList.jsp" />
+    </definition>
 </tiles-definitions>
 

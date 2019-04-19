@@ -74,4 +74,14 @@ public interface MemberMapper {
 	public List<MemberCommand> selectPayHistory(Map<String, Object> map);
 	@Select("SELECT COUNT(*) FROM payment_hist WHERE user_id=#{user_id}")
 	public int selectPayHistoryRowCount(String user_id);
+	
+	//호텔 예매 내역
+	public List<MemberCommand> selectHotelList(Map<String, Object> map);
+	@Select("SELECT COUNT(*) FROM payment_hist WHERE user_id=#{user_id}")
+	public int selectHotelRowCount(String user_id);
+	
+	//호텔 예매 내역
+	public List<MemberCommand> selectFlightList(Map<String, Object> map);
+	@Select("SELECT COUNT(*) FROM payment_hist WHERE user_id=#{user_id}")
+	public int selectFlightRowCount(String user_id);
 }

@@ -354,4 +354,49 @@ public class MemberController {
 		
 		return mav;
 	}
+	//호텔 목록
+	@RequestMapping("/member/memberHotelList.do")
+	public ModelAndView processReservation(
+			@RequestParam(value="pageNum", defaultValue="1")int currentPage,
+			@RequestParam(value="keyfield", defaultValue="user_id")String keyfield,
+			@RequestParam(value="keyword", defaultValue="")String keyword,
+			HttpSession session
+			) {
+		String user_id=(String)session.getAttribute("user_id");
+		keyword = user_id;
+		
+		if(log.isDebugEnabled()) {
+			log.debug("<<keyword>> : " + keyword);
+		}
+		
+		Map<String,Object> map = new HashMap<String, Object>();
+		map.put("keyfield", keyfield);
+		map.put("keyword", keyword);
+		
+		// 총 결제 갯수 또는 검색된 결제의 갯수
+		//어떤 결제??? 대여? 투어 결제? 항공권 결제? 호텔 결제?
+		int count = memberService.selectPayHistoryRowCount(user_id);
+		 
+		if(log.isDebugEnabled()) {
+			log.debug("<<count>> : " + count);
+		}
+		
+		PagingUtil page = new PagingUtil(keyfield, keyword,currentPage, count,rowCount, pageCount, "memberPayHistory.do");
+		map.put("start", page.getStartCount());
+		map.put("end", page.getEndCount());
+		
+		
+		List<MemberCommand> list = null;
+		if (count > 0) {
+			list = memberService.selectHotelList(map);
+		}
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("memberHotelList");
+		mav.addObject("count", count);
+		mav.addObject("memberHotelList", list);
+		mav.addObject("pagingHtml", page.getPagingHtml());
+		
+		return mav;
+	}
 }
