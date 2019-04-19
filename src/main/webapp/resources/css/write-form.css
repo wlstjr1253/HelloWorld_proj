@@ -12,6 +12,7 @@
 .write-form li input {background-color: rgba(0,0,0,.4);color: #44b272;font-weight: 900;border: 1px solid #44b272;line-height: 45px;}
 .write-form li input::placeholder {color: #44b272;}
 .write-form li input[type="file"] {height: auto; line-height: 1;padding-left: 0;padding-top: 10px;padding-bottom: 10px;}
+.write-form textarea {background-color: white;}
 .write-form input {background-color: rgba(0,0,0,.4);color: #44b272;font-weight: 900;border: 1px solid #44b272;line-height: 45px;}
 .write-form input::placeholder {color: #44b272;}
 .write-form .search-sth {position: relative;}
